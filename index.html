@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JIO MART</title>
+    <link rel="stylesheet" href="./assets/css/navbarfooter.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+      #nav-dropdowns-section {
+        width: 100%;
+        height: 100vh;
+        /* position: fixed; */
+        margin-top: 113px;
+        top: 0;
+        /* display: none; */
+        background-color: rgba(20, 125, 218, 0.787);
+      }
+    </style>
+  </head>
+  <body>
+    <section id="navabar-section">
+
+      <!--===================== Upper half of navabar  ===========================-->
+
+      <div id="nav-top">
+        <!-- <div></div> -->
+        <div id="logosM">
+          <i class="fa-solid fa-bars" id="slider_Menu_BTN" onclick="ShowSideSliderMenu()"></i>
+          <a href="#">
+            <img src="https://www.jiomart.com/assets/version1659035733/smartweb/images/jiomart_logo_beta.svg"
+          alt=""/>
+          </a>
+        </div>
+
+        <div id="search-div">
+          <input
+            id="search"
+            type="text"
+            placeholder="Search essentials, groceries, and more …"
+          />
+          <button><i class="fa-solid fa-list"></i></button>
+        </div>
+
+        <div id="login-div">
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Sign in / Sign up</span>
+          </a>
+        </div>
+
+        <div id="cart-div">
+          <a href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="countOfCart">5</span>
+            <span>Cart</span>
+          </a>
+        </div>
+      </div>
+
+      <!--======================== lower half of navabar ==========================-->
+
+      <div id="nav-bottom">
+        <div id="nav-bottom-options">
+
+          <div id="location-option-div" onclick="ShowlocationPopup()">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p>Deliver to</p>
+              <p id="pincode">400001</p>
+            </div>
+          </div>
+
+          <div id="Groceries-option">
+            <a href=""><h4>Groceries</h4></a>
+            <i class="fa-solid fa-chevron-down" class="arrowUp"></i>
+            <div id="Groceries-dropdown">
+              <ul class="navigation_submenu">
+                <li>
+                  <a href="#">Fruits &amp; Vegetables</a>
+                </li>
+                <li>
+                  <a href="#">Dairy &amp; Bakery</a>
+                </li>
+                <li>
+                  <a href="#">Staples</a>
+                </li>
+                <li>
+                  <a href="#">Snacks &amp; Branded Foods</a>
+                </li>
+                <li>
+                  <a href="#">Beverages</a>
+                </li>
+                <li>
+                  <a href="#">Personal Care</a>
+                </li>
+                <li>
+                  <a href="#">Home Care</a>
+                </li>
+                <li>
+                  <a href="#">Home &amp; Kitchen</a>
+                </li>
+                <li>
+                  <a href="#">Mom &amp; Baby Care</a>
+                </li>
+                <li>
+                  <a href="#">Books</a>
+                </li>
+                <li>
+                  <a href="#">Pets</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="premiumfruits-option">
+            <a href=""><h4>Premium Fruits</h4></a>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div id="premiumfruits-dropdown">
+              <ul class="navigation_submenu">
+                <li>
+                  <a href="#">Apples &amp; Pears</a>
+                </li>
+                <li>
+                  <a href="#">Avocado, Peach, Plum</a>
+                </li>
+                <li>
+                  <a href="#">Banana, Melons &amp; Coconut</a>
+                </li>
+                <li>
+                  <a href="#">Cherries, Berries &amp; Exotic Fruits</a>
+                </li>
+                <li>
+                  <a href="#">Citrus, Mango &amp; Grapes</a>
+                </li>
+                <li>
+                  <a href="#">Dates</a>
+                </li>
+                <li>
+                  <a href="#">Gift, Assorted &amp; XL Packs</a>
+                </li>
+                <li>
+                  <a href="#">Pomegranate, Papaya &amp; Pineapple</a>
+                </li>
+                <li>
+                  <a href="#">Seasonal &amp; Minor Fruits</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="homekitchen-option">
+            <a href=""><h4>Home & Kitchen</h4></a>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div id="homekitchen-dropdown">
+              <ul class="navigation_submenu">
+                <li>
+                  <a href="#">Kitchenware</a>
+                </li>
+                <li>
+                  <a href="#">Dining</a>
+                </li>
+                <li>
+                  <a href="#">Furnishing</a>
+                </li>
+                <li>
+                  <a href="#">Home Decor</a>
+                </li>
+                <li>
+                  <a href="#">Furniture</a>
+                </li>
+                <li>
+                  <a href="#">Home Appliances</a>
+                </li>
+                <li>
+                  <a href="#">Toys, Games &amp; Fitness</a>
+                </li>
+                <li>
+                  <a href="#">Electrical</a>
+                </li>
+                <li>
+                  <a href="#">Bathroom &amp; Laundry Accessories</a>
+                </li>
+                <li>
+                  <a href="#">Disposables</a>
+                </li>
+                <li>
+                  <a href="#">Stationery</a>
+                </li>
+                <li>
+                  <a href="#">Bags &amp; Travel Luggage</a>
+                </li>
+                <li>
+                  <a href="#">Mops, Brushes &amp; Scrubs</a>
+                </li>
+                <li>
+                  <a href="#">Auto Care</a>
+                </li>
+                <li>
+                  <a href="#">Garden &amp; Outdoor</a>
+                </li>
+                <li>
+                  <a href="#">Carpentry &amp; work accessories</a>
+                </li>
+                <li>
+                  <a href="#">Pooja Needs</a>
+                </li>
+                <li>
+                  <a href="#">Bathroom &amp; Laundry</a>
+                </li>
+                <li>
+                  <a href="#">Industrial &amp; Scientific Supplies</a>
+                </li>
+                <li>
+                  <a href="#">Power &amp; Hand Tools</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="fashion-option">
+            <a href=""><h4>Fashion</h4></a>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div id="fashion-dropdown">
+              <ul class="navigation_submenu">
+                <li>
+                  <a href="#">Men</a>
+                </li>
+                <li>
+                  <a href="#">Women</a>
+                </li>
+                <li>
+                  <a href="#">Boys</a>
+                </li>
+                <li>
+                  <a href="#">Girls</a>
+                </li>
+                <li>
+                  <a href="#">Junior Boys</a>
+                </li>
+                <li>
+                  <a href="#">Infants</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="electronics-option">
+            <a href=""><h4>Electronics</h4></a>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div id="electronics-dropdown">
+              <ul class="navigation_submenu">
+                <li>
+                  <a href="#">Mobiles &amp; Tablets</a>
+                </li>
+                <li>
+                  <a href="#">TV &amp; Speaker</a>
+                </li>
+                <li>
+                  <a href="#">Home Appliances</a>
+                </li>
+                <li>
+                  <a href="#">Computers</a>
+                </li>
+                <li>
+                  <a href="#">Cameras</a>
+                </li>
+                <li>
+                  <a href="#">Kitchen Appliances</a>
+                </li>
+                <li>
+                  <a href="#">Personal Care &amp; Grooming</a>
+                </li>
+                <li>
+                  <a href="#">Smart Devices</a>
+                </li>
+                <li>
+                  <a href="#">Gaming</a>
+                </li>
+                <li>
+                  <a href="#">Accessories</a>
+                </li>
+                <li>
+                  <a href="#">Phones</a>
+                </li>
+                <li>
+                  <a href="#">Office Products</a>
+                </li>
+                <li>
+                  <a href="#">Health Care Devices</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="beauty-option">
+            <a href=""><h4>Beauty</h4></a>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div id="beauty-dropdown">
+              <ul class="navigation_submenu">
+                <li>
+                  <a href="#">Make-Up</a>
+                </li>
+                <li>
+                  <a href="#">Hair</a>
+                </li>
+                <li>
+                  <a href="#">Skin Care</a>
+                </li>
+                <li>
+                  <a href="#">Fragrances</a>
+                </li>
+                <li>
+                  <a href="#">Personal Care</a>
+                </li>
+                <li>
+                  <a href="#">Mom &amp; Baby</a>
+                </li>
+                <li>
+                  <a href="#">Men's Grooming</a>
+                </li>
+                <li>
+                  <a href="#">Tools &amp; Appliances</a>
+                </li>
+                <li>
+                  <a href="#">Covid Essentials</a>
+                </li>
+                <li>
+                  <a href="#">Wellness</a>
+                </li>
+                <li>
+                  <a href="#">Fitness</a>
+                </li>
+                <li>
+                  <a href="#">Treatments</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="jwellery-option">
+            <a href=""><h4>Jewellery</h4></a>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div id="jwellery-dropdown">
+              <ul class="navigation_submenu">
+                <li>
+                  <a href="#">Fine Jewellery</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== HTML For Location Popup ================================ -->
+
+    <section id="location_popup_section">
+      <div id="location_popup">
+        <div class="triangle"></div>
+        <div id="location_popup_div">
+          <div class="location_popup_upper">
+              <div class="whereDoYouwant">
+                <h3 >Where do you want the delivery?</h3>
+                <span  onclick="HidelocationPopup()" class="location_close_btn">X</span>
+              </div>
+               <!--===================== part 1 Before Login ========================-->
+            
+             <div class="where_address_div" id="where_address_div">
+              <h5>Get access to your Addresses, Orders, and Wishlist</h5>
+              <button>Sign in to see Your Addresses</button>
+            </div>
+            
+            <!--========= part 2 After Login ==================================-->
+
+            <div class="my_address_div" id="my_address_div">
+              <h4>Ayush</h4>
+              <h4>825409</h4>
+              <p>13/17, Tara Tand </p>
+                <p>Koderma, Jharkhand</p>  
+              <button>Default Address</button>
+            </div>
+          </div>
+
+          <div class="location_popup_lower">
+            <h3>Or Enter Pincode</h3>
+            <h5>Select pincode to see product availability.</h5>
+            <div class="enter_pincode_div">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" maxlength="6" minlength="6" placeholder="Enter your Pincode">
+              <button>Apply</button>
+            </div>
+            <div class="detect_loc_mark">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <h4>DETECT MY LOCATION</h4>
+            </div>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+   <!--============================ HTML slideer Menu ==================================-->
+   
+   <section id="slide_menu_slider_section">
+    <div id="slide_menu_slider">
+
+            <div class="HelloName">
+              <div class="OnlyHelloName">
+                <div>
+                  <i class="fa-solid fa-circle-user"></i>
+                  <h3>Hello, </h3>
+                  <h3 id="nameshowAfterLoginSlidebar">Ayush</h3>
+                </div>
+                <p id="CloseSlideMenuSlider" onclick="CloseSlideMenuSlider()">X</p>
+              </div>
+
+              <div class="HelloNameBtns">
+                <button>Account</button>
+                <button>Orders</button>
+              </div>
+            </div>
+
+      <div class="Slider_Content_Option">
+            <div class="slider_home_option">
+                  <ul>
+                    <li>
+                      <a href="/">Home</a>
+                    </li>
+                    <li>
+                      <a href="/">Shop by Category</a>
+                    </li>
+                    <li>
+                      <a href="/">My List</a>
+                    </li>
+                    <li>
+                      <a href="/">JioMart Wallet</a>
+                    </li>
+                    <li>
+                      <a href="/">JioMart Gift Store</a>
+                    </li>
+                    <li>
+                      <a href="/">JioMart Gift Card</a>
+                    </li>
+                    <li>
+                      <a href="/">GoGreen with JioMart</a>
+                    </li>
+                    <li>
+                      <a href="/">All Offers</a>
+                    </li>
+                  </ul> 
+                  
+                  <ul>
+                    <li>
+                      <a href="/">My Account</a>
+                    </li>
+                    <li>
+                      <a href="/">Need Help</a>
+                    </li>
+                    <li>
+                      <a href="/">About us</a>
+                    </li>
+                    <li>
+                      <a href="/">Guide</a>
+                    </li>
+                    <li></li>
+                  </ul>
+            </div>
+
+
+            <div class="ContactUsinsideSlider">
+              <div>
+                <h3>CONTACT US</h3>
+                <p>WhatsApp us : <span>70003 70003</span></p>
+                <p>Call Us : <span>1800 890 1222</span></p>
+                <p>
+                  Please note that you are accessing the BETA Version of
+                  <span> www.jiomart.com</span>
+                </p>
+                <p>
+                  Should you encounter any bugs, glitches, lack of functionality,
+                  delayed deliveries, billing errors or other problems on the beta
+                  website, please email us on <span>cs@jiomart.com </span>
+                </p>
+              </div>
+              <div>
+                <h3>DOWNLOAD APP</h3>
+                <div class="ContactUsinsideSliderImg">
+                  <img
+                    src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/play_store-057f9061b4cd0fd4953a485569c15e63fdf8d89b0bcc025c04cfb34d9e8cd571.png"
+                    alt=""
+                  />
+                  <img
+                    src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/app_store-4407bc8ced0d52a50ff042ce51e32d51de3e11717955798ec54c6a28e7926c7c.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            
+
+      </div>
+
+    </div>
+
+   
+
+   </section>
+   
+
+    <!-- =============== HTML For Footer Section ====================================== -->
+
+    <section id="footer-section">
+      <footer>
+        <ul>
+          <li>
+            <h3>MOST POPULAR CATEGORIES</h3>
+          </li>
+          <li>
+            <a href="#">Staples</a>
+          </li>
+          <li>
+            <a href="#">Beverages</a>
+          </li>
+          <li>
+            <a href="#">Personal Care</a>
+          </li>
+          <li>
+            <a href="#">Home Care</a>
+          </li>
+          <li>
+            <a href="#">Fruits and Vegetables</a>
+          </li>
+          <li>
+            <a href="#">Baby Care</a>
+          </li>
+          <li>
+            <a href="#">Snacks & Branded Foods</a>
+          </li>
+          <li>
+            <a href="#">Dairy & Bakery</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <h3>CUSTOMER SERVICES</h3>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">FAQ</a>
+          </li>
+          <li>
+            <a href="#">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">E-waste policy</a>
+          </li>
+          <li>
+            <a href="#">Cancellation and return policy</a>
+          </li>
+        </ul>
+
+        <div class="ContactUs">
+          <div>
+            <h3>CONTACT US</h3>
+            <p>WhatsApp us : <span>70003 70003</span></p>
+            <p>Call Us : <span>1800 890 1222</span></p>
+            <p>
+              Please note that you are accessing the BETA Version of
+              <span> www.jiomart.com</span>
+            </p>
+            <p>
+              Should you encounter any bugs, glitches, lack of functionality,
+              delayed deliveries, billing errors or other problems on the beta
+              website, please email us on <span>cs@jiomart.com </span>
+            </p>
+          </div>
+          <div>
+            <h3>DOWNLOAD APP</h3>
+            <div>
+              <img
+                src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/play_store-057f9061b4cd0fd4953a485569c15e63fdf8d89b0bcc025c04cfb34d9e8cd571.png"
+                alt=""
+              />
+              <img
+                src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/app_store-4407bc8ced0d52a50ff042ce51e32d51de3e11717955798ec54c6a28e7926c7c.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>
+          Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+,
+          Google Chrome 80+
+        </p>
+        <p>© 2022 All rights reserved. Reliance Retail Ltd.</p>
+      </div>
+    </section>
+
+
+     <!--=================== HTML end ======================================= -->
+
+  </body>
+
+  <script src="https://kit.fontawesome.com/337fe3a5de.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/navbar.js"></script>
+</html>
