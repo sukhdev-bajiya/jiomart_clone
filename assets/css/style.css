@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
+}
+
+section {
+    max-width: 1680px;
+    min-width: 1030px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.homePage-topslideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+.homePage-topslideshow-container img {
+    vertical-align: middle;
+}
+
+.homePage-topslideshow-container .prev,
+.homePage-topslideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.homePage-topslideshow-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.homePage-topslideshow-container .prev:hover,
+.homePage-topslideshow-container .next:hover {
+    background-color: rgba(0, 225, 255, 0.61);
+}
+
+.homePage-topslideshow-dots-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+}
+
+.homePage-topslideshow-dots-container .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #ffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border: 1px solid rgb(148, 148, 148);
+}
+
+.homePage-topslideshow-dots-container .active,
+.homePage-topslideshow-dots-container .dot:hover {
+    background-color: #007bff;
+    border: 2px solid white;
+}
+
+/* Fading animation */
+.homePage-topslideshow-container .homePage-topslideshow-image {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#homepage_top__part_all_category {
+    margin: 10px 0;
+}
+
+section>img {
+    width: 100%;
+}
+
+.homepage_boxwithhad_part {
+    padding: 0 50px;
+}
+
+.homepage_boxwithhad_part h1 {
+    padding: 20px 0;
+    font-size: 20px;
+    color: #000;
+    text-align: start;
+    width: 100%;
+}
+
+.homepage_boxwithhad_part_items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.homepage_boxwithhad_part_items>div {
+    background: #efd6da;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage_boxwithhad_part_items>div:hover {
+    box-shadow: rgba(122, 122, 122, 0.3) 5px 5px, rgba(167, 167, 167, 0.25) 6px 6px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.homepage_boxwithhad_part_items>div>span {
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    font-family: JioBold;
+    width: 100%;
+    text-transform: uppercase;
+    background: url(https://www.jiomart.com/assets/version1659035733/smartweb/images/offer_bg.png) no-repeat top center;
+    height: 38px;
+    background-size: 100%;
+    text-align: center;
+    padding: 8px 0 0;
+    top: 0;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.homepage_boxwithhad_part_items>div>span>span {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.homepage_boxwithhad_part_items>div>div {
+    margin-top: 25px;
+    height: 235px;
+    width: 200px;
+    transition: all 0.2s ease-out;
+}
+
+.homepage_boxwithhad_part_items>div:hover div {
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.homepage_boxwithhad_part_items>div>div>img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.homepage_boxwithhad_part_items>div>div>p {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: JioBold;
+    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 38px;
+}
+
+.homepage_bottam_box_twoImage_part_items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px 15px;
+}
+
+.homepage_bottam_box_twoImage_part_items>img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.homepage_bottam_box_twoImagebyRound_part_items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px 15px;
+}
+
+.homepage_bottam_box_twoImagebyRound_part_items>div {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.homepage_bottam_box_twoImagebyRound_part_items>div>img {
+    width: 100%;
+    transition: all 0.2s ease-out;
+}
+
+.homepage_bottam_box_twoImagebyRound_part_items>div>img:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#homepage_OffersonGroceriesallproduct_part .homepage_boxwithhad_part_items>div {
+    background-color: #007bff57 !important;
+}
+
+#homepage_OffersonHousehold_Personalcareallproduct_part .homepage_boxwithhad_part_items>div {
+    background-color: #c8f9c2 !important;
+}
+
+.homepage_bottam_box_fiveImagebyRound_part_items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 10px 15px;
+}
+
+.homepage_bottam_box_fiveImagebyRound_part_items>div {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.homepage_bottam_box_fiveImagebyRound_part_items>div>img {
+    width: 100%;
+    transition: all 0.2s ease-out;
+}
+
+.homepage_bottam_box_fiveImagebyRound_part_items>div>img:hover {
+    transform: scale(1.05, 1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* .homepage_box_Shopbycategorieso_part_iteams {}
+
+.homepage_Shopbycategorieso_images_container .prev,
+.homepage_Shopbycategorieso_images_container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.homepage_Shopbycategorieso_images_container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.homepage_Shopbycategorieso_images_container .prev:hover,
+.homepage_Shopbycategorieso_images_container .next:hover {
+    background-color: rgba(0, 225, 255, 0.61);
+}
+
+.homepage_Shopbycategorieso_part_iteams {
+    display: grid;
+    grid-template-columns: repeat(8, 23%);
+    overflow-x: auto;
+    height: auto;
+    margin: 0 50px;
+    gap: 20px;
+}
+
+.homepage_Shopbycategorieso_part_iteams::-webkit-scrollbar {}
+
+.homepage_Shopbycategorieso_part_iteams>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+}
+
+.homepage_Shopbycategorieso_part_iteams>div>img {
+    width: 50%;
+    transition: all 0.2s ease-out;
+}
+
+.homepage_Shopbycategorieso_part_iteams>div>img:hover {
+    transform: scale(1.05, 1.05);
+    transition: all 0.3s ease-in-out;
+} */

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        /* Fading animation */
+        .homePage-topslideshow-container .homePage-topslideshow-image {
+            display: none;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .homePage-topslideshow-container img {
+            vertical-align: middle;
+        }
+
+        .homePage-topslideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .homePage-topslideshow-container .prev,
+        .homePage-topslideshow-container .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .homePage-topslideshow-container .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .homePage-topslideshow-container .prev:hover,
+        .homePage-topslideshow-container .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .homePage-topslideshow-dots-container {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            bottom: 5px;
+        }
+
+        .homePage-topslideshow-dots-container .dot {
+            cursor: pointer;
+            height: 5px;
+            width: 5px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .homePage-topslideshow-dots-container .active,
+        .homePage-topslideshow-dots-container .dot:hover {
+            background-color: #00ffff;
+            border: 1px solid white;
+
+        }
+
+        @media only screen and (max-width: 300px) {
+
+            .homePage-topslideshow-container .prev,
+            .homePage-topslideshow-container .next {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="homePage-topslideshow-container">
+
+        <div class="homePage-topslideshow-images-container">
+            <div class="homePage-topslideshow-image">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1659106018_Desktop_31-07-22.jpg"
+                    style="width:100%">
+            </div>
+
+            <div class="homePage-topslideshow-image">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1659117862_Food--Grains_1680x320.jpg"
+                    style="width:100%">
+            </div>
+
+            <div class="homePage-topslideshow-image">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1656184459_1655579994_1654784310_1654703960_1654615182_Detergents-1680.jpg"
+                    style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div class="homePage-topslideshow-dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // setInterval(() => {
+        //     plusSlides(1)
+        // }, 5000);
+
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("homePage-topslideshow-image");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
