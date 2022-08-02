@@ -37,10 +37,31 @@
   color: white;
   /* width: 30px; */
 }
+#login-div{
+  display: block;
+}
 #login-div i,
 #login-div span {
   font-size: 18px;
   margin: 0 2px;
+}
+
+#after_login_div{
+  display: none;
+}
+
+#after_login_div a{
+  display: flex;
+  gap: 15px;
+}
+
+#after_login_div i{
+  font-size: 32px;
+  margin: 0 2px;
+}
+#after_login_div{
+  font-size: 22px;
+
 }
 /* #cart-div{
   display: flex;
