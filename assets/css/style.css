@@ -25,7 +25,9 @@ section {
     position: relative;
 }
 
-
+#homepage_top_slider_part{
+    margin-top: 112px;
+}
 .homePage-topslideshow-container {
     position: relative;
     margin: auto;

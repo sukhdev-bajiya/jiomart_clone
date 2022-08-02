@@ -4,19 +4,17 @@
 // Part -  homepage body+++++++++++++++++++++++++++++++++++++++++++++++++
 
 document.body.innerHTML = `
-<!-- Done -->
+<section id="navabar-section"></section>
+<section id="location_popup_section"></section>
+<section id="slide_menu_slider_section"></section>
 <section id="homepage_top_slider_part"></section>
-<!-- Done -->
 <section id="homepage_top__part_all_category"></section>
 <section id="homepage_top_Shop_from_Top_Categories_part"></section>
-<!-- Done -->
 <section id="homepage_top_hollyday_part_all_category"></section>
 <section id="homepage_TopDeals_part_all_category"></section>
 <section id="homepage_bank_and_paytm_add_part"></section>
-<!-- Done -->
 <section id="homepage_Offersondailyessentials_part" class="homepage_boxwithhad_part"></section>
 <section id="homepage_Shopbycategorieso_part"></section>
-<!-- Done -->
 <section id="homepage_WomensFashiontwo_part"></section>
 <section id="homepage_WomensFashionallproduct_part"></section>
 <section id="homepage_OffersonPersonalcareallproduct_part"></section>
@@ -29,6 +27,7 @@ document.body.innerHTML = `
 <section id="homepage_MensFashionallproduct_part"></section>
 <section id="homepage_homeCitiPart1_part"></section>
 <section id="homepage_homeCitiPart2_part"></section>
+<section id="footer-section"></section>
 `;
 
 // Part -  homepage_topslider +++++++++++++++++++++++++++++++++++++++++++++++++
