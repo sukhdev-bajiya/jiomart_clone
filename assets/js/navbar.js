@@ -1,3 +1,7 @@
+
+
+
+
 document.getElementById("navabar-section").innerHTML = `
 <!--===================== Upper half of navabar  ===========================-->
 
@@ -630,7 +634,3 @@ function ShowSideSliderMenu(){
 function CloseSlideMenuSlider(){
   document.getElementById("slide_menu_slider_section").style.display = "none";
 }
-
-
-
-

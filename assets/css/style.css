@@ -18,7 +18,7 @@ body {
 
 section {
     max-width: 1680px;
-    min-width: 1030px;
+    min-width: 1024px;
     height: auto;
     width: 100%;
     margin: 0 auto;
@@ -503,11 +503,16 @@ section>img {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     line-height: 32px;
 }
-
-.homepage_TopDeals_part_all_category_iteams #homepage_TopDeals_part_Addtocart_btn>button>span:last-child {
+.homepage_TopDeals_part_all_category_iteams #homepage_TopDeals_part_Addtocart_btn>button>.qty_minus  {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .1) url(https://www.jiomart.com/assets/version1659035733/smartweb/images/icons/minus-bulecolor.svg) center no-repeat;
+}
+.homepage_TopDeals_part_all_category_iteams #homepage_TopDeals_part_Addtocart_btn>button>.add_plus {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -533,3 +538,7 @@ margin: 25px 0;
 .homepage_bank_and_paytm_add_part_iteams>img {
     width: 50%;
 }
+
+/* @media (min-width: 320px) and (max-width: 1024px) {
+    
+  } */
