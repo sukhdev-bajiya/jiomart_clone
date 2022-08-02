@@ -3,29 +3,33 @@
 // Part -  homepage body+++++++++++++++++++++++++++++++++++++++++++++++++
 // Part -  homepage body+++++++++++++++++++++++++++++++++++++++++++++++++
 
-// document.body.innerHTML = `
-// <section id="homepage_top_slider_part"></section>
-// <section id="homepage_top_add_part_all_category"></section>
-// <section></section>
-// <section id="homepage_top_hollydayAdd_part_all_category"></section>
-// <section id="homepage_TopDealsAdd_part_all_category"></section>
-// <section></section>
-// <section id="homepage_OffersondailyessentialsAdd_part" class="homepage_boxwithhadAdd_part"></section>
-// <section id="homepage_ShopbycategoriesoAdd_part"></section>
-// <section id="homepage_WomensFashiontwoAdd_part"></section>
-
-// <section id="homepage_WomensFashionallproduct_part"></section>
-// <section id="homepage_OffersonPersonalcareallproduct_part" class="homepage_boxwithhadAdd_part"></section>
-// <section id="homepage_OffersonHousehold&Personalcareallproduct_part"></section>
-// <section id="homepage_OffersonHouseholdallproduct_part"></section>
-// <section id="homepage_OffersonGroceriesallproduct_part" class="homepage_boxwithhadAdd_part"></section>
-// <section id="homepage_HottestDealsallproduct_part"></section>
-// <section id="homepage_KidsFashionallproduct_part"></section>
-// <section id="homepage_MensFashiontwoAdd_part"></section>
-// <section id="homepage_MensFashionallproduct_part"></section>
-// <section id="homepage_homeCitiPart1Add_part" class="homepage_bottam_box_twoImage_part_Section"></section>
-// <section id="homepage_homeCitiPart2Add_part" class="homepage_bottam_box_twoImage_part_Section"></section>
-// `;
+document.body.innerHTML = `
+<!-- Done -->
+<section id="homepage_top_slider_part"></section>
+<!-- Done -->
+<section id="homepage_top__part_all_category"></section>
+<section id="homepage_top_Shop_from_Top_Categories_part"></section>
+<!-- Done -->
+<section id="homepage_top_hollyday_part_all_category"></section>
+<section id="homepage_TopDeals_part_all_category"></section>
+<section id="homepage_bank_and_paytm_add_part"></section>
+<!-- Done -->
+<section id="homepage_Offersondailyessentials_part" class="homepage_boxwithhad_part"></section>
+<section id="homepage_Shopbycategorieso_part"></section>
+<!-- Done -->
+<section id="homepage_WomensFashiontwo_part"></section>
+<section id="homepage_WomensFashionallproduct_part"></section>
+<section id="homepage_OffersonPersonalcareallproduct_part"></section>
+<section id="homepage_OffersonHousehold_Personalcareallproduct_part" class="homepage_boxwithhad_part"></section>
+<section id="homepage_OffersonHouseholdallproduct_part"></section>
+<section id="homepage_OffersonGroceriesallproduct_part" class="homepage_boxwithhad_part"></section>
+<section id="homepage_HottestDealsallproduct_part"></section>
+<section id="homepage_KidsFashionallproduct_part"></section>
+<section id="homepage_MensFashiontwo_part"></section>
+<section id="homepage_MensFashionallproduct_part"></section>
+<section id="homepage_homeCitiPart1_part"></section>
+<section id="homepage_homeCitiPart2_part"></section>
+`;
 
 // Part -  homepage_topslider +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part -  homepage_topslider +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -93,6 +97,61 @@ homepage_top__part_all_categoryArray.forEach((element) => {
 // Part -  Shop_from_Top_Categories +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part -  Shop_from_Top_Categories +++++++++++++++++++++++++++++++++++++++++++++++++
 
+let homepage_top_Shop_from_Top_Categories_partArray = [
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109073_1654018509_Fruits-Veg.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109088_1654018530_Beverage-Corner.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109143_1656693044_Foodgrains-Oils.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109179_1654018570_Snacks-FOOD.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109205_1654018587_Home-care.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109260_1654018604_personal-Care.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109280_1654018629_Dairy-Bakery.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109301_1654018647_Instant-Foods.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109327_1654018658_Home-Kitchen.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109344_1654018675_Mens-Wear.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109379_1654018684_Womens-Wear.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109408_1654018699_Kids-WEAR.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109544_1656508232_washing-Machine.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109495_1654018730_Smartphones.jpg",
+];
+document.getElementById(
+  "homepage_top_Shop_from_Top_Categories_part"
+).innerHTML = `
+<h1 style="padding: 20px 0 20px 50px;">Shop from Top Categories</h1>
+<div class="homepage_top_Shop_from_Top_Categories_part_container">
+  <div class="homepage_sliderLiftRightarrow_images_container">
+      <a class="prev" onclick="homepage_top_Shop_from_Top_Categories_part_iteamsslide('left')"></a>
+      <a class="next" onclick="homepage_top_Shop_from_Top_Categories_part_iteamsslide('right')"></a>
+  </div>
+<div class="homepage_top_Shop_from_Top_Categories_part_iteams "> </div>
+</div>
+    `;
+homepage_top_Shop_from_Top_Categories_partArray.forEach((element) => {
+  let img = document.createElement("img");
+  img.src = element;
+
+  document
+    .querySelector(".homepage_top_Shop_from_Top_Categories_part_iteams")
+    .append(img);
+});
+
+function homepage_top_Shop_from_Top_Categories_part_iteamsslide(direction) {
+  var container = document.querySelector(
+    ".homepage_top_Shop_from_Top_Categories_part_iteams"
+  );
+  scrollCompleted = 0;
+  var slideVar = setInterval(function () {
+    if (direction == "left") {
+      container.scrollLeft -= 28;
+    } else {
+      container.scrollLeft += 28;
+    }
+    scrollCompleted += 10;
+    if (scrollCompleted >= 100) {
+      window.clearInterval(slideVar);
+    }
+  }, 50);
+}
+
 // Part - hollyday Add +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - hollyday Add +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - hollyday Add +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -114,11 +173,459 @@ homepage_top_hollyday_part_all_categoryArray.forEach((element) => {
 // Part - Top Deals +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - Top Deals +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - Top Deals +++++++++++++++++++++++++++++++++++++++++++++++++
+let homepage_TopDeals_part_all_categoryArray = [
+  {
+    item_name:
+      "Saffola Gold Refined Rice Bran And Sunflower Based Blended Oil 3 L + Daawat Devaaya Basmati Rice 5 kg (Combo Pack)",
+    item_img_url:
+      "https://www.jiomart.com/images/product/150x150/592200116/saffola-gold-refined-rice-bran-and-sunflower-based-blended-oil-3-l-daawat-devaaya-basmati-rice-5-kg-combo-pack-0-20220624.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/150x150/592200116/saffola-gold-refined-rice-bran-and-sunflower-based-blended-oil-3-l-daawat-devaaya-basmati-rice-5-kg-combo-pack-0-20220624.jpg",
+      "https://www.jiomart.com/images/product/150x150/592200116/saffola-gold-refined-rice-bran-and-sunflower-based-blended-oil-3-l-daawat-devaaya-basmati-rice-5-kg-combo-pack-1-20220624.jpg",
+      "https://www.jiomart.com/images/product/150x150/592200116/saffola-gold-refined-rice-bran-and-sunflower-based-blended-oil-3-l-daawat-devaaya-basmati-rice-5-kg-combo-pack-13-20220624.jpg",
+      "https://www.jiomart.com/images/product/150x150/592200116/saffola-gold-refined-rice-bran-and-sunflower-based-blended-oil-3-l-daawat-devaaya-basmati-rice-5-kg-combo-pack-14-20220624.jpg",
+    ],
+    item_final_price: 915.0,
+    item_price: 1310.0,
+    item_discount: 30,
+    item_tag_name: "Trending",
+    item_disc_price: 395.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Tur / Arhar Dal 2 kg",
+    item_img_url:
+      "https://www.jiomart.com/images/product/150x150/491417390/tur-arhar-dal-2-kg-product-images-o491417390-p491417390-0-202203170610.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/150x150/491417390/tur-arhar-dal-2-kg-product-images-o491417390-p491417390-0-202203170610.jpg",
+      "https://www.jiomart.com/images/product/150x150/491417390/tur-arhar-dal-2-kg-product-images-o491417390-p491417390-1-202203170610.jpg",
+      "https://www.jiomart.com/images/product/150x150/491417390/tur-arhar-dal-2-kg-product-images-o491417390-p491417390-2-202203170610.jpg",
+      "https://www.jiomart.com/images/product/150x150/491417390/tur-arhar-dal-2-kg-legal-images-o491417390-p491417390-3-202203170610.jpg",
+      "https://www.jiomart.com/images/product/150x150/491417390/tur-arhar-dal-2-kg-legal-images-o491417390-p491417390-4-202203170610.jpg",
+      "https://www.jiomart.com/images/product/150x150/491417390/tur-arhar-dal-2-kg-legal-images-o491417390-p491417390-5-202203170610.jpg",
+    ],
+    item_final_price: 210.0,
+    item_price: 270.0,
+    item_discount: 22,
+    item_tag_name: "Trending",
+    item_disc_price: 60.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Colgate Strong Teeth Dental Cream Toothpaste 500 g Saver Pack",
+    item_img_url:
+      "https://www.jiomart.com/images/product/150x150/491055460/colgate-strong-teeth-dental-cream-toothpaste-500-g-saver-pack-product-images-o491055460-p491055460-0-202203151056.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/150x150/491055460/colgate-strong-teeth-dental-cream-toothpaste-500-g-saver-pack-product-images-o491055460-p491055460-0-202203151056.jpg",
+      "https://www.jiomart.com/images/product/150x150/491055460/colgate-strong-teeth-dental-cream-toothpaste-500-g-saver-pack-product-images-o491055460-p491055460-1-202203151056.jpg",
+      "https://www.jiomart.com/images/product/150x150/491055460/colgate-strong-teeth-dental-cream-toothpaste-500-g-saver-pack-product-images-o491055460-p491055460-2-202203151056.jpg",
+    ],
+    item_final_price: 183.0,
+    item_price: 253.0,
+    item_discount: 27,
+    item_tag_name: "Trending",
+    item_disc_price: 70.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Surf Excel Matic Front Load Detergent Powder 6 kg",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-0-202204291101.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/150x150/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-0-202204291101.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-1-202204291101.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-2-202204291101.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-3-202204291102.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-4-202204291102.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-5-202204291102.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-legal-images-o492848164-p591223797-6-202206031811.jpg",
+    ],
+    item_final_price: 1275.0,
+    item_price: 1425.0,
+    item_discount: 10,
+    item_tag_name: "Trending",
+    item_disc_price: 150.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Maggi 2-Minute Masala Instant Noodles 560 g",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-0-202203150702.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-0-202203150702.jpg",
+      "https://www.jiomart.com/images/product/150x150/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-1-202203150702.jpg",
+      "https://www.jiomart.com/images/product/150x150/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-2-202203150702.jpg",
+      "https://www.jiomart.com/images/product/150x150/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-3-202203150702.jpg",
+      "https://www.jiomart.com/images/product/150x150/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-5-202203150702.jpg",
+      "https://www.jiomart.com/images/product/150x150/490003834/maggi-2-minute-masala-instant-noodles-560-g-legal-images-o490003834-p490003834-6-202203150702.jpg",
+      "https://www.jiomart.com/images/product/150x150/490003834/maggi-2-minute-masala-instant-noodles-560-g-legal-images-o490003834-p490003834-7-202203150702.jpg",
+      "https://www.jiomart.com/images/product/150x150/490003834/maggi-2-minute-masala-instant-noodles-560-g-legal-images-o490003834-p490003834-8-202203150702.jpg",
+    ],
+    item_final_price: 90.0,
+    item_price: 109.0,
+    item_discount: 17,
+    item_tag_name: "Trending",
+    item_disc_price: 19.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Amul Butter 500 g (Carton)",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/490001392/amul-butter-500-g-carton-product-images-o490001392-p490001392-0-202203152128.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/490001392/amul-butter-500-g-carton-product-images-o490001392-p490001392-0-202203152128.jpg",
+      "https://www.jiomart.com/images/product/150x150/490001392/amul-butter-500-g-carton-product-images-o490001392-p490001392-1-202203152128.jpg",
+      "https://www.jiomart.com/images/product/150x150/490001392/amul-butter-500-g-carton-product-images-o490001392-p490001392-2-202203152128.jpg",
+      "https://www.jiomart.com/images/product/150x150/490001392/amul-butter-500-g-carton-product-images-o490001392-p490001392-3-202203152128.jpg",
+      "https://www.jiomart.com/images/product/150x150/490001392/amul-butter-500-g-carton-product-images-o490001392-p490001392-4-202203152128.jpg",
+      "https://www.jiomart.com/images/product/150x150/490001392/amul-butter-500-g-carton-legal-images-o490001392-p490001392-7-202203152128.jpg",
+      "https://www.jiomart.com/images/product/150x150/490001392/amul-butter-500-g-carton-legal-images-o490001392-p490001392-9-202203152128.jpg",
+    ],
+    item_final_price: 245.0,
+    item_price: 255.0,
+    item_discount: 3,
+    item_tag_name: "Trending",
+    item_disc_price: 10.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Sugar (M) 2 kg",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/491696003/sugar-m-2-kg-product-images-o491696003-p590108360-0-202205272027.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/491696003/sugar-m-2-kg-product-images-o491696003-p590108360-0-202205272027.jpg",
+      "https://www.jiomart.com/images/product/150x150/491696003/sugar-m-2-kg-product-images-o491696003-p590108360-1-202205272027.jpg",
+      "https://www.jiomart.com/images/product/150x150/491696003/sugar-m-2-kg-product-images-o491696003-p590108360-2-202205272027.jpg",
+      "https://www.jiomart.com/images/product/150x150/491696003/sugar-m-2-kg-legal-images-o491696003-p590108360-3-202205272027.jpg",
+      "https://www.jiomart.com/images/product/150x150/491696003/sugar-m-2-kg-legal-images-o491696003-p590108360-5-202205272027.jpg",
+    ],
+    item_final_price: 79.0,
+    item_price: 100.0,
+    item_discount: 21,
+    item_tag_name: "Trending",
+    item_disc_price: 21.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Closeup Everfresh+ Red Hot Gel Toothpaste 150 g (Pack of 2)",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/490008332/closeup-everfresh-red-hot-gel-toothpaste-150-g-pack-of-2-product-images-o490008332-p490008332-0-202206222347.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/490008332/closeup-everfresh-red-hot-gel-toothpaste-150-g-pack-of-2-product-images-o490008332-p490008332-0-202206222347.jpg",
+      "https://www.jiomart.com/images/product/600x600/490008332/closeup-everfresh-red-hot-gel-toothpaste-150-g-pack-of-2-product-images-o490008332-p490008332-2-202206222347.jpg",
+      "https://www.jiomart.com/images/product/600x600/490008332/closeup-everfresh-red-hot-gel-toothpaste-150-g-pack-of-2-product-images-o490008332-p490008332-3-202206222347.jpg",
+    ],
+    item_final_price: 121.0,
+    item_price: 182.0,
+    item_discount: 33,
+    item_tag_name: "Trending",
+    item_disc_price: 61.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Surf Excel Easy Wash Detergent Powder 5 kg",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-0-202203151445.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-0-202203151445.jpg",
+      "https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-1-202203151445.jpg",
+      "https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-2-202203151445.jpg",
+      "https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-3-202203151445.jpg",
+      "https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-4-202203151445.jpg",
+      "https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-5-202203151445.jpg",
+      "https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-6-202203151445.jpg",
+    ],
+    item_final_price: 590.0,
+    item_price: 730.0,
+    item_discount: 19,
+    item_tag_name: "Trending",
+    item_disc_price: 140.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Britannia NutriChoice Hi-Fibre Digestive Biscuits 1 kg",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/491373488/britannia-nutrichoice-hi-fibre-digestive-biscuits-1-kg-product-images-o491373488-p491373488-0-202203151522.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/491373488/britannia-nutrichoice-hi-fibre-digestive-biscuits-1-kg-product-images-o491373488-p491373488-0-202203151522.jpg",
+      "https://www.jiomart.com/images/product/150x150/491373488/britannia-nutrichoice-hi-fibre-digestive-biscuits-1-kg-product-images-o491373488-p491373488-1-202203151523.jpg",
+      "https://www.jiomart.com/images/product/150x150/491373488/britannia-nutrichoice-hi-fibre-digestive-biscuits-1-kg-legal-images-o491373488-p491373488-2-202203151523.jpg",
+      "https://www.jiomart.com/images/product/150x150/491373488/britannia-nutrichoice-hi-fibre-digestive-biscuits-1-kg-legal-images-o491373488-p491373488-3-202203151523.jpg",
+    ],
+    item_final_price: 162.0,
+    item_price: 220.0,
+    item_discount: 26,
+    item_tag_name: "Trending",
+    item_disc_price: 58.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Amul Taaza Homogenised Toned Milk 1 L (Tetra Pak)",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-product-images-o490010311-p490010311-0-202203152257.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-product-images-o490010311-p490010311-0-202203152257.jpg",
+      "https://www.jiomart.com/images/product/150x150/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-product-images-o490010311-p490010311-1-202203152257.jpg",
+      "https://www.jiomart.com/images/product/150x150/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-product-images-o490010311-p490010311-2-202203152257.jpg",
+      "https://www.jiomart.com/images/product/150x150/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-product-images-o490010311-p490010311-3-202203152257.jpg",
+      "https://www.jiomart.com/images/product/150x150/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-legal-images-o490010311-p490010311-6-202203152257.jpg",
+    ],
+    item_final_price: 65.0,
+    item_price: 68.0,
+    item_discount: 4,
+    item_tag_name: "Trending",
+    item_disc_price: 3.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Mangaldeep Mogra Puja Agarbattis 120 pcs",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/491584193/mangaldeep-mogra-puja-agarbattis-120-pcs-product-images-o491584193-p491584193-0-202203170516.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/491584193/mangaldeep-mogra-puja-agarbattis-120-pcs-product-images-o491584193-p491584193-0-202203170516.jpg",
+      "https://www.jiomart.com/images/product/600x600/491584193/mangaldeep-mogra-puja-agarbattis-120-pcs-product-images-o491584193-p491584193-1-202203170516.jpg",
+      "https://www.jiomart.com/images/product/600x600/491584193/mangaldeep-mogra-puja-agarbattis-120-pcs-product-images-o491584193-p491584193-3-202203170516.jpg",
+    ],
+    item_final_price: 32.0,
+    item_price: 65.0,
+    item_discount: 50,
+    item_tag_name: "Trending",
+    item_disc_price: 33.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: false,
+  },
+  {
+    item_name:
+      "Lux Rose & Vitamin E Soft Glowing Skin Soap Bar 150 g (Pack of 3)",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-0-202203151351.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-0-202203151351.jpg",
+      "https://www.jiomart.com/images/product/150x150/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-1-202203151351.jpg",
+      "https://www.jiomart.com/images/product/150x150/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-2-202203151351.jpg",
+      "https://www.jiomart.com/images/product/150x150/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-3-202203151351.jpg",
+      "https://www.jiomart.com/images/product/150x150/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-5-202203151352.jpg",
+      "https://www.jiomart.com/images/product/600x600/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-7-202203151352.jpg",
+      "https://www.jiomart.com/images/product/150x150/490915877/lux-rose-vitamin-e-soft-glowing-skin-soap-bar-150-g-pack-of-3-product-images-o490915877-p490915877-8-202203151352.jpg",
+    ],
+    item_final_price: 181.0,
+    item_price: 216.0,
+    item_discount: 16,
+    item_tag_name: "Trending",
+    item_disc_price: 35.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+  {
+    item_name: "Surf Excel Matic Top Load Detergent Powder 6 kg",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-0-202204291101.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-0-202204291101.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-1-202204291101.jpg",
+      "https://www.jiomart.com/images/product/150x150/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-2-202204291101.jpg",
+      "https://www.jiomart.com/images/product/600x600/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-3-202204291102.jpg",
+      "https://www.jiomart.com/images/product/600x600/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-4-202204291102.jpg",
+      "https://www.jiomart.com/images/product/600x600/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-legal-images-o492848165-p591223798-8-202206031811.jpg",
+    ],
+    item_final_price: 1275.0,
+    item_price: 1425.0,
+    item_discount: 10,
+    item_tag_name: "Trending",
+    item_disc_price: 150.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: false,
+  },
+  {
+    item_name: "Parle-G Gold Biscuits 1 kg",
+    item_img_url:
+      "https://www.jiomart.com/images/product/600x600/491335633/parle-g-gold-biscuits-1-kg-product-images-o491335633-p491335633-0-202203150704.jpg",
+    item_other_img_url: [
+      "https://www.jiomart.com/images/product/600x600/491335633/parle-g-gold-biscuits-1-kg-product-images-o491335633-p491335633-0-202203150704.jpg",
+      "https://www.jiomart.com/images/product/150x150/491335633/parle-g-gold-biscuits-1-kg-product-images-o491335633-p491335633-1-202203150704.jpg",
+      "https://www.jiomart.com/images/product/150x150/491335633/parle-g-gold-biscuits-1-kg-legal-images-o491335633-p491335633-2-202203150704.jpg",
+    ],
+    item_final_price: 112.0,
+    item_price: 140.0,
+    item_discount: 20,
+    item_tag_name: "Trending",
+    item_disc_price: 28.0,
+    item_stock: true,
+    item_like: false,
+    item_star: 0,
+    item_quantity: 0,
+    text_veg: true,
+  },
+];
 
+document.getElementById("homepage_TopDeals_part_all_category").innerHTML = `
+<h1 style="padding: 20px 0 20px 50px;">Top Deals</h1>
+<div class="homepage_TopDeals_part_all_category_container">
+  <div class="homepage_sliderLiftRightarrow_images_container">
+      <a class="prev" onclick="homepage_TopDeals_part_all_category_iteamsslide('left')"></a>
+      <a class="next" onclick="homepage_TopDeals_part_all_category_iteamsslide('right')"></a>
+  </div>
+<div class="homepage_TopDeals_part_all_category_iteams"> </div>
+</div>
+    `;
+homepage_TopDeals_part_all_categoryArray.forEach((element) => {
+  let div = document.createElement("div");
+  div.innerHTML = `
+  <div><span class="homepage_TopDeals_part_dis_section"><span>${
+    element.item_discount
+  }</span>%<br>off</span> <span></span></div>
+  <div class="homepage_TopDeals_part_pro_detail">
+      <img class="product-image-photo"
+          src="${element.item_img_url}"
+          alt="">
+      <p class="clsgetname">${element.item_name.slice(0, 50)}</p>
+  </div>
+  <div class="homepage_TopDeals_part_price_box">
+      <p class="final_price">₹ ${element.item_final_price}.00</p>
+      <p class="price">M.R.P: <strike>₹ ${element.item_price}.00</strike></p>
+      <p class="save_price">Save ₹ ${element.item_disc_price}.00</p>
+  </div>
+  <div id="homepage_TopDeals_part_Addtocart_btn">
+  <button type="button"><span class="txt_btn">Add to Cart</span><span class="add_plus"></span></button>
+  </div>
+  `;
+
+  document
+    .querySelector(".homepage_TopDeals_part_all_category_iteams")
+    .append(div);
+});
+
+function homepage_TopDeals_part_all_category_iteamsslide(direction) {
+  var container = document.querySelector(
+    ".homepage_TopDeals_part_all_category_iteams"
+  );
+
+  scrollCompleted = 0;
+  var slideVar = setInterval(function () {
+    if (direction == "left") {
+      container.scrollLeft -= 28;
+    } else {
+      container.scrollLeft += 28;
+    }
+    scrollCompleted += 10;
+    if (scrollCompleted >= 100) {
+      window.clearInterval(slideVar);
+    }
+  }, 50);
+}
 // Part - bank_and_paytm_add +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - bank_and_paytm_add +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - bank_and_paytm_add +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - bank_and_paytm_add +++++++++++++++++++++++++++++++++++++++++++++++++
+let homepage_bank_and_paytm_add_partArray = [
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1656494148_910-x-278.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657119726_INDUSLAND-Bank-Offer-Banner-910x278-4-7-22.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657175622_910-x-278.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657278400_910-X-278.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1657631246_Payzapp_910x278.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1656657585_Cred-pay-Package_910x278.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1656657679_jiomart-svg_910x278.jpg",
+  "https://www.jiomart.com/images/cms/aw_rbslider/slides/1656930218_AU-Banking--unit-1st-to-31st-July_910x278.jpg",
+];
+
+document.getElementById("homepage_bank_and_paytm_add_part").innerHTML = `
+<div class="homepage_bank_and_paytm_add_part_container">
+  <div class="homepage_sliderLiftRightarrow_images_container">
+      <a class="prev" onclick="homepage_bank_and_paytm_add_part_iteamsslide('left')"></a>
+      <a class="next" onclick="homepage_bank_and_paytm_add_part_iteamsslide('right')"></a>
+  </div>
+<div class="homepage_bank_and_paytm_add_part_iteams"> </div>
+</div>
+    `;
+
+homepage_bank_and_paytm_add_partArray.forEach((element) => {
+  let img = document.createElement("img");
+  img.src = element;
+
+  document
+    .querySelector(".homepage_bank_and_paytm_add_part_iteams")
+    .append(img);
+});
+let homepage_bank_and_paytm_add_part_count =0;
+setInterval(() => {
+  homepage_bank_and_paytm_add_part_iteamsslide("right");
+}, 5000);
+function homepage_bank_and_paytm_add_part_iteamsslide(direction) {
+  var container = document.querySelector(
+    ".homepage_bank_and_paytm_add_part_iteams"
+  );
+
+  homepage_bank_and_paytm_add_part_count++;
+if(homepage_bank_and_paytm_add_part_count == 4){
+  container.scrollLeft = 0;
+  homepage_bank_and_paytm_add_part_count =0;
+}
+  scrollCompleted = 0;
+  var slideVar = setInterval(function () {
+    if (direction == "left") {
+      container.scrollLeft -= 150;
+    } else {
+      container.scrollLeft += 150;
+    }
+    scrollCompleted += 10;
+    if (scrollCompleted >= 100) {
+      window.clearInterval(slideVar);
+    }
+  }, 50);
+}
 
 // Part - Offers on daily essentials +++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - Offers on daily essentials  +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -235,25 +742,44 @@ let homepage_Shopbycategorieso_partArray = [
       "https://www.jiomart.com/images/category/3/thumb/0-3.png?v=1607022291",
   },
 ];
-// document.getElementById(
-//   "homepage_Shopbycategorieso_part"
-// ).innerHTML = `<div class="homepage_Shopbycategorieso_part_container">
-// <div class="homepage_Shopbycategorieso_images_container">
-//     <a class="prev" onclick="plusSlides(-1)">❮</a>
-//     <a class="next" onclick="plusSlides(1)">❯</a>
-// </div>
-// <div class="homepage_Shopbycategorieso_part_iteams"> </div>
-// </div>
-//     `;
-// homepage_Shopbycategorieso_partArray.forEach((element) => {
-//   let div = document.createElement("div");
-//   div.innerHTML = `
-//     <img src="${element.img_url}" alt="">
-//     <p>${element.name}</p>
-//   `;
+document.getElementById("homepage_Shopbycategorieso_part").innerHTML = `
+<h1 style="padding: 20px 0 20px 50px;">Shop by categories</h1>
+<div class="homepage_Shopbycategorieso_part_container">
+  <div class="homepage_sliderLiftRightarrow_images_container">
+      <a class="prev" onclick="homepage_Shopbycategorieso_part_iteamsslide('left')"></a>
+      <a class="next" onclick="homepage_Shopbycategorieso_part_iteamsslide('right')"></a>
+  </div>
+<div class="homepage_Shopbycategorieso_part_iteams"> </div>
+</div>
+    `;
+homepage_Shopbycategorieso_partArray.forEach((element) => {
+  let div = document.createElement("div");
+  div.innerHTML = `
+    <img src="${element.img_url}" alt="">
+    <p>${element.name}</p>
+  `;
 
-//   document.querySelector(".homepage_Shopbycategorieso_part_iteams").append(div);
-// });
+  document.querySelector(".homepage_Shopbycategorieso_part_iteams").append(div);
+});
+
+function homepage_Shopbycategorieso_part_iteamsslide(direction) {
+  var container = document.querySelector(
+    ".homepage_Shopbycategorieso_part_iteams"
+  );
+
+  scrollCompleted = 0;
+  var slideVar = setInterval(function () {
+    if (direction == "left") {
+      container.scrollLeft -= 28;
+    } else {
+      container.scrollLeft += 28;
+    }
+    scrollCompleted += 10;
+    if (scrollCompleted >= 100) {
+      window.clearInterval(slideVar);
+    }
+  }, 50);
+}
 
 // Part - Women's Fashion two+++++++++++++++++++++++++++++++++++++++++++++++++
 // Part - Women's Fashion two+++++++++++++++++++++++++++++++++++++++++++++++++
