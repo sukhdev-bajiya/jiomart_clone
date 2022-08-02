@@ -57,6 +57,9 @@
   position: fixed;
   top: 0;
 }
+#cart-div a{
+  position: relative;
+}
 #cart-div i,
 #cart-div span {
   font-size: 18px;
@@ -81,16 +84,15 @@
   border-radius: 0 7px 7px 0;
   padding: 0 14px;
 }
-
 #countOfCart {
   background-color: red;
   padding: 1px 6px;
   border-radius: 80px;
   font-size: 12px !important;
   font-weight: bold;
-  /* position: absolute; */
-  /* margin-top: -40px; */
-  /* margin: 0 20px 0 ; */
+  position: absolute;
+  top: -10px;
+  left: 5px
 }
 #slider_Menu_BTN{
   cursor: pointer;
