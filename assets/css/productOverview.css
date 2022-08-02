@@ -1,198 +1,231 @@
-
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
- #product-Overview_section {
-    height: 100vh;
-    /* border-bottom: 1px solid grey; */
-  }
-
-#product_Overview_Nav{
-    margin-top: 112px;
-    background-color: aliceblue;
-    font-size: 13px;
-}
-#product_Overview_Nav a{
-    text-decoration: none;
-    color: black;
-}
-#product_Overview_Nav>ul{
-    list-style: none;
-    display: flex;
-}
-#product_Overview_Nav>ul li{
-    padding: 4px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#product-Overview_section{
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    width: 100%;
-
+#product-Overview_section {
+  height: 100vh;
+  /* border-bottom: 1px solid grey; */
 }
 
-.All_Images_of_Selected_Product{
-    /* height: 700px; */
-    /* background-color: blue; */
-    display: flex;
-    width: 48%;
+#product_Overview_Nav {
+  margin-top: 112px;
+  background-color: aliceblue;
+  font-size: 13px;
 }
-.AllImagesSlider{
-    height: 70%;
-    width: 25%;
-    overflow-y: scroll;
+#product_Overview_Nav a {
+  text-decoration: none;
+  color: black;
+}
+#product_Overview_Nav > ul {
+  list-style: none;
+  display: flex;
+}
+#product_Overview_Nav > ul li {
+  padding: 4px;
+}
+
+#product-Overview_section {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+}
+
+.All_Images_of_Selected_Product {
+  /* height: 700px; */
+  /* background-color: blue; */
+  display: flex;
+  width: 48%;
+}
+.AllImagesSlider {
+  height: 70%;
+  width: 25%;
+  overflow-y: scroll;
 }
 .AllImagesSlider::-webkit-scrollbar {
-    display: none;
-  }
-.AllImagesSlider img{
-    width: 80%;
-    margin: 10px;
+  display: none;
+}
+.AllImagesSlider img {
+  width: 80%;
+  margin: 10px;
 }
 
-.NameDesc_of_Selected_Product{
-    /* height: 1000px; */
-    background-color: white;
-    padding: 20px;
-    width: 48%;
+.NameDesc_of_Selected_Product {
+  /* height: 1000px; */
+  background-color: white;
+  padding: 20px;
+  width: 48%;
 }
 
+.all_prices_div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.final_price_PO {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.price_PO {
+  font-size: 17px;
+  font-weight: 500;
+}
+.price_POO {
+  font-size: 16px;
+  font-weight: 500;
+  color: grey;
+}
+.Product_Names_Desc * {
+  margin: 4px;
+}
+.all_prices_div * {
+  margin: 0;
+}
+.all_prices_div {
+  margin-top: 20px;
+}
+.all_prices_div i {
+  font-size: 27px;
+  color: rgb(162, 3, 3);
+  color: grey;
+}
+.Product_fullName {
+  font-size: 22px;
+  font-weight: bolder;
+}
 
-.all_prices_div{
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.save_price {
+  font-size: 17px;
 }
-.final_price_PO{
-    font-size: 20px;
-    font-weight: bolder;
+
+.showGreenText {
+  color: #00a651;
+  font-weight: 600;
+  font-size: 20px;
 }
-.price_PO{
-    font-size: 17px;
-    font-weight: 500;
+
+.showBlueText {
+  color: #008ecc;
+  font-weight: 600;
+  font-size: 17px;
 }
-.price_POO{
-    font-size: 16px;
-    font-weight: 500;
-    color: grey;
+
+.Add_To_Cart_Btn {
+  background-color: #008ecc;
+  width: 180px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+  align-items: center;
 }
-.Product_Names_Desc *{
-    margin: 4px;
+.txt_btnn {
+  color: white;
 }
-.all_prices_div *{
+.add_plus {
+  color: #9ad8f3;
+  background-color: #17aded;
+  padding: 2px 4px;
+  border-radius: 50px;
+}
+.enter_pincode_divv {
+  display: flex;
+  width: 50%;
+  padding: 5px 10px;
+  border: none;
+  font-size: 17px;
+  outline: none;
+  margin-top: 15px;
+}
+.enter_pincode_divv > input {
+  width: 80%;
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 2px solid #7f7f7f;
+  font-size: 17px;
+  outline: none;
+}
+.enter_pincode_divv > button {
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid #7f7f7f;
+  font-size: 17px;
+  color: rgb(178, 28, 5);
+  font-weight: bold;
+}
+.enter_pincode_divv > i {
+  font-size: 22px;
+  margin-top: 4px;
+  margin-right: 4px;
+  color: #7f7f7f;
+}
+/* .enter_pincode_div button{
     margin: 0;
-}
-.all_prices_div{
-    margin-top: 20px;
-}
-.all_prices_div i{
-    font-size: 27px;
-    color: rgb(162, 3, 3);
-    color: grey;
-}
-.Product_fullName{
-    font-size: 22px;
-    font-weight: bolder;
+} */
+.location_btn {
+  color: grey;
 }
 
-.save_price{
-    font-size: 17px;
+.Available_Offers_Parent_div > div {
+  display: flex;
+  gap: 20px;
 }
 
-.showGreenText{
-    color: #00a651;
-    font-weight: 600;
-    font-size: 20px;
+.Available_Offer_div {
+  width: 230px;
+  height: 110px;
+  padding: 5px 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 8px;
+}
+.Available_Offers_1 {
+  display: inline;
+  font-weight: bold;
+  font-size: 10px;
+  color: #05b905;
+  border: 1px solid #40eb40;
+  padding: 3px 8px;
+  margin: 7px 0;
+  border-radius: 40px;
+}
+.Available_Offers_2 {
+  font-size: 13px;
+  font-weight: 620;
+}
+.Available_Offers_3 {
+  font-size: 15px;
+  font-weight: 420;
+  color: grey;
 }
 
-.showBlueText{
-    color: #008ecc;
-    font-weight: 600;
-    font-size: 17px;
+.SeeMorePo {
+  color: rgb(196, 5, 5);
+  font-size: 17px;
+  text-align: right;
 }
 
-.Add_To_Cart_Btn{
-    background-color: #008ecc;
-    width: 180px;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-around;
-    font-size: 17px;
-    align-items: center;
+.SelectedFromImagesSlider {
+  height: 100%;
 }
-.txt_btnn{
-    color: white;
-}
-.add_plus{
-    color: #9ad8f3;
-    background-color: #17aded;
-    padding: 2px 4px;
-    border-radius: 50px;
-}
-.enter_pincode_div{
-    display: flex;
-    width: 50%;
-    padding: 5px 10px;
-    border: none;
-    font-size: 17px;
-    outline: none;
-}
-.enter_pincode_div button{
-    margin: 0;
-}
-.location_btn{
-    color: grey;
+.hrRow {
+  width: 97%;
+  height: 2px;
 }
 
-.Available_Offers_Parent_div>div{
-    display: flex;
-    gap: 20px;
-}
 
-.Available_Offer_div{
-    width: 230px;
-    height: 110px;
-    padding: 5px 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    border-radius: 8px;
+#Item_Description{
+    padding: 0 30px;
+    /* width: 98%; */
 }
-.Available_Offers_1{
-    display: inline;
-    font-weight: bold;
-    font-size: 10px;
-    color: #05b905;
-    border: 1px solid #40eb40;
-    padding: 3px 8px;
-    margin: 7px 0;
-    border-radius: 40px;
+#first_desc{
+    padding-left: 30px;
 }
-.Available_Offers_2{
-    font-size: 13px;
-    font-weight: 620;
-}
-.Available_Offers_3{
-    font-size: 15px;
-    font-weight: 420;
-    color: grey;
-}
-
-.SeeMorePo{
-    color: rgb(196, 5, 5);
-    font-size: 17px;
-    text-align: right;
-}
-
-.SelectedFromImagesSlider{
-    height: 100%;
-}
-.hrlow{
-    width: 97%;
-    height: 3px;
+#second_desc{
+    padding-left: 30px;
 }

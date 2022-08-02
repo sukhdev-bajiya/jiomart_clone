@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JIO MART</title>
     <link rel="stylesheet" href="./assets/css/navbarfooter.css" />
-    <link rel="stylesheet" href="./assets/css/productOverview.css">
-    
-     
-  
+    <link rel="stylesheet" href="./assets/css/productOverview.css" />
   </head>
   <body>
     <section id="navabar-section">
-
       <!--===================== Upper half of navabar  ===========================-->
 
       <div id="nav-top">
         <!-- <div></div> -->
         <div id="logosM">
-          <i class="fa-solid fa-bars" id="slider_Menu_BTN" onclick="ShowSideSliderMenu()"></i>
+          <i
+            class="fa-solid fa-bars"
+            id="slider_Menu_BTN"
+            onclick="ShowSideSliderMenu()"
+          ></i>
           <a href="#">
-            <img src="https://www.jiomart.com/assets/version1659035733/smartweb/images/jiomart_logo_beta.svg"
-          alt=""/>
+            <img
+              src="https://www.jiomart.com/assets/version1659035733/smartweb/images/jiomart_logo_beta.svg"
+              alt=""
+            />
           </a>
         </div>
 
@@ -35,8 +37,7 @@
           <button><i class="fa-solid fa-list"></i></button>
         </div>
 
-   
- <!--============== before Login ============================= -->   
+        <!--============== before Login ============================= -->
 
         <div id="login-div">
           <a href="#">
@@ -45,7 +46,7 @@
           </a>
         </div>
 
- <!--============== After Login ======== 62 to 69 ===================== -->
+        <!--============== After Login ======== 62 to 69 ===================== -->
 
         <div id="after_login_div">
           <a href="#">
@@ -56,9 +57,9 @@
 
         <div id="cart-div">
           <a href="#">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span id="countOfCart">5</span>
-              <span>Cart</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="countOfCart">5</span>
+            <span>Cart</span>
           </a>
         </div>
       </div>
@@ -67,7 +68,6 @@
 
       <div id="nav-bottom">
         <div id="nav-bottom-options">
-
           <div id="location-option-div" onclick="ShowlocationPopup()">
             <i class="fa-solid fa-location-dot"></i>
             <div>
@@ -363,24 +363,26 @@
         <div class="triangle"></div>
         <div id="location_popup_div">
           <div class="location_popup_upper">
-              <div class="whereDoYouwant">
-                <h3 >Where do you want the delivery?</h3>
-                <span  onclick="HidelocationPopup()" class="location_close_btn">X</span>
-              </div>
-               <!--===================== part 1 Before Login ========================-->
-            
-             <div class="where_address_div" id="where_address_div">
+            <div class="whereDoYouwant">
+              <h3>Where do you want the delivery?</h3>
+              <span onclick="HidelocationPopup()" class="location_close_btn"
+                >X</span
+              >
+            </div>
+            <!--===================== part 1 Before Login ========================-->
+
+            <div class="where_address_div" id="where_address_div">
               <h5>Get access to your Addresses, Orders, and Wishlist</h5>
               <button>Sign in to see Your Addresses</button>
             </div>
-            
+
             <!--========= part 2 After Login ==================================-->
 
             <div class="my_address_div" id="my_address_div">
               <h4>Ayush</h4>
               <h4>825409</h4>
-              <p>13/17, Tara Tand </p>
-                <p>Koderma, Jharkhand</p>  
+              <p>13/17, Tara Tand</p>
+              <p>Koderma, Jharkhand</p>
               <button>Default Address</button>
             </div>
           </div>
@@ -390,183 +392,192 @@
             <h5>Select pincode to see product availability.</h5>
             <div class="enter_pincode_div">
               <i class="fa-solid fa-location-dot"></i>
-              <input type="text" maxlength="6" minlength="6" placeholder="Enter your Pincode">
+              <input
+                type="text"
+                maxlength="6"
+                minlength="6"
+                placeholder="Enter your Pincode"
+              />
               <button>Apply</button>
             </div>
             <div class="detect_loc_mark">
               <i class="fa-solid fa-location-crosshairs"></i>
               <h4>DETECT MY LOCATION</h4>
             </div>
-            
           </div>
-
         </div>
-
       </div>
     </section>
-   <!--============================ HTML slideer Menu ==================================-->
-   <section id="slide_menu_slider_section">
-    <div id="slide_menu_slider">
+    <!--============================ HTML slideer Menu ==================================-->
+    <section id="slide_menu_slider_section">
+      <div id="slide_menu_slider">
+        <div class="HelloName">
+          <div class="OnlyHelloName">
+            <div>
+              <i class="fa-solid fa-circle-user"></i>
+              <h3>Hello,</h3>
+              <h3 id="nameshowAfterLoginSlidebar">Ayush</h3>
+            </div>
+            <p id="CloseSlideMenuSlider" onclick="CloseSlideMenuSlider()">X</p>
+          </div>
 
-            <div class="HelloName">
-              <div class="OnlyHelloName">
-                <div>
-                  <i class="fa-solid fa-circle-user"></i>
-                  <h3>Hello, </h3>
-                  <h3 id="nameshowAfterLoginSlidebar">Ayush</h3>
-                </div>
-                <p id="CloseSlideMenuSlider" onclick="CloseSlideMenuSlider()">X</p>
-              </div>
+          <div class="HelloNameBtns">
+            <button>Account</button>
+            <button>Orders</button>
+          </div>
+        </div>
 
-              <div class="HelloNameBtns">
-                <button>Account</button>
-                <button>Orders</button>
+        <div class="Slider_Content_Option">
+          <div class="slider_home_option">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/">Shop by Category</a>
+              </li>
+              <li>
+                <a href="/">My List</a>
+              </li>
+              <li>
+                <a href="/">JioMart Wallet</a>
+              </li>
+              <li>
+                <a href="/">JioMart Gift Store</a>
+              </li>
+              <li>
+                <a href="/">JioMart Gift Card</a>
+              </li>
+              <li>
+                <a href="/">GoGreen with JioMart</a>
+              </li>
+              <li>
+                <a href="/">All Offers</a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <a href="/">My Account</a>
+              </li>
+              <li>
+                <a href="/">Need Help</a>
+              </li>
+              <li>
+                <a href="/">About us</a>
+              </li>
+              <li>
+                <a href="/">Guide</a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+
+          <div class="ContactUsinsideSlider">
+            <div>
+              <h3>CONTACT US</h3>
+              <p>WhatsApp us : <span>70003 70003</span></p>
+              <p>Call Us : <span>1800 890 1222</span></p>
+              <p>
+                Please note that you are accessing the BETA Version of
+                <span> www.jiomart.com</span>
+              </p>
+              <p>
+                Should you encounter any bugs, glitches, lack of functionality,
+                delayed deliveries, billing errors or other problems on the beta
+                website, please email us on <span>cs@jiomart.com </span>
+              </p>
+            </div>
+            <div>
+              <h3>DOWNLOAD APP</h3>
+              <div class="ContactUsinsideSliderImg">
+                <img
+                  src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/play_store-057f9061b4cd0fd4953a485569c15e63fdf8d89b0bcc025c04cfb34d9e8cd571.png"
+                  alt=""
+                />
+                <img
+                  src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/app_store-4407bc8ced0d52a50ff042ce51e32d51de3e11717955798ec54c6a28e7926c7c.png"
+                  alt=""
+                />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================================================================================== -->
 
-      <div class="Slider_Content_Option">
-            <div class="slider_home_option">
-                  <ul>
-                    <li>
-                      <a href="/">Home</a>
-                    </li>
-                    <li>
-                      <a href="/">Shop by Category</a>
-                    </li>
-                    <li>
-                      <a href="/">My List</a>
-                    </li>
-                    <li>
-                      <a href="/">JioMart Wallet</a>
-                    </li>
-                    <li>
-                      <a href="/">JioMart Gift Store</a>
-                    </li>
-                    <li>
-                      <a href="/">JioMart Gift Card</a>
-                    </li>
-                    <li>
-                      <a href="/">GoGreen with JioMart</a>
-                    </li>
-                    <li>
-                      <a href="/">All Offers</a>
-                    </li>
-                  </ul> 
-                  
-                  <ul>
-                    <li>
-                      <a href="/">My Account</a>
-                    </li>
-                    <li>
-                      <a href="/">Need Help</a>
-                    </li>
-                    <li>
-                      <a href="/">About us</a>
-                    </li>
-                    <li>
-                      <a href="/">Guide</a>
-                    </li>
-                    <li></li>
-                  </ul>
-            </div>
+    <!--============================= HTML FOR Product OverviewPage Start ================= -->
 
+    <!-- ========================================================================================= -->
 
-            <div class="ContactUsinsideSlider">
-              <div>
-                <h3>CONTACT US</h3>
-                <p>WhatsApp us : <span>70003 70003</span></p>
-                <p>Call Us : <span>1800 890 1222</span></p>
-                <p>
-                  Please note that you are accessing the BETA Version of
-                  <span> www.jiomart.com</span>
-                </p>
-                <p>
-                  Should you encounter any bugs, glitches, lack of functionality,
-                  delayed deliveries, billing errors or other problems on the beta
-                  website, please email us on <span>cs@jiomart.com </span>
-                </p>
-              </div>
-              <div>
-                <h3>DOWNLOAD APP</h3>
-                <div class="ContactUsinsideSliderImg">
-                  <img
-                    src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/play_store-057f9061b4cd0fd4953a485569c15e63fdf8d89b0bcc025c04cfb34d9e8cd571.png"
-                    alt=""
-                  />
-                  <img
-                    src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/app_store-4407bc8ced0d52a50ff042ce51e32d51de3e11717955798ec54c6a28e7926c7c.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            
+    <section id="product_Overview_Nav">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-angle-right"></i>
+        </li>
+        <li>
+          <a href="#">All Categories</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-angle-right"></i>
+        </li>
+        <li>
+          <span id="ProductNameinOverViewNav"
+            >Surf Excel Matic Top Load Detergent Powder 6 kg</span
+          >
+        </li>
+      </ul>
+    </section>
 
+    <section id="product-Overview_section">
+      <div class="All_Images_of_Selected_Product">
+        <div class="AllImagesSlider">
+          <!-- <img src="https://www.jiomart.com/images/product/600x600/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-0-202204291101.jpg" alt=""> -->
+          <img
+            src="https://www.jiomart.com/images/product/150x150/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-1-202204291101.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.jiomart.com/images/product/150x150/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-2-202204291101.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-3-202203151445.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-4-202203151445.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-5-202203151445.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-6-202203151445.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="SelectedFromImagesSlider">
+          <img
+            class="product-image-photo"
+            src="https://www.jiomart.com/images/product/600x600/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-0-202204291101.jpg"
+            alt=""
+          />
+        </div>
       </div>
 
-    </div>
-
-   
-
-   </section>
-   <!-- ==================================================================================== -->
-  
-   <!--============================= HTML FOR Product OverviewPage Start ================= -->
- 
-   <!-- ========================================================================================= -->
-  
-
-
-  <section id="product_Overview_Nav">
-    <ul>
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <i class="fa-solid fa-angle-right"></i>
-      </li>
-      <li>
-        <a href="#">All Categories</a>
-      </li>
-      <li>
-        <i class="fa-solid fa-angle-right"></i>
-      </li>
-      <li>
-        <span id="ProductNameinOverViewNav">Surf Excel Matic Top Load Detergent Powder 6 kg</span>
-      </li>
-    </ul>
-  </section>
-
-
-
-
-  <section id="product-Overview_section">
-
-    <div class="All_Images_of_Selected_Product">
-
-      <div class="AllImagesSlider">
-        <!-- <img src="https://www.jiomart.com/images/product/600x600/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-0-202204291101.jpg" alt=""> -->
-        <img src="https://www.jiomart.com/images/product/150x150/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-1-202204291101.jpg" alt="">
-        <img src="https://www.jiomart.com/images/product/150x150/492848165/surf-excel-matic-top-load-detergent-powder-6-kg-product-images-o492848165-p591223798-2-202204291101.jpg" alt="">
-        <img src= "https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-3-202203151445.jpg" alt="">
-        <img src="https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-4-202203151445.jpg" alt="">
-        <img src="https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-5-202203151445.jpg" alt="">
-        <img src="https://www.jiomart.com/images/product/150x150/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-6-202203151445.jpg" alt="">
-  
-      </div>
-      
-      <div class="SelectedFromImagesSlider">
-        <img class="product-image-photo" src="https://www.jiomart.com/images/product/600x600/492848164/surf-excel-matic-front-load-detergent-powder-6-kg-product-images-o492848164-p591223797-0-202204291101.jpg" alt="">
-     </div>
-
-    </div>
-
-
-    <div class="NameDesc_of_Selected_Product">
-      
+      <div class="NameDesc_of_Selected_Product">
         <div class="Product_Names_Desc">
-          <p class="Product_fullName">Surf Excel Matic Front Load Detergent Powder 6 kg</p>
-          <p class="price_POO">SURF EXCEL</p> 
+          <p class="Product_fullName">
+            Surf Excel Matic Front Load Detergent Powder 6 kg
+          </p>
+          <p class="price_POO">SURF EXCEL</p>
         </div>
 
         <div class="all_prices_div">
@@ -574,66 +585,102 @@
           <p class="price_PO">M.R.P: <strike>₹ 1425.00</strike></p>
           <i class="fa-solid fa-heart" class="heart_PO"></i>
         </div>
-        
-        <div>   
-          <p class="save_price">You Save : <span class="showGreenText">₹ 150.00</span> Inclusive of all taxes </p>
+
+        <div>
+          <p class="save_price">
+            You Save : <span class="showGreenText">₹ 150.00</span> Inclusive of
+            all taxes
+          </p>
           <p class="showGreenText">In Stock</p>
           <p>Sold By <span class="showBlueText">Reliance Retail</span></p>
-          <p>Inaugural Offer <span class="price_PO">Free Shipping</span> </p>
+          <p>Inaugural Offer <span class="price_PO">Free Shipping</span></p>
         </div>
 
         <div>
-        <button type="button" class="Add_To_Cart_Btn"><span class="txt_btnn">Add to Cart</span><span class="add_plus"><i class="fa-solid fa-plus"></i></span></button>
+          <button type="button" class="Add_To_Cart_Btn">
+            <span class="txt_btnn">Add to Cart</span
+            ><span class="add_plus"><i class="fa-solid fa-plus"></i></span>
+          </button>
         </div>
 
-        <div class="enter_pincode_div">
-          <button> <i class="fa-solid fa-location-dot" class="heart_PO"></i></button>
-          <input type="text" maxlength="6" minlength="6" placeholder="Enter your Pincode">
+        <div class="enter_pincode_divv">
+          <button><i class="fa-solid fa-location-dot"></i></button>
+          <input
+            type="text"
+            maxlength="6"
+            minlength="6"
+            placeholder="Enter your Pincode"
+          />
           <button>Check</button>
         </div>
 
         <div class="Available_Offers_Parent_div">
-          <h3>Available Offers <span>10</span> </h3>
+          <h3>Available Offers <span>10</span></h3>
           <div>
             <div class="Available_Offer_div">
               <p class="Available_Offers_1">BUY MORE SAVE MORE</p>
-              <p class="Available_Offers_2">Get Sugar at ₹ 9 only on Grocery Shopping of Min. ₹ 1499.</p>
+              <p class="Available_Offers_2">
+                Get Sugar at ₹ 9 only on Grocery Shopping of Min. ₹ 1499.
+              </p>
               <p class="Available_Offers_3">View 1 Offer</p>
             </div>
             <div class="Available_Offer_div">
               <p class="Available_Offers_1">ADDITIONAL OFFERS</p>
-              <p class="Available_Offers_2">Get Sugar at Rs.9 only on Grocery Shopping of Min. 1499.</p>
+              <p class="Available_Offers_2">
+                Get Sugar at Rs.9 only on Grocery Shopping of Min. 1499.
+              </p>
               <p class="Available_Offers_3">View 1 offer</p>
             </div>
             <div class="Available_Offer_div">
               <p class="Available_Offers_1">BANK OFFERS</p>
-              <p class="Available_Offers_2">Pay using Paytm Wallet &amp; Get up to Rs. 750/- Cashback.</p>
+              <p class="Available_Offers_2">
+                Pay using Paytm Wallet &amp; Get up to Rs. 750/- Cashback.
+              </p>
               <p class="Available_Offers_3">View 6 more offers</p>
             </div>
-         
           </div>
           <h3 class="SeeMorePo">SEE MORE</h3>
-          
         </div>
-   
-       
+      </div>
+    </section>
+    <hr class="hrRow" />
 
 
+    <section id="Item_Description">
+
+    <div class="feat_detail">
+      <h2 id="first_title">Description</h2>
+      <div id="first_desc">
+          <p>
+            <b>Surf Excel Matic Top Load Detergent Powder 6 kg</b><br/>
+            Keep clothes looking fresh and clean with Surf Excel Matic Top Load
+            Detergent Powder that ensures tough stain removal from your clothes.
+            This detergent powder is suitable for both your white and coloured
+            clothes. It removes dirt from clothes, thereby removing dullness from
+            them and leaving a pleasant fragrance. So go ahead and buy this
+            product online today!
+          </p>
+          <p>
+          <b>Disclaimer:</b><br />Despite our attempts to provide you with the
+          most accurate information possible, the actual packaging, ingredients
+          and colour of the product may sometimes vary. Please read the label,
+          directions and warnings carefully before use.
+         </p>
+      </div>
     </div>
- 
-    
+
+    <hr>
+
+    <div id="Features_List">
+      <h2>Features & Details</h2>
+      <div id="second_desc">
+        <p>Removes tough stains</p>
+        <p>Leaves a pleasant scent</p>
+      </div>
+        
+    </div>
 
   </section>
-  <hr class="hrlow">
-
-
-
-
-
-
-
-
-   
 
     <!-- =============== HTML For Footer Section ====================================== -->
 
@@ -732,10 +779,12 @@
       </div>
     </section>
 
-     <!--=================== HTML end ======================================= -->
-
+    <!--=================== HTML end ======================================= -->
   </body>
 
-  <script src="https://kit.fontawesome.com/337fe3a5de.js" crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/337fe3a5de.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="./assets/js/navbar.js"></script>
 </html>
