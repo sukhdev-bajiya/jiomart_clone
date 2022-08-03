@@ -1,8 +1,7 @@
 
-
-
-
-document.getElementById("navabar-section").innerHTML = `
+shownavbar();
+function shownavbar() {
+  document.getElementById("navabar_section").innerHTML = `
 <!--===================== Upper half of navabar  ===========================-->
 
     <div id="nav-top">
@@ -353,8 +352,8 @@ document.getElementById("navabar-section").innerHTML = `
         </div>
       </div>
     </div>
-`
-document.getElementById("location_popup_section").innerHTML=`
+`;
+  document.getElementById("location_popup_section").innerHTML = `
 <div id="location_popup">
       <div class="triangle"></div>
       <div id="location_popup_div">
@@ -386,9 +385,10 @@ document.getElementById("location_popup_section").innerHTML=`
           <h5>Select pincode to see product availability.</h5>
           <div class="enter_pincode_div">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="text" maxlength="6" minlength="6" placeholder="Enter your Pincode">
-            <button>Apply</button>
+            <input type="text" id="pincodeFromPopUp" maxlength="6" minlength="6" placeholder="Enter your Pincode">
+            <button onclick="pincodeFromPopUpUpdatevaleinlocal()">Apply</button>
           </div>
+          <span><i id="locationToBeShown"></i></span>
           <div class="detect_loc_mark">
             <i class="fa-solid fa-location-crosshairs"></i>
             <h4>DETECT MY LOCATION</h4>
@@ -399,9 +399,9 @@ document.getElementById("location_popup_section").innerHTML=`
       </div>
 
     </div>
-`
+`;
 
-document.getElementById("slide_menu_slider_section").innerHTML=`
+  document.getElementById("slide_menu_slider_section").innerHTML = `
 <div id="slide_menu_slider">
 
       <div class="HelloName">
@@ -499,9 +499,9 @@ document.getElementById("slide_menu_slider_section").innerHTML=`
       </div>
 
     </div>
-`
+`;
 
-document.getElementById("footer-section").innerHTML=`
+  document.getElementById("footer_section").innerHTML = `
 <footer>
       <ul>
         <li>
@@ -592,45 +592,79 @@ document.getElementById("footer-section").innerHTML=`
       </p>
       <p>© 2022 All rights reserved. Reliance Retail Ltd.</p>
     </div>
-`
+`;
+}
 
 //// ============== Check Login or not ===================================== ///
 
 setInterval(function () {
-  if(false){
+  if (false) {
     document.getElementById("where_address_div").style.display = "none";
     document.getElementById("my_address_div").style.display = "block";
-  }else{
+  } else {
     document.getElementById("where_address_div").style.display = "block";
     document.getElementById("my_address_div").style.display = "none";
   }
-},200);
-
-
+}, 200);
 
 ///============== JS FOR LOCATION  POPUP =================== \\
-
-
 
 function ShowlocationPopup() {
   document.getElementById("location_popup_section").style.display = "block";
 }
 
-
 function HidelocationPopup() {
   document.getElementById("location_popup_section").style.display = "none";
 }
 
-
 ///============== JS FOR Slider Menu =================== \\
 
-
-
-function ShowSideSliderMenu(){
+function ShowSideSliderMenu() {
   document.getElementById("slide_menu_slider_section").style.display = "block";
   document.getElementById("slide_menu_slider_section").style.width = "100%";
 }
 
-function CloseSlideMenuSlider(){
+function CloseSlideMenuSlider() {
   document.getElementById("slide_menu_slider_section").style.display = "none";
 }
+
+document
+  .getElementById("pincodeFromPopUp")
+  .addEventListener("keyup", getLocation);
+let pincodeSpan = document.getElementById("locationToBeShown");
+
+async function getLocation(e) {
+  try {
+    let pincode = document.getElementById("pincodeFromPopUp");
+    if (pincode.value.length == 6) {
+      let res = await fetch(
+        `https://api.postalpincode.in/pincode/${pincode.value}`
+      );
+      let data = await res.json();
+
+      DisplayPinCode(data[0]);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function DisplayPinCode(data) {
+  pincodeSpan.innerText = "";
+  if (data.PostOffice) {
+    let LocationOfPin = data.PostOffice[0];
+    pincodeSpan.innerText = `${LocationOfPin.District}, ${LocationOfPin.State}`;
+  } else {
+    pincodeSpan.innerText = data.Message;
+  }
+}
+
+function pincodeFromPopUpUpdatevaleinlocal() {
+  localStorage.setItem(
+    "userpincodelocal",
+    document.getElementById("pincodeFromPopUp").value
+  );
+  document.getElementById("pincode").innerText = document.getElementById("pincodeFromPopUp").value;
+  HidelocationPopup()
+}
+document.getElementById("pincode").innerText = localStorage.getItem("userpincodelocal");

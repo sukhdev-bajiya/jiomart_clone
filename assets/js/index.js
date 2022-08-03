@@ -4,7 +4,7 @@
 // Part -  homepage body+++++++++++++++++++++++++++++++++++++++++++++++++
 
 document.body.innerHTML = `
-<section id="navabar-section"></section>
+<section id="navabar_section"></section>
 <section id="location_popup_section"></section>
 <section id="slide_menu_slider_section"></section>
 <section id="homepage_top_slider_part"></section>
@@ -27,7 +27,7 @@ document.body.innerHTML = `
 <section id="homepage_MensFashionallproduct_part"></section>
 <section id="homepage_homeCitiPart1_part"></section>
 <section id="homepage_homeCitiPart2_part"></section>
-<section id="footer-section"></section>
+<section id="footer_section"></section>
 `;
 
 dishplayData();
@@ -564,7 +564,7 @@ function showSlides(n) {
 
 async function dishplayData1() {
   try {
-    let res = await fetch("http://localhost:3000/Top_Deals");
+    let res = await fetch("https://jsonservermasai.herokuapp.com/items");
     let data = await res.json();
 
     // Part - Top Deals +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -594,10 +594,10 @@ async function dishplayData1() {
       }
       let div = document.createElement("div");
       div.innerHTML = `
-        div><span class="homepage_TopDeals_part_dis_section"><span>${
+        <div><span class="homepage_TopDeals_part_dis_section"><span>${
           element.item_discount
-        }</span>%<br>off</span> <span></span></div>
-        <div class="homepage_TopDeals_part_pro_detail">
+        }</span>%<br>off</span></div>
+        <div class="homepage_TopDeals_part_pro_detail" onclick="showSelectProductDetails(${element.id})">
             <img class="product-image-photo"
                 src="${element.item_img_url}"
                 alt="">
@@ -621,7 +621,7 @@ async function dishplayData1() {
 }
 
 function updateproductValuesplus(id, val) {
-  fetch(`http://localhost:3000/Top_Deals/${id}`, {
+  fetch(`https://jsonservermasai.herokuapp.com/items/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       item_quantity: val + 1,
@@ -632,7 +632,7 @@ function updateproductValuesplus(id, val) {
 }
 
 function updateproductValuesminus(id, val) {
-  fetch(`http://localhost:3000/Top_Deals/${id}`, {
+  fetch(`https://jsonservermasai.herokuapp.com/items/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       item_quantity: val - 1,
@@ -640,4 +640,9 @@ function updateproductValuesminus(id, val) {
     headers: { "Content-Type": "application/json" },
   });
   dishplayData1()
+}
+
+function showSelectProductDetails(id){
+localStorage.setItem("selectProductIdandshowDetails", id);
+window.open("./pages/products/productView.html","_Self");
 }

@@ -412,7 +412,7 @@ section>img {
     z-index: 1;
 }
 
-.homepage_TopDeals_part_all_category_iteams>div>div>span:first-child {
+.homepage_TopDeals_part_all_category_iteams>div>div>.homepage_TopDeals_part_dis_section{
     background-image: url(https://www.jiomart.com/assets/version1659035733/smartweb/images/icons/offer_bg.svg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -485,13 +485,13 @@ section>img {
     margin-top: 2px;
 }
 
-.homepage_TopDeals_part_all_category_iteams #homepage_TopDeals_part_Addtocart_btn {
+#homepage_TopDeals_part_Addtocart_btn {
     width: 100%;
     padding: 10px;
 
 }
 
-.homepage_TopDeals_part_all_category_iteams #homepage_TopDeals_part_Addtocart_btn>button {
+#homepage_TopDeals_part_Addtocart_btn>button {
     background: #008ecc;
     width: 100%;
     font-size: 14px;
@@ -506,13 +506,13 @@ section>img {
     justify-content: space-around;
     line-height: 32px;
 }
-.homepage_TopDeals_part_all_category_iteams #homepage_TopDeals_part_Addtocart_btn>button>.qty_minus  {
+#homepage_TopDeals_part_Addtocart_btn>button>.qty_minus  {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background: rgba(255, 255, 255, .1) url(https://www.jiomart.com/assets/version1659035733/smartweb/images/icons/minus-bulecolor.svg) center no-repeat;
 }
-.homepage_TopDeals_part_all_category_iteams #homepage_TopDeals_part_Addtocart_btn>button>.add_plus {
+#homepage_TopDeals_part_Addtocart_btn>button>.add_plus {
     width: 24px;
     height: 24px;
     border-radius: 50%;

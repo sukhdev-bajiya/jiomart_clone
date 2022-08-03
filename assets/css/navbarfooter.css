@@ -8,7 +8,7 @@
       z-index: 5;
     }
 
-    #navabar-section {
+    #navabar_section {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -28,6 +28,119 @@
       background-color: #008ecc;
       color: white;
       min-width: 1230px;
+    }
+
+    #logosM {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #logosM img {
+      width: 110px;
+    }
+
+    #logosM i {
+      font-size: 30px;
+    }
+
+    #nav-top a {
+      text-decoration: none;
+      color: white;
+      /* width: 30px; */
+    }
+
+    #login-div {
+      display: block;
+    }
+
+    #login-div i,
+    #login-div span {
+      font-size: 18px;
+      margin: 0 2px;
+    }
+
+    #after_login_div {
+      display: none;
+    }
+
+    #after_login_div a {
+      display: flex;
+      gap: 15px;
+    }
+
+    #after_login_div i {
+      font-size: 32px;
+      margin: 0 2px;
+    }
+
+    #after_login_div {
+      font-size: 22px;
+
+    }
+
+    /* #cart-div{
+  display: flex;
+  background-color: bisque; 
+  width: 200px;
+}
+#cart-div>div{
+  position: relative;
+}
+#cart-div>div p{
+  margin: 0;
+} */
+    #cart-div>div>span {
+      position: fixed;
+      top: 0;
+    }
+
+    #cart-div a {
+      position: relative;
+    }
+
+    #cart-div i,
+    #cart-div span {
+      font-size: 18px;
+      margin: 0 2px;
+    }
+
+    #search-div {
+      display: flex;
+      width: 60%;
+    }
+
+    #search-div input {
+      width: 100%;
+      font-size: 17px;
+      height: 30px;
+      padding: 6px 20px;
+      border-radius: 7px 0 0 7px;
+      outline: none;
+      border: none;
+    }
+
+    #search-div button {
+      background-color: white;
+      border: none;
+      border-radius: 0 7px 7px 0;
+      padding: 0 14px;
+    }
+
+    #countOfCart {
+      background-color: red;
+      padding: 1px 6px;
+      border-radius: 80px;
+      font-size: 12px !important;
+      font-weight: bold;
+      position: absolute;
+      top: -10px;
+      left: 5px
+    }
+
+    #slider_Menu_BTN {
+      cursor: pointer;
     }
 
     #logosM {
@@ -200,7 +313,7 @@
 
     /*========================CSS For Footer=========================================================*/
 
-    #footer-section {
+    #footer_section {
       max-width: 1680px;
       min-width: 1024px;
       background-color: #ededef;
@@ -621,7 +734,11 @@
     #location_popup {
       z-index: 2;
     }
-
+    #locationToBeShown {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #05b905;
+    }
 
     /* =================  CSS For Slider Menu ========================================*/
 
