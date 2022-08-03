@@ -218,14 +218,22 @@ body {
   height: 2px;
 }
 
+#Item_Description {
+  padding: 0 30px;
+  /* width: 98%; */
+}
+#first_desc {
+  padding-left: 30px;
+}
+#second_desc {
+  padding-left: 30px;
+}
 
-#Item_Description{
-    padding: 0 30px;
-    /* width: 98%; */
-}
-#first_desc{
-    padding-left: 30px;
-}
-#second_desc{
-    padding-left: 30px;
+/* 
+CSSS For Location to be shown */
+
+#locationToBeShown {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #05b905;
 }
