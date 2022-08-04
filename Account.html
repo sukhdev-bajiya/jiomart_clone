@@ -625,32 +625,33 @@
       <div id="UpdateAddress_PopUp">
         <button id="ClosePopBtn_address" onclick="ClosePopBtn_address()">X</button>
         <div id="UpdateAddress">
-          <p>EDIT PROFILE</p>
+          <p class="edit_U">EDIT PROFILE</p>
 
           <form id="profileUpdateForm">
-            <label>First Name</label>
-            <input type="text">
-            <label>Last Name</label>
-            <input type="text">
+            <label class="skyblue_U">First Name</label>
+            <input type="text" id="firstName_U" class="OpenInput_U">
+            <label class="skyblue_U">Last Name</label>
+            <input type="text" id="lastName_U" class="OpenInput_U">
             <div>
-            <label>Gender</label>
-            <select name="" id="genderSelect">
-              <option value="">-select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-             <option value="other">Other</option>
-            </select>
-            <label>Date Of Birth</label>
-            <input type="date">
+              <label class="skyblue_U">Gender</label>
+              <select name="" id="gender_U" class="OpenInput_U">
+                
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="">Unspecified</option>
+              </select>
+              <label class="skyblue_U">Date Of Birth</label>
+              <input type="date" id="date_U" class="OpenInput_U">
 
             </div>
             
-            <label>Email ID</label>
-            <input type="text">
-            <label>Phone Number</label>
-            <input type="text">
+            <label class="skyblue_U">Email ID</label>
+            <input type="text" id="email_U" class="OpenInput_U">
+            <label class="skyblue_U">Phone Number</label>
+            <input type="text" id="phoneNo_U" class="OpenInput_U">
 
-            <input type="submit">
+            <input type="submit" class="Submit_btn_U">
           </form>
 
         </div>

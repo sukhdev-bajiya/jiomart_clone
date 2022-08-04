@@ -95,8 +95,6 @@
   border-radius: 8px;
 }
 
-#Info_Account_div {
-}
 .heading_of_account_info {
   width: 100%;
   display: flex;
@@ -205,4 +203,34 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/*=============================== After First Deplay ======================================*/
+
+.edit_U {
+  text-align: center;
+  color: grey;
+}
+.skyblue_U {
+  color: #1798d0;
+  font-weight: 700px;
+}
+
+.OpenInput_U {
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 2px 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+.Submit_btn_U {
+  width: 95%;
+  padding: 10px 4px;
+  align-self: center;
+  color: white;
+  background-color: #008ecc;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
 }
