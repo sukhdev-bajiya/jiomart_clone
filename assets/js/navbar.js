@@ -1,4 +1,3 @@
-
 shownavbar();
 function shownavbar() {
   document.getElementById("navabar_section").innerHTML = `
@@ -8,7 +7,7 @@ function shownavbar() {
       <!-- <div></div> -->
       <div id="logosM">
         <i class="fa-solid fa-bars" id="slider_Menu_BTN" onclick="ShowSideSliderMenu()"></i>
-        <a href="#">
+        <a href="./index.html">
           <img src="https://www.jiomart.com/assets/version1659035733/smartweb/images/jiomart_logo_beta.svg" alt="" />
         </a>
       </div>
@@ -21,7 +20,7 @@ function shownavbar() {
       <!--============== before Login ============================= -->   
 
         <div id="login-div">
-          <a href="#">
+          <a href="./signup.html">
             <i class="fa-solid fa-user"></i>
             <span>Sign in / Sign up</span>
           </a>
@@ -39,9 +38,23 @@ function shownavbar() {
       <div id="cart-div">
         <a href="#">
           <i class="fa-solid fa-cart-shopping"></i>
-          <span id="countOfCart">10</span>
+          <span id="countOfCart">0</span>
           <span>Cart</span>
         </a>
+        <div class="cartpopup_container">
+            <span class="trishalCartcontainer"></span>
+            <div class="mc_title">
+                <h2>Order Summary</h2><span class="items">0 item(s)</span>
+            </div>
+            <div class="cartpopup_items" id="navbarCartpopup_items">
+            </div>
+            <div class="mc_footer">
+                <div class="mc_price">
+                    <div class="mc_amount"></div>
+                    <div class="mc_savings">You save ₹ 0.00</div>
+                </div><button class="mc_cartBtn btn-ripple" type="button">PROCEED TO CART</button>
+            </div>
+        </div>
       </div>
     </div>
 
@@ -369,16 +382,16 @@ function shownavbar() {
             <button>Sign in to see Your Addresses</button>
           </div>
 
-          <!--========= part 2 After Login ==================================-->
+          <!--  ========= part 2 After Login ==================================
 
           <div class="my_address_div" id="my_address_div">
-            <h4>Ayush</h4>
+            <h4 id="my_address_part_username>Ayush</h4>
             <h4>825409</h4>
             <p>13/17, Tara Tand </p>
             <p>Koderma, Jharkhand</p>
             <button>Default Address</button>
           </div>
-        </div>
+        </div>-->
 
         <div class="location_popup_lower">
           <h3>Or Enter Pincode</h3>
@@ -597,15 +610,15 @@ function shownavbar() {
 
 //// ============== Check Login or not ===================================== ///
 
-setInterval(function () {
-  if (false) {
-    document.getElementById("where_address_div").style.display = "none";
-    document.getElementById("my_address_div").style.display = "block";
-  } else {
-    document.getElementById("where_address_div").style.display = "block";
-    document.getElementById("my_address_div").style.display = "none";
-  }
-}, 200);
+// setInterval(function () {
+//   if (false) {
+//     document.getElementById("where_address_div").style.display = "none";
+//     document.getElementById("my_address_div").style.display = "block";
+//   } else {
+//     document.getElementById("where_address_div").style.display = "block";
+//     document.getElementById("my_address_div").style.display = "none";
+//   }
+// }, 200);
 
 ///============== JS FOR LOCATION  POPUP =================== \\
 
@@ -664,7 +677,42 @@ function pincodeFromPopUpUpdatevaleinlocal() {
     "userpincodelocal",
     document.getElementById("pincodeFromPopUp").value
   );
-  document.getElementById("pincode").innerText = document.getElementById("pincodeFromPopUp").value;
-  HidelocationPopup()
+  document.getElementById("pincode").innerText =
+    document.getElementById("pincodeFromPopUp").value;
+  HidelocationPopup();
 }
-document.getElementById("pincode").innerText = localStorage.getItem("userpincodelocal");
+document.getElementById("pincode").innerText =
+  localStorage.getItem("userpincodelocal");
+if (document.getElementById("pincode").innerText == "") {
+  document.getElementById("pincode").innerText = "302034";
+}
+
+checkuserdata();
+async function checkuserdata() {
+  try {
+    let userndata = localStorage.getItem("userNumberOndata");
+    let res = await fetch(
+      `https://jsonservermasai.herokuapp.com/jiomartuserdata?user_number=${userndata}`
+    );
+    let data = await res.json();
+    if (data.length == 1) {
+      document.getElementById("login-div").style.display = "none";
+      document.getElementById("after_login_div").style.display = "block";
+      document.getElementById("where_address_div").style.display = "none";
+      // document.getElementById("my_address_div").style.display = "block";
+
+      document.getElementById("yourNameAfterLogin_in_navbar").innerHTML =
+        data[0].user_fname || "User";
+      document.getElementById("nameshowAfterLoginSlidebar").innerHTML =
+        data[0].user_fname || "User";
+    } else {
+      document.getElementById("login-div").style.display = "block";
+      document.getElementById("after_login_div").style.display = "none";
+      document.getElementById("where_address_div").style.display = "block";
+      // document.getElementById("my_address_div").style.display = "none";
+      localStorage.setItem("jiomartUserNotLogin", false);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}

@@ -564,7 +564,7 @@ function showSlides(n) {
 
 async function dishplayData1() {
   try {
-    let res = await fetch("https://jsonservermasai.herokuapp.com/items");
+    let res = await fetch("https://jsonservermasai.herokuapp.com/items?item_category=Top_Deals");
     let data = await res.json();
 
     // Part - Top Deals +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -618,31 +618,4 @@ async function dishplayData1() {
   } catch (error) {
     console.log(error);
   }
-}
-
-function updateproductValuesplus(id, val) {
-  fetch(`https://jsonservermasai.herokuapp.com/items/${id}`, {
-    method: "PATCH",
-    body: JSON.stringify({
-      item_quantity: val + 1,
-    }),
-    headers: { "Content-Type": "application/json" },
-  });
-  dishplayData1()
-}
-
-function updateproductValuesminus(id, val) {
-  fetch(`https://jsonservermasai.herokuapp.com/items/${id}`, {
-    method: "PATCH",
-    body: JSON.stringify({
-      item_quantity: val - 1,
-    }),
-    headers: { "Content-Type": "application/json" },
-  });
-  dishplayData1()
-}
-
-function showSelectProductDetails(id){
-localStorage.setItem("selectProductIdandshowDetails", id);
-window.open("./pages/products/productView.html","_Self");
 }

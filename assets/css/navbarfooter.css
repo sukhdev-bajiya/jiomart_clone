@@ -15,7 +15,7 @@
       align-items: center;
       position: fixed;
       top: 0;
-      overflow: hidden;
+      /* overflow: hidden; */
       z-index: 5;
     }
 
@@ -80,17 +80,83 @@
 
     }
 
-    /* #cart-div{
-  display: flex;
-  background-color: bisque; 
-  width: 200px;
-}
-#cart-div>div{
+    #cart-div {
+      position: relative;
+    }
+
+    /* #cart-div>div{
   position: relative;
 }
 #cart-div>div p{
   margin: 0;
 } */
+    #cart-div:hover .cartpopup_container {
+      display: block;
+    }
+
+    #cart-div .cartpopup_container .mc_title {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    #cart-div .cartpopup_container .mc_title h2 {
+      text-transform: uppercase;
+    }
+
+    #cart-div .cartpopup_container .cartpopup_items .mc_item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    #cart-div .cartpopup_container .mc_footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    #cart-div .cartpopup_container .mc_footer .mc_price .mc_amount{
+      font-size: 21px;
+    font-weight: 700;
+    }
+    #cart-div .cartpopup_container .mc_footer .mc_price .mc_savings{
+      color: #05b905;
+    }
+    #cart-div .cartpopup_container .mc_footer .mc_cartBtn{
+      width: 200px;
+      margin: 6px;
+      border-radius: 5px;
+      color: white;
+      font-weight: 700;
+      background: #008ecc;
+      border: none;
+      letter-spacing: 1.5px;
+    }
+
+    .cartpopup_container {
+      color: black;
+      display: none;
+      position: absolute;
+      width: 401px;
+      height: auto;
+      right: 5px;
+      top: 51px;
+      padding: 5px;
+      background-color: rgb(255, 255, 255);
+      z-index: 2;
+      border-radius: 5px;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
+    .cartpopup_container>.trishalCartcontainer {
+      background: rgb(255, 255, 255);
+      height: 21px;
+      width: 21px;
+      position: absolute !important;
+      right: 21px;
+      top: -9px !important;
+      transform: rotate(45deg);
+    }
+
     #cart-div>div>span {
       position: fixed;
       top: 0;
@@ -213,7 +279,7 @@
       width: 100%;
       font-size: 17px;
       height: 30px;
-      padding: 6px 20px;
+      padding: 18px 20px;
       border-radius: 7px 0 0 7px;
       outline: none;
       border: none;
@@ -734,6 +800,7 @@
     #location_popup {
       z-index: 2;
     }
+
     #locationToBeShown {
       margin-left: 20px;
       font-size: 14px;

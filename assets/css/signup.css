@@ -1,0 +1,99 @@
+#signupSection_container {
+    margin-top: 125px;
+    padding: 25px 50px;
+}
+
+#footer_section {
+    display: none;
+}
+
+.signup_container {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#signupSection_container .signup_footer_section {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#signupSection_container .signup_footer_section span {
+    color: red;
+    cursor: pointer;
+}
+
+.signup_container .signup_container_rightpart1 {
+    padding: 38px 101px;
+    display: block;
+}
+
+.signup_container .signup_container_rightpart1 h1 {
+    padding: 0;
+    margin: 0 0 8px;
+    font-family: JioBold;
+    font-size: 24px;
+    color: #000;
+}
+
+.signup_container .signup_container_rightpart1>p {
+    font-family: JioMedium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .6);
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+
+.signup_container .signup_container_rightpart1 div {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    margin-bottom: 41px;
+}
+
+.signup_container .signup_container_rightpart1 button {
+    background: #008ecc;
+    font-family: JioMedium;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    border-radius: 50%;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 10px 6px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.signup_container .signup_container_rightpart1 div input {
+    padding: 9px 0 9px 3rem;
+    margin: 0;
+    width: calc(100% - 3.5rem);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    outline: none;
+    box-shadow: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.signup_container .signup_container_rightpart1 div #usersigninotp1 {
+    display: none;
+    padding: 9px 0 9px 0;
+}
+
+.signup_container .signup_container_rightpart1 div span {
+    margin-right: -41px;
+    border-right: 1px solid gray;
+    padding-right: 7px;
+}

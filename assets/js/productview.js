@@ -7,18 +7,17 @@ document.body.innerHTML = `
 <section id="Item_Description"></section>
 <section id="footer_section"></section>
 `;
-dishplayProductOnItemData()
+dishplayProductOnItemData();
 async function dishplayProductOnItemData() {
   try {
-    let id = localStorage.getItem("selectProductIdandshowDetails")
+    let id = localStorage.getItem("selectProductIdandshowDetails");
     let res = await fetch(`https://jsonservermasai.herokuapp.com/items/${id}`);
     let data = await res.json();
-
 
     document.getElementById("product_Overview_Nav").innerHTML = `
     <ul>
         <li>
-            <a href="../../index.html">Home</a>
+            <a href="./index.html">Home</a>
         </li>
         <li>
             <i class="fa-solid fa-angle-right"></i>
@@ -37,19 +36,18 @@ async function dishplayProductOnItemData() {
     </ul>
     `;
     let buttonInt;
-      if (data.item_quantity == 0) {
-        buttonInt = ` <button type="button" style="width: 175px;"><span class="txt_btn">Add to Cart</span><span class="add_plus" onclick="updateproductValuesplus(${data.id},${data.item_quantity})"></span></button>`;
-      } else {
-        buttonInt = `
+    if (data.item_quantity == 0) {
+      buttonInt = ` <button type="button" style="width: 175px;"><span class="txt_btn">Add to Cart</span><span class="add_plus" onclick="updateproductValuesplus(${data.id},${data.item_quantity})"></span></button>`;
+    } else {
+      buttonInt = `
             <button type="button" style="background-color:#fff; width: 175px; "><span class="qty_minus" onclick="updateproductValuesminus(${data.id},${data.item_quantity})"></span><span class="qty_valur" style="color:black">${data.item_quantity}</span><span class="add_plus" style="background-image:url(https://www.jiomart.com/assets/version1659035733/smartweb/images/icons/plus-bluecolor.svg)" onclick="updateproductValuesplus(${data.id},${data.item_quantity})"></span></button>
             `;
-      }
+    }
 
-      let likeornot;
-      if(data.item_like){
-
-        likeornot = 'style="color:red"'
-      }
+    let likeornot;
+    if (data.item_like) {
+      likeornot = 'style="color:red"';
+    }
     document.getElementById("product_Overview_section").innerHTML = `
     <div class="All_Images_of_Selected_Product">
         <div class="AllImagesSlider"></div>
@@ -92,9 +90,8 @@ async function dishplayProductOnItemData() {
             type="text"
             maxlength="6"
             minlength="6"
-            id="pincodeFromPopUp"
+            id="pincodeFromPopUp1"
             placeholder="Enter your Pincode"
-            value="${localStorage.getItem("userpincodelocal")}"
             />
         </div>
     
@@ -128,14 +125,12 @@ async function dishplayProductOnItemData() {
         </div>
     `;
 
-data.item_other_img_url.forEach(element => {
-    let img = document.createElement('img');
-    img.src = element;
-    document.querySelector(".AllImagesSlider").append(img);
-});
+    data.item_other_img_url.forEach((element) => {
+      let img = document.createElement("img");
+      img.src = element;
+      document.querySelector(".AllImagesSlider").append(img);
+    });
 
-    
-    
     document.getElementById("Item_Description").innerHTML = `
     <div class="feat_detail">
     <h2 id="first_title">Description</h2>
@@ -167,41 +162,15 @@ data.item_other_img_url.forEach(element => {
     
     </div>
     `;
-
+    if (localStorage.getItem("userpincodelocal") == null) {
+      document
+        .getElementById("pincodeFromPopUp1")
+        .setAttribute("value", "302034");
+    } else {
+      document.getElementById("pincodeFromPopUp1").value =
+        localStorage.getItem("userpincodelocal");
+    }
   } catch (error) {
     console.log(error);
   }
 }
-
-function updateproductValuesplus(id, val) {
-    fetch(`https://jsonservermasai.herokuapp.com/items/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({
-        item_quantity: val + 1,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-    dishplayProductOnItemData()
-  }
-  
-  function updateproductValuesminus(id, val) {
-    fetch(`https://jsonservermasai.herokuapp.com/items/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({
-        item_quantity: val - 1,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-    dishplayProductOnItemData()
-  }
-  
-  function likeProductvalue(id, val) {
-    fetch(`https://jsonservermasai.herokuapp.com/items/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({
-        item_like: !val,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-    dishplayProductOnItemData()
-  }
