@@ -7,6 +7,7 @@
     <title>JIO MART</title>
     <link rel="stylesheet" href="./assets/css/navbarfooter.css" />
     <!-- <link rel="stylesheet" href="./assets/css/productOverview.css" /> -->
+    <link rel="stylesheet" href="./assets/css/account.css" />
   </head>
   <body>
     <section id="navabar-section">
@@ -507,27 +508,156 @@
     </section>
     <!-- ==================================================================================== -->
 
-    <!--============================= HTML FOR Cart and Payment Section Start Start ================= -->
+    <!--============================= HTML FOR Account Page ================= -->
 
     <!-- ========================================================================================= -->
 
-   <section id="Cart_Sections">
-    <div id="Cart_">
+    <section id="Account_Section_Parent">
+      <h1 class="my_acc_heading">My Account</h1>
+      <div id="Account_Section">
+
+ <!-- 
+    HTML for Payment  info Div     -->       
+
+        <div id="Payment_Account_div">
+          <div>
+            <div id="Payment_Account_1">
+              <div>
+                <img
+                  src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2018/png/iconmonstr-user-circle-thin.png&r=0&g=0&b=0"
+                  class="userImage"
+                />
+              </div>
+              <div class="userDetails_account">
+                <h2>user suduko</h2>
+                <p class="dullBlue">userpro@gmail.com</p>
+                <p class="dullBlue">
+                  +91-<span class="phoneNoPaymentDiv">1234567890</span>
+                </p>
+              </div>
+            </div>
+
+            <div id="Payment_Account_2">
+              <div>
+                <button>
+                  <span>
+                    
+                    <i class="fa-solid fa-credit-card"></i></span>
+                  Payment Methods
+                </button>
+                <button>
+                  <span
+                    <i class="fa-solid fa-rectangle-list"></i></span>
+                  Order History
+                </button>
+              </div>
+              <div>
+                <button>
+                  <span><i class="fa-solid fa-location-dot"></i></span> Delivery
+                  Addresses
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- 
+    HTML for Account info Div     -->
+
+        <div id="Info_Account_div">
+              <div class="heading_of_account_info">
+              <h2>Account Information</h2>
+              <button onclick="ShowChangeAddressPop()" class="editAddress">EDIT</button>
+              </div>
+
+              <div id="All_Info_Data">
+
+                <div id="All_Info_Data_1">
+                  <div>
+                    <p class="dullgrey">Full Name</p>
+                    <h3>User Kurukshetra</h3>
+                    
+                  </div>
+                   <div>
+                    <p class="dullgrey">Email id</p>
+                    <h3>userKr@gmail.com</h3>
+                  </div>
+                
+
+                </div>
+
+                <div id="All_Info_Data_2"></div>
+                   <div>
+                    <p class="dullgrey">AGE</p>
+                    <h3>20</h3
+                  </div>
+                   <div>
+                    <p class="dullgrey">Mobile Number</p>
+                    <h3>+91-<span>1234567890</span></h3
+                  </div>
+                   <div>
+                    <p class="dullgrey">Default Address</Address></p>
+                    <h3>Ayush Kumar,<br> 13/17,Tara Tand,<br>Near Hanuman Mandir,Mumbai, Maharashtra - 400001</
+                  </div>
+
+                </div>
+
+              </div>
+        </div>
+      </div>
 
 
-    </div>
-    <div>
+    </section>
 
-    </div>
+    <section id="WishListSection">
+      <div class="ListButtons">
+        <button>My List </button>
+        <button>WishList</button>
+        <button>Legal Information</button>
+        <button>Need Help</button>
+        <button>Contact Us</button>
+        <button>Logout</button>
+      </div>
+
+    </section>
 
 
+    <section id="UpdateAddress_PopUp_section">
+      <div id="UpdateAddress_PopUp">
+        <button id="ClosePopBtn_address" onclick="ClosePopBtn_address()">X</button>
+        <div id="UpdateAddress">
+          <p>EDIT PROFILE</p>
 
-   </section>
+          <form id="profileUpdateForm">
+            <label>First Name</label>
+            <input type="text">
+            <label>Last Name</label>
+            <input type="text">
+            <div>
+            <label>Gender</label>
+            <select name="" id="genderSelect">
+              <option value="">-select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+             <option value="other">Other</option>
+            </select>
+            <label>Date Of Birth</label>
+            <input type="date">
 
+            </div>
+            
+            <label>Email ID</label>
+            <input type="text">
+            <label>Phone Number</label>
+            <input type="text">
 
+            <input type="submit">
+          </form>
 
+        </div>
 
+      </div>
 
+    </section>
 
     <!-- =============== HTML For Footer Section ====================================== -->
 
@@ -629,7 +759,11 @@
     <!--=================== HTML end ======================================= -->
   </body>
 
-  <script src="https://kit.fontawesome.com/337fe3a5de.js crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/337fe3a5de.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="./assets/js/navbar.js"></script>
   <script src="./assets/js/getLocation.js"></script>
-</html>
+  <script src="./assets/js/account.js"></script>
+  </html>
