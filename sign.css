@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+
+.navbar2 {
+    background-color: #ececed;
+    text-align: center;
+    position: fixed;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.navbar2 ul {
+    display: flex;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.navbar2 ul li {
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navbar2 ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.navbar2 ul li i {
+    color: #878b9c;
+}
+
+#loction_icon {
+    display: flex;
+}
+
+#loction_icon p {
+    margin-bottom: 0;
+    margin-top: -15px;
+    margin-left: -10px;
+}
+
+#loction_icon i {
+    font-size: 30px;
+    color: #878b9c;
+}
+
+.menu_text:nth-child(1) {
+    margin-left: 70px;
+}
+
+.menu_text:nth-child(2) {
+    margin-left: -20px;
+}
+
+.menu_text:nth-child(3) {
+    margin-left: 20px;
+}
+
+.menu_text:nth-child(4) {
+    margin-left: 20px;
+}
+
+.menu_text:nth-child(5) {
+    margin-left: 10px;
+}
+
+.menu_text:nth-child(6) {
+    margin-left: -20px;
+}
+
+.menu_text:nth-child(7) {
+    margin-left: -20px;
+}
+
+.menu_text:nth-child(8) {
+    margin-left: -20px;
+}
+
+.menu_text:nth-child(9) {
+    margin-left: -60px;
+}
+
+.sub_menu_1 {
+    display: none;
+}
+
+.navbar2 ul li:hover .sub_menu_1 {
+    display: block;
+    position: absolute;
+    background-color: #ececed;
+}
+
+.navbar2 ul li:hover .sub_menu_1 ul {
+    display: block;
+    margin-left: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar2 ul li:hover .sub_menu_1 ul li {
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+
+    margin-top: 10px;
+    width: 250px;
+}
+
+.navbar2 ul li:hover .sub_menu_1 ul li a:hover {
+    color: lightskyblue;
+}
+
+/* -------------------------------------------------------------sidenav bar------------------------------------------------------ */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#sidenav_home>a {
+    padding: 20px 8px 8px 20px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 70px;
+    color: white;
+    margin-top: 10px;
+}
+
+.myacc {
+    background-color: #008ecc;
+    height: 100px;
+}
+
+#hello_button {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    color: white;
+    margin-left: 10px;
+}
+
+#hello_icon {
+    font-size: 25px;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+
+#hello_text {
+    margin-left: 14px;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#account {
+    display: flex;
+}
+
+.accdiv {
+    border: 1px solid white;
+    width: 150px;
+    height: 25px;
+    color: white;
+    text-align: center;
+    margin-left: 7px;
+    padding-top: 7px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#order_box {
+    margin-left: 5px;
+}
+
+.line {
+    height: 5px;
+    width: 100%;
+    background-color: #ececed;
+    margin-top: 6px;
+}
+
+#sidenav_home {
+    overflow: scroll;
+    height: 600px;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+#sidenav_home>h4,
+p {
+    padding: 10px 0px 0px 20px;
+    margin-right: 20px;
+}
+
+#playstore {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#sign_page {
+    padding-top: 150px;
+}
+
+/* media Queries */
+@media only screen and (min-width:591px) and (max-width:800px) {
+
+    #form>input {
+        width: 250px;
+    }
+
+}
+
+@media screen and (min-width:0px) and (max-width:590px) {
+
+    .imgDiv {
+        display: none;
+    }
+
+    #form>input {
+        width: 250px;
+    }
+
+    .login {
+        min-width: 500px;
+    }
+
+}
+
+
+/* box shadows */
+.login {
+
+    border-radius: 18px;
+    display: flex;
+    flex-flow: wrap;
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.signinDiv {
+
+    padding: 5% 10%;
+}
+
+.login>.imgDiv {
+    width: 488px;
+    height: 528px;
+
+}
+
+img {
+    border-radius: 18px 0px;
+}
+
+.mobDiv {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: auto;
+    padding: 1%;
+
+
+}
+
+#mob {
+    width: auto;
+
+}
+
+#numRemoval {
+    color: red;
+    margin-left: 10%;
+}
+
+.forward {
+    padding: 5% 45%;
+}
+
+/* For scrolls disappearence */
+.login>div>div>div>input {
+    border: none;
+    -moz-appearance: textfield;
+    width: 250px;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.info>p {
+    margin: -2% 0% 10% -5%;
+    color: grey;
+}
+
+.prefix {
+    margin-right: 5px;
+}
+
+.terms,
+.privacy {
+    color: red;
+}
+
+.TandC {
+    margin: auto;
+    width: 330px;
+    line-height: 25px;
+    text-align: center;
+}
+
+#form>input,
+select {
+    margin-top: 5%;
+    /* background-color: white; */
+    width: 97%;
+    font-size: 14px;
+    padding: 1.5%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#gen {
+    margin-top: 5%;
+    width: 97%;
+    font-size: 14px;
+    padding: 1.5%;
+}
+
+#whatsappCB {
+    display: grid;
+    grid-template-columns: 50px 300px 25px;
+}
+
+#whatsappCB>img {
+    margin-top: 15px;
+}
+
+#otp>h3 {
+    color: lightseagreen;
+    margin-top: 10px;
+}
+
+#otp>input {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2%;
+    margin-top: 10px;
+
+
+}
+
+#loginbtn {
+    background-color: #0191D8;
+    color: white;
+    padding: 10px 200px;
+    border: #0191D8;
+    margin-left: -170px;
+    font-size: 14px;
+    border-radius: 6px;
+
+}
+
+.terms,
+.privacy:hover {
+    cursor: pointer;
+}
+
+#new-user {
+    color: grey;
+    margin-left: 20px;
+    padding: 2%;
+}
+
+#sign-up-page {
+    color: green;
+}
