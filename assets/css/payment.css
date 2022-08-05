@@ -141,7 +141,7 @@ body {
 #payment_nav {
   width: 100%;
   height: 75px;
-  background-color: #5f259f;
+  background-color: #fafafd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,6 +156,7 @@ body {
   align-items: center;
   height: auto;
   background-color: antiquewhite;
+  background-image: url("https://wallpaperaccess.com/full/4597135.jpg");
   border-radius: 10px;
 }
 .main_payment_content {
@@ -166,6 +167,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
   margin: 80px;
+  border: 2px solid purple;
 }
 
 .qrcode {
@@ -175,22 +177,25 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin: 15px;
+  margin-left: -4px;
 }
 .qrcode img {
   width: 180px;
 }
 #qrcode_cover {
-  width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.724);
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid grey;
+  width: 190px;
 }
 #qrcode_cover p {
   display: inline;
-  background-color: #5f259f;
+  background-color: #004584;
   color: white;
   padding: 7px 10px;
   border-radius: 60px;
@@ -226,7 +231,7 @@ body {
 }
 .PaymentInputsButton input {
   padding: 10px 20px;
-  border: 1px solid #5f259f;
+  border: 1px solid #004584;
   border-radius: 10px;
   font-size: 18px;
   outline: none;
@@ -236,11 +241,15 @@ body {
   width: 95%;
   text-align: center;
 }
+.h2mZero {
+  margin: 0;
+  color: #024687;
+}
 
 .PaymentInputsButton button {
   padding: 10px 20px;
-  border: 1px solid #5f259f;
-  background-color: #5f259f;
+  border: 1px solid #004584;
+  background-color: #1b5e9d8f;
   border-radius: 70px;
   font-size: 18px;
   outline: none;
@@ -257,7 +266,22 @@ body {
 .TermsInfoPara span {
   color: #5f259f;
 }
+.PaymentInputsButton {
+  text-align: center;
+}
+#waitingforPayment {
+  display: none;
+}
 
-#EnterOTPforPay {
+#Successfull {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(240, 248, 255, 0.66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
   display: none;
 }

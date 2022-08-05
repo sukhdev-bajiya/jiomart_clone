@@ -141,7 +141,7 @@
           </div>
         </div>
         <button id="ProceedToPay" onclick="ProceedToPay()">
-          Proceed To Pay ₹ <span>1800</span>.00
+          Proceed To Pay ₹ <span id="totalPayment">1800</span>.00
         </button>
       </div>
     </section>
@@ -154,5 +154,19 @@
   ></script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/addorremoveproduct.js"></script>
-  <script src="../assets/js/payment.js"></script>
+  <script>
+    function ProceedToPay() {
+      let amountToPay = Number(
+        document.getElementById("amountTotal").innerText
+      );
+      localStorage.setItem("TotalAmount", amountToPay);
+      window.open("./finalPayment.html", "_Self");
+
+      console.log(amountToPay);
+    }
+
+    let TotalPayment = JSON.parse(localStorage.getItem("usemakepayment")) || 0;
+    document.getElementById("totalPayment").innerText = TotalPayment;
+    document.getElementById("amountTotal").innerText = TotalPayment;
+  </script>
 </html>

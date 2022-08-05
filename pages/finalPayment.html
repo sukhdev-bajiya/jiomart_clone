@@ -10,15 +10,15 @@
   <body>
     <div id="payment_nav">
       <img
-        src="https://mercury.phonepe.com/linchpin/39bc6040b40f5b456810bbf4fccd7c6a.svg"
+        src="https://www.pngplay.com/wp-content/uploads/7/Online-Payment-Logo-PNG-HD-Quality.png"
         alt=""
       />
     </div>
-    <div id="payment_display">
+    <section id="payment_display">
       <div class="main_payment_content">
         <div>
           <div class="UpperHalfPay">
-            <h2>Scan and Pay via <span>Phone Pay</span></h2>
+            <h2>Scan and Pay via any UPI App</h2>
             <div class="qrcode">
               <img
                 src="https://www.investopedia.com/thmb/KfGSwVyV8mOdTHFxL1T0aS3xpE8=/1148x1148/smart/filters:no_upscale()/qr-code-bc94057f452f4806af70fd34540f72ad.png"
@@ -34,7 +34,7 @@
             <hr />
           </div>
           <div class="OrPhoneNodiv">
-            <h2>Enter Your UPI ID</h2>
+            <h2 class="h2mZero">Enter Your UPI ID</h2>
             <p class="TermsInfoPara">
               Login with the same number or register with a new number to access
               your account with PhonePe
@@ -44,9 +44,12 @@
                 type="text"
                 placeholder="Enter Your UPI Id"
                 class="EnterHeadingTag"
-                id="EnterPhoneNumber"
+                id="EnterUPIid"
               />
-              <button id="SendOTPbtn">Send Payment Request</button>
+              <button id="UPIconfirmBtn" disabled="true">
+                Send Payment Request
+              </button>
+              <p id="waitingforPayment"></p>
             </div>
 
             <p class="TermsInfoPara">
@@ -56,7 +59,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section id="Successfull">
+      <div>
+        <img
+          src="http://www.shikharclasses.in/wp-content/uploads/2020/04/PAYMENT-SUCCESS.png"
+          alt=""
+        />
+      </div>
+    </section>
   </body>
 </html>
 <script src="../assets/js/payment.js"></script>
