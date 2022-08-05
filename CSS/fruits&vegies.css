@@ -1,0 +1,125 @@
+body{
+    background-color: rgb(241, 238, 238);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.discount-price{
+    font-weight: 700;
+}
+hr{
+    color: rgb(250, 249, 249);
+}
+.arrow {
+    border: solid rgb(73, 68, 68);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.subhead{
+    font-size: 20px;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.contentSection{
+    display: flex;
+    justify-content: space-between;
+}
+.leftSide{
+    width: 22%;
+    height: auto;
+}
+.leftdivs{
+    border-radius: 10px;
+    padding: 5%;
+    line-height: 6px;
+    height: auto;
+    background-color: white;
+    box-shadow: rgb(255, 255, 255) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.rightSide{
+    width: 75%;
+}
+
+button{
+    height: 25px;
+    align-items: center;
+}
+a {
+    color: #323232;
+    text-decoration: none;
+    transition: all .3s ease 0s;
+}
+.filters{
+    display: flex;
+    justify-content: space-between;
+}
+.filter_buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 55%;
+    align-items: center;
+}
+#products_display{
+    padding: 1.5%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 20px;
+    row-gap: 35px;
+    background-color: white;
+    box-shadow: rgb(255, 255, 255) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.inside-container{
+    width: 190px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: auto;
+    height: 350px;
+    border-radius: 5%;
+    padding: 5%;
+}
+.image-container{
+    width: 80%;
+    margin: auto;
+}
+.category-container{
+    width: 20px;
+    height: 20px;
+    border: 1px solid green;
+}
+.symbol-veg{
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    border: 1px solid green;
+    margin: 4px;
+    border-radius: 50%;
+}
+.imges{
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+.heading{
+    height: 60px;
+    color: #323232;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.flex-box{
+    height: 40px;
+}
+.AddBtn{
+    width: 90%;
+    margin: auto;
+}
+.AddToCart{
+    width: 97%;
+    height: 35px;
+    margin: auto;
+    justify-items: center;
+    background-color: rgb(3, 105, 145);
+    color: white;
+}
