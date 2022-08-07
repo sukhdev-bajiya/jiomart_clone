@@ -726,18 +726,25 @@ function showAllProductsInNewPage(val) {
 
 document
   .getElementById("search")
-  .addEventListener("keypress", searchDivResultsInAll);
+  .addEventListener("keyup", searchDivResultsInAll);
 
-async function searchDivResultsInAll(e) {
+async function searchDivResultsInAll() {
   try {
-    let val = document.getElementById("search").value;
     document.getElementById("search_div_results").style.display = "block";
+    let val = document.getElementById("search").value;
+    document.getElementById("search_div_results").innerHTML = "";
     let res = await fetch(
       `https://jsonservermasai.herokuapp.com/items?item_name_like=${val}`
     );
+    console.log(
+      `https://jsonservermasai.herokuapp.com/items?item_name_like=${val}`
+    );
     let data = await res.json();
-
-    for (let i = 0; i < 5; i++) {
+    let as = 5;
+    if (data.length < 5) {
+      as = data.length;
+    }
+    for (let i = 0; i < as; i++) {
       let p = document.createElement("p");
       p.addEventListener("click", () => {
         localStorage.setItem("selectProductIdandshowDetails", data[i].id);
@@ -748,7 +755,7 @@ async function searchDivResultsInAll(e) {
     }
     setTimeout(() => {
       document.getElementById("search_div_results").style.display = "none";
-    }, 3000);
+    }, 5000);
   } catch (error) {
     console.log(error);
   }
