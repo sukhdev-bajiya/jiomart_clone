@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jio Mart Payment Gateway | Daily Needs Supermarket - JioMart</title>
+    <link rel="shortcut icon" href="../assets/img/jiomartlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbarfooter.css" />
+    <link rel="stylesheet" href="../assets/css/makepayment.css" />
+</head>
+
+<body>
+
+</body>
+<script src="https://kit.fontawesome.com/337fe3a5de.js" crossorigin="anonymous"></script>
+<script src="../assets/js/makepayment.js"></script>
+<script src="../assets/js/navbar.js"></script>
+<script src="../assets/js/addorremoveproduct.js"></script>
+<script>
+
+    function ProceedToPay() {
+        let amountToPay = Number(
+            document.getElementById("amountTotal").innerText
+        );
+        localStorage.setItem("TotalAmount", amountToPay);
+        window.open("./finalPayment.html", "_Self");
+
+        console.log(amountToPay);
+    }
+
+    let TotalPayment = JSON.parse(localStorage.getItem("usemakepayment")) || 0;
+    document.getElementById("totalPayment").innerText = TotalPayment;
+    document.getElementById("amountTotal").innerText = TotalPayment;
+    if (localStorage.getItem("jiomartUserNotLogin") == "false") {
+        window.open("./signup.html", "_Self");
+    }
+</script>
+
+</html>

@@ -560,11 +560,11 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-
-
 async function dishplayData1() {
   try {
-    let res = await fetch("https://jsonservermasai.herokuapp.com/items?item_category=Top_Deals");
+    let res = await fetch(
+      "https://jsonservermasai.herokuapp.com/items?item_category=Top_Deals"
+    );
     let data = await res.json();
 
     // Part - Top Deals +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -597,7 +597,9 @@ async function dishplayData1() {
         <div><span class="homepage_TopDeals_part_dis_section"><span>${
           element.item_discount
         }</span>%<br>off</span></div>
-        <div class="homepage_TopDeals_part_pro_detail" onclick="showSelectProductDetails(${element.id})">
+        <div class="homepage_TopDeals_part_pro_detail" onclick="showSelectProductDetails(${
+          element.id
+        })">
             <img class="product-image-photo"
                 src="${element.item_img_url}"
                 alt="">
@@ -605,7 +607,9 @@ async function dishplayData1() {
         </div>
         <div class="homepage_TopDeals_part_price_box">
             <p class="final_price">₹ ${element.item_final_price}.00</p>
-            <p class="price">M.R.P: <strike>₹ ${element.item_price}.00</strike></p>
+            <p class="price">M.R.P: <strike>₹ ${
+              element.item_price
+            }.00</strike></p>
             <p class="save_price">Save ₹ ${element.item_disc_price}.00</p>
         </div>
         <div id="homepage_TopDeals_part_Addtocart_btn"> ${buttonInt} </div>

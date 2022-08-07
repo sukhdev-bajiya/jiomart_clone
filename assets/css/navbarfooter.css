@@ -8,6 +8,10 @@
       z-index: 5;
     }
 
+    a {
+      cursor: pointer;
+    }
+
     #navabar_section {
       width: 100%;
       display: flex;
@@ -109,19 +113,23 @@
       justify-content: space-between;
       padding: 10px;
     }
+
     #cart-div .cartpopup_container .mc_footer {
       display: flex;
       justify-content: space-between;
       padding: 10px;
     }
-    #cart-div .cartpopup_container .mc_footer .mc_price .mc_amount{
+
+    #cart-div .cartpopup_container .mc_footer .mc_price .mc_amount {
       font-size: 21px;
-    font-weight: 700;
+      font-weight: 700;
     }
-    #cart-div .cartpopup_container .mc_footer .mc_price .mc_savings{
+
+    #cart-div .cartpopup_container .mc_footer .mc_price .mc_savings {
       color: #05b905;
     }
-    #cart-div .cartpopup_container .mc_footer .mc_cartBtn{
+
+    #cart-div .cartpopup_container .mc_footer .mc_cartBtn {
       width: 200px;
       margin: 6px;
       border-radius: 5px;
@@ -173,8 +181,31 @@
     }
 
     #search-div {
+      position: relative;
       display: flex;
       width: 60%;
+    }
+
+    #search_div_results {
+      position: absolute;
+      width: 100%;
+      background-color: #ffffff;
+      top: 37px;
+      left: 0;
+      border-radius: 7px;
+      z-index: 1;
+      height: 250px;
+      padding: 10px;
+      overflow: hidden;
+      display: none;
+    }
+
+    #search_div_results>p {
+      color: black;
+      font-size: 21px;
+      padding: 9px;
+      border-bottom: 1px solid gray;
+      cursor: pointer;
     }
 
     #search-div input {
@@ -867,14 +898,23 @@
       justify-content: space-around;
     }
 
-    .HelloNameBtns button {
+    .HelloNameBtns a {
       width: 49%;
       padding: 8px;
       font-size: 17px;
-      /* border-radius: 3px; */
+      text-decoration: none;
+      text-align: center;
       background-color: #008ecc;
       border: 1px solid white;
       color: white;
+      font-weight: 600;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    .HelloNameBtns a:hover {
+      background-color: white;
+      color: #008ecc;
     }
 
     .Slider_Content_Option {
