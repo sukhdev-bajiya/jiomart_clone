@@ -8,6 +8,10 @@
   z-index: 5;
 }
 
+a {
+  cursor: pointer;
+}
+
 #navabar_section {
   width: 100%;
   display: flex;
@@ -27,7 +31,7 @@
   height: 72px;
   background-color: #008ecc;
   color: white;
-  min-width: 1230px;
+  /* min-width: 1230px; */
 }
 
 #logosM {
@@ -108,18 +112,22 @@
   justify-content: space-between;
   padding: 10px;
 }
+
 #cart-div .cartpopup_container .mc_footer {
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
+
 #cart-div .cartpopup_container .mc_footer .mc_price .mc_amount {
   font-size: 21px;
   font-weight: 700;
 }
+
 #cart-div .cartpopup_container .mc_footer .mc_price .mc_savings {
   color: #05b905;
 }
+
 #cart-div .cartpopup_container .mc_footer .mc_cartBtn {
   width: 200px;
   margin: 6px;
@@ -173,8 +181,31 @@
 }
 
 #search-div {
+  position: relative;
   display: flex;
   width: 60%;
+}
+
+#search_div_results {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  top: 37px;
+  left: 0;
+  border-radius: 7px;
+  z-index: 1;
+  height: 250px;
+  padding: 10px;
+  overflow: hidden;
+  display: none;
+}
+
+#search_div_results > p {
+  color: black;
+  font-size: 21px;
+  padding: 9px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
 }
 
 #search-div input {
@@ -858,14 +889,23 @@ footer a {
   justify-content: space-around;
 }
 
-.HelloNameBtns button {
+.HelloNameBtns a {
   width: 49%;
   padding: 8px;
   font-size: 17px;
-  /* border-radius: 3px; */
+  text-decoration: none;
+  text-align: center;
   background-color: #008ecc;
   border: 1px solid white;
   color: white;
+  font-weight: 600;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.HelloNameBtns a:hover {
+  background-color: white;
+  color: #008ecc;
 }
 
 .Slider_Content_Option {
@@ -923,10 +963,104 @@ footer a {
 .slider_home_option li:hover a {
   color: white;
 }
+#navbar_small_section,
+#small_navbar_small_2 {
+  display: none;
+}
+@media screen and (min-width: 342px) and (max-width: 1023px) {
+  #navabar_section,
+  #location_popup_section,
+  #slide_menu_slider_section {
+    display: none;
+  }
+  #navbar_small_section,
+  #small_navbar_small_2 {
+    display: block;
+    z-index: 5;
+  }
 
-/*===============================================================================
-     ================ Adding Media Query ==============================================
-     =============================================================================== */
+  #homepage_top__part_all_category,
+  #homepage_bank_and_paytm_add_part {
+    width: 100%;
+    margin: auto;
+  }
+  #navbar_small {
+    width: 100%;
+    position: fixed;
+    background-color: #008ecc;
+    height: 100px;
+  }
+  #navbar_small_upper {
+    display: flex;
+    justify-content: space-between;
 
-@media all and (min-width: 320) and (max-width: 767) {
+    align-items: center;
+  }
+  #navbar_small_upper > div {
+    margin: 5px 0;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #navbar_small_upper i {
+    color: white;
+    font-size: 20px;
+  }
+
+  #smallCarProf {
+    display: flex;
+    gap: 15px;
+  }
+  #smallCart {
+    position: relative;
+  }
+  #smallCart span {
+    position: relative;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 50px;
+    top: -17px;
+    left: -24px;
+  }
+  #smallSearch_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  #smallSearch_div input {
+    width: 70%;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+    border: none;
+    padding: 6px 20px;
+    margin-bottom: 5px;
+  }
+  #smallSearch_div button {
+    background-color: white;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    padding: 6px 14px;
+    margin-top: -2px;
+  }
+
+  #small_navbar_small_2 {
+    position: fixed;
+    top: 100px;
+    /* margin-top: 100px; */
+    background-color: #e5e5e5;
+    width: 100%;
+  }
+  #small_navbar_small_2 > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  #small_navbar_small_2 > div > div {
+    display: flex;
+    gap: 10px;
+  }
 }

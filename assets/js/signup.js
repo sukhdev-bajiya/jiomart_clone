@@ -94,6 +94,7 @@ async function checkuserallreadyLoginornot(userndata) {
         method: "POST",
         body: JSON.stringify({
           user_number: userndata,
+          user_fname: "Guest",
         }),
         headers: { "Content-Type": "application/json" },
       });

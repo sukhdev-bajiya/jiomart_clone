@@ -15,6 +15,7 @@ function shownavbar() {
       <div id="search-div">
         <input id="search" type="text" placeholder="Search essentials, groceries, and more …" />
         <button><i class="fa-solid fa-list"></i></button>
+        <div id="search_div_results"> </div>
       </div>
 
       <!--============== before Login ============================= -->   
@@ -29,14 +30,14 @@ function shownavbar() {
  <!--============== After Login ======== 62 to 69 ===================== -->
 
         <div id="after_login_div">
-          <a href="#">
+          <a href="./useraccount.html">
             <i class="fa-solid fa-circle-user"></i>
             <span id="yourNameAfterLogin_in_navbar">Ayush</span>
           </a>
         </div>
 
       <div id="cart-div">
-        <a href="#">
+        <a href="./cartpage.html">
           <i class="fa-solid fa-cart-shopping"></i>
           <span id="countOfCart">0</span>
           <span>Cart</span>
@@ -51,7 +52,7 @@ function shownavbar() {
             <div class="mc_footer">
                 <div class="mc_price">
                     <div class="mc_amount"></div>
-                    <div class="mc_savings">You save ₹ 0.00</div>
+                    <div class="mc_savings"></div>
                 </div><button class="mc_cartBtn btn-ripple" type="button">PROCEED TO CART</button>
             </div>
         </div>
@@ -72,293 +73,293 @@ function shownavbar() {
         </div>
 
         <div id="Groceries-option">
-          <a href="">
-            <h4>Groceries</h4>
+          <a>
+            <h4 onclick="showAllProductsInNewPage('Top_Deals')">Groceries</h4>
           </a>
           <i class="fa-solid fa-chevron-down" class="arrowUp"></i>
           <div id="Groceries-dropdown">
             <ul class="navigation_submenu">
               <li>
-                <a href="#">Fruits &amp; Vegetables</a>
+                <a onclick="showAllProductsInNewPage('fruitsNvegies')">Fruits &amp; Vegetables</a>
               </li>
               <li>
-                <a href="#">Dairy &amp; Bakery</a>
+                <a>Dairy &amp; Bakery</a>
               </li>
               <li>
-                <a href="#">Staples</a>
+                <a>Staples</a>
               </li>
               <li>
-                <a href="#">Snacks &amp; Branded Foods</a>
+                <a>Snacks &amp; Branded Foods</a>
               </li>
               <li>
-                <a href="#">Beverages</a>
+                <a>Beverages</a>
               </li>
               <li>
-                <a href="#">Personal Care</a>
+                <a>Personal Care</a>
               </li>
               <li>
-                <a href="#">Home Care</a>
+                <a>Home Care</a>
               </li>
               <li>
-                <a href="#">Home &amp; Kitchen</a>
+                <a>Home &amp; Kitchen</a>
               </li>
               <li>
-                <a href="#">Mom &amp; Baby Care</a>
+                <a>Mom &amp; Baby Care</a>
               </li>
               <li>
-                <a href="#">Books</a>
+                <a>Books</a>
               </li>
               <li>
-                <a href="#">Pets</a>
+                <a>Pets</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div id="premiumfruits-option">
-          <a href="">
+          <a>
             <h4>Premium Fruits</h4>
           </a>
           <i class="fa-solid fa-chevron-down"></i>
           <div id="premiumfruits-dropdown">
             <ul class="navigation_submenu">
               <li>
-                <a href="#">Apples &amp; Pears</a>
+                <a>Apples &amp; Pears</a>
               </li>
               <li>
-                <a href="#">Avocado, Peach, Plum</a>
+                <a>Avocado, Peach, Plum</a>
               </li>
               <li>
-                <a href="#">Banana, Melons &amp; Coconut</a>
+                <a>Banana, Melons &amp; Coconut</a>
               </li>
               <li>
-                <a href="#">Cherries, Berries &amp; Exotic Fruits</a>
+                <a>Cherries, Berries &amp; Exotic Fruits</a>
               </li>
               <li>
-                <a href="#">Citrus, Mango &amp; Grapes</a>
+                <a>Citrus, Mango &amp; Grapes</a>
               </li>
               <li>
-                <a href="#">Dates</a>
+                <a>Dates</a>
               </li>
               <li>
-                <a href="#">Gift, Assorted &amp; XL Packs</a>
+                <a>Gift, Assorted &amp; XL Packs</a>
               </li>
               <li>
-                <a href="#">Pomegranate, Papaya &amp; Pineapple</a>
+                <a>Pomegranate, Papaya &amp; Pineapple</a>
               </li>
               <li>
-                <a href="#">Seasonal &amp; Minor Fruits</a>
+                <a>Seasonal &amp; Minor Fruits</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div id="homekitchen-option">
-          <a href="">
-            <h4>Home & Kitchen</h4>
+          <a>
+            <h4 onclick="showAllProductsInNewPage('kitchenware')">Home & Kitchen</h4>
           </a>
           <i class="fa-solid fa-chevron-down"></i>
           <div id="homekitchen-dropdown">
             <ul class="navigation_submenu">
               <li>
-                <a href="#">Kitchenware</a>
+                <a onclick="showAllProductsInNewPage('kitchenware')">Kitchenware</a>
               </li>
               <li>
-                <a href="#">Dining</a>
+                <a>Dining</a>
               </li>
               <li>
-                <a href="#">Furnishing</a>
+                <a>Furnishing</a>
               </li>
               <li>
-                <a href="#">Home Decor</a>
+                <a>Home Decor</a>
               </li>
               <li>
-                <a href="#">Furniture</a>
+                <a>Furniture</a>
               </li>
               <li>
-                <a href="#">Home Appliances</a>
+                <a>Home Appliances</a>
               </li>
               <li>
-                <a href="#">Toys, Games &amp; Fitness</a>
+                <a>Toys, Games &amp; Fitness</a>
               </li>
               <li>
-                <a href="#">Electrical</a>
+                <a>Electrical</a>
               </li>
               <li>
-                <a href="#">Bathroom &amp; Laundry Accessories</a>
+                <a>Bathroom &amp; Laundry Accessories</a>
               </li>
               <li>
-                <a href="#">Disposables</a>
+                <a>Disposables</a>
               </li>
               <li>
-                <a href="#">Stationery</a>
+                <a>Stationery</a>
               </li>
               <li>
-                <a href="#">Bags &amp; Travel Luggage</a>
+                <a>Bags &amp; Travel Luggage</a>
               </li>
               <li>
-                <a href="#">Mops, Brushes &amp; Scrubs</a>
+                <a>Mops, Brushes &amp; Scrubs</a>
               </li>
               <li>
-                <a href="#">Auto Care</a>
+                <a>Auto Care</a>
               </li>
               <li>
-                <a href="#">Garden &amp; Outdoor</a>
+                <a>Garden &amp; Outdoor</a>
               </li>
               <li>
-                <a href="#">Carpentry &amp; work accessories</a>
+                <a>Carpentry &amp; work accessories</a>
               </li>
               <li>
-                <a href="#">Pooja Needs</a>
+                <a>Pooja Needs</a>
               </li>
               <li>
-                <a href="#">Bathroom &amp; Laundry</a>
+                <a>Bathroom &amp; Laundry</a>
               </li>
               <li>
-                <a href="#">Industrial &amp; Scientific Supplies</a>
+                <a>Industrial &amp; Scientific Supplies</a>
               </li>
               <li>
-                <a href="#">Power &amp; Hand Tools</a>
+                <a>Power &amp; Hand Tools</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div id="fashion-option">
-          <a href="">
-            <h4>Fashion</h4>
+          <a>
+            <h4 onclick="showAllProductsInNewPage('mens')">Fashion</h4>
           </a>
           <i class="fa-solid fa-chevron-down"></i>
           <div id="fashion-dropdown">
             <ul class="navigation_submenu">
               <li>
-                <a href="#">Men</a>
+                <a onclick="showAllProductsInNewPage('mens')">Men</a>
               </li>
               <li>
-                <a href="#">Women</a>
+                <a>Women</a>
               </li>
               <li>
-                <a href="#">Boys</a>
+                <a>Boys</a>
               </li>
               <li>
-                <a href="#">Girls</a>
+                <a>Girls</a>
               </li>
               <li>
-                <a href="#">Junior Boys</a>
+                <a>Junior Boys</a>
               </li>
               <li>
-                <a href="#">Infants</a>
+                <a>Infants</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div id="electronics-option">
-          <a href="">
-            <h4>Electronics</h4>
+          <a>
+            <h4 onclick="showAllProductsInNewPage('Electronics')">Electronics</h4>
           </a>
           <i class="fa-solid fa-chevron-down"></i>
           <div id="electronics-dropdown">
             <ul class="navigation_submenu">
               <li>
-                <a href="#">Mobiles &amp; Tablets</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Mobiles &amp; Tablets</a>
               </li>
               <li>
-                <a href="#">TV &amp; Speaker</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">TV &amp; Speaker</a>
               </li>
               <li>
-                <a href="#">Home Appliances</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Home Appliances</a>
               </li>
               <li>
-                <a href="#">Computers</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Computers</a>
               </li>
               <li>
-                <a href="#">Cameras</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Cameras</a>
               </li>
               <li>
-                <a href="#">Kitchen Appliances</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Kitchen Appliances</a>
               </li>
               <li>
-                <a href="#">Personal Care &amp; Grooming</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Personal Care &amp; Grooming</a>
               </li>
               <li>
-                <a href="#">Smart Devices</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Smart Devices</a>
               </li>
               <li>
-                <a href="#">Gaming</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Gaming</a>
               </li>
               <li>
-                <a href="#">Accessories</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Accessories</a>
               </li>
               <li>
-                <a href="#">Phones</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Phones</a>
               </li>
               <li>
-                <a href="#">Office Products</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Office Products</a>
               </li>
               <li>
-                <a href="#">Health Care Devices</a>
+                <a onclick="showAllProductsInNewPage('Electronics')">Health Care Devices</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div id="beauty-option">
-          <a href="">
-            <h4>Beauty</h4>
+          <a>
+            <h4 onclick="showAllProductsInNewPage('makeup')">Beauty</h4>
           </a>
           <i class="fa-solid fa-chevron-down"></i>
           <div id="beauty-dropdown">
             <ul class="navigation_submenu">
               <li>
-                <a href="#">Make-Up</a>
+                <a onclick="showAllProductsInNewPage('makeup')">Make-Up</a>
               </li>
               <li>
-                <a href="#">Hair</a>
+                <a>Hair</a>
               </li>
               <li>
-                <a href="#">Skin Care</a>
+                <a>Skin Care</a>
               </li>
               <li>
-                <a href="#">Fragrances</a>
+                <a>Fragrances</a>
               </li>
               <li>
-                <a href="#">Personal Care</a>
+                <a>Personal Care</a>
               </li>
               <li>
-                <a href="#">Mom &amp; Baby</a>
+                <a>Mom &amp; Baby</a>
               </li>
               <li>
-                <a href="#">Men's Grooming</a>
+                <a>Men's Grooming</a>
               </li>
               <li>
-                <a href="#">Tools &amp; Appliances</a>
+                <a>Tools &amp; Appliances</a>
               </li>
               <li>
-                <a href="#">Covid Essentials</a>
+                <a>Covid Essentials</a>
               </li>
               <li>
-                <a href="#">Wellness</a>
+                <a>Wellness</a>
               </li>
               <li>
-                <a href="#">Fitness</a>
+                <a>Fitness</a>
               </li>
               <li>
-                <a href="#">Treatments</a>
+                <a>Treatments</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div id="jwellery-option">
-          <a href="">
+          <a>
             <h4>Jewellery</h4>
           </a>
           <i class="fa-solid fa-chevron-down"></i>
           <div id="jwellery-dropdown">
             <ul class="navigation_submenu">
               <li>
-                <a href="#">Fine Jewellery</a>
+                <a>Fine Jewellery</a>
               </li>
             </ul>
           </div>
@@ -421,15 +422,15 @@ function shownavbar() {
         <div class="OnlyHelloName">
           <div>
             <i class="fa-solid fa-circle-user"></i>
-            <h3>Hello, </h3>
+            <h3>Hello </h3>
             <h3 id="nameshowAfterLoginSlidebar">User</h3>
           </div>
           <p id="CloseSlideMenuSlider" onclick="CloseSlideMenuSlider()">X</p>
         </div>
 
         <div class="HelloNameBtns">
-          <button>Account</button>
-          <button>Orders</button>
+          <a href="./useraccount.html">Account</a>
+          <a href="./cartpage.html">Orders</a>
         </div>
       </div>
 
@@ -464,7 +465,7 @@ function shownavbar() {
 
           <ul>
             <li>
-              <a href="/">My Account</a>
+              <a href="./useraccount.html">My Account</a>
             </li>
             <li>
               <a href="/">Need Help</a>
@@ -521,28 +522,28 @@ function shownavbar() {
           <h3>MOST POPULAR CATEGORIES</h3>
         </li>
         <li>
-          <a href="#">Staples</a>
+          <a>Staples</a>
         </li>
         <li>
-          <a href="#">Beverages</a>
+          <a>Beverages</a>
         </li>
         <li>
-          <a href="#">Personal Care</a>
+          <a>Personal Care</a>
         </li>
         <li>
-          <a href="#">Home Care</a>
+          <a>Home Care</a>
         </li>
         <li>
-          <a href="#">Fruits and Vegetables</a>
+          <a>Fruits and Vegetables</a>
         </li>
         <li>
-          <a href="#">Baby Care</a>
+          <a>Baby Care</a>
         </li>
         <li>
-          <a href="#">Snacks & Branded Foods</a>
+          <a>Snacks & Branded Foods</a>
         </li>
         <li>
-          <a href="#">Dairy & Bakery</a>
+          <a>Dairy & Bakery</a>
         </li>
       </ul>
 
@@ -551,22 +552,22 @@ function shownavbar() {
           <h3>CUSTOMER SERVICES</h3>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a>About Us</a>
         </li>
         <li>
-          <a href="#">FAQ</a>
+          <a>FAQ</a>
         </li>
         <li>
-          <a href="#">Terms and conditions</a>
+          <a>Terms and conditions</a>
         </li>
         <li>
-          <a href="#">Privacy Policy</a>
+          <a>Privacy Policy</a>
         </li>
         <li>
-          <a href="#">E-waste policy</a>
+          <a>E-waste policy</a>
         </li>
         <li>
-          <a href="#">Cancellation and return policy</a>
+          <a>Cancellation and return policy</a>
         </li>
       </ul>
 
@@ -716,3 +717,47 @@ async function checkuserdata() {
     console.log(error);
   }
 }
+
+function showAllProductsInNewPage(val) {
+  console.log(val);
+  localStorage.setItem("productsCategory", val);
+  window.open("./showallproduct.html", "_Self");
+}
+
+document
+  .getElementById("search")
+  .addEventListener("keyup", searchDivResultsInAll);
+
+async function searchDivResultsInAll() {
+  try {
+    document.getElementById("search_div_results").style.display = "block";
+    let val = document.getElementById("search").value;
+    document.getElementById("search_div_results").innerHTML = "";
+    let res = await fetch(
+      `https://jsonservermasai.herokuapp.com/items?item_name_like=${val}`
+    );
+    console.log(
+      `https://jsonservermasai.herokuapp.com/items?item_name_like=${val}`
+    );
+    let data = await res.json();
+    let as = 5;
+    if (data.length < 5) {
+      as = data.length;
+    }
+    for (let i = 0; i < as; i++) {
+      let p = document.createElement("p");
+      p.addEventListener("click", () => {
+        localStorage.setItem("selectProductIdandshowDetails", data[i].id);
+        window.open("./productView.html", "_Self");
+      });
+      p.innerHTML = `${data[i].item_name.slice(0, 50)}...`;
+      document.getElementById("search_div_results").append(p);
+    }
+    setTimeout(() => {
+      document.getElementById("search_div_results").style.display = "none";
+    }, 5000);
+  } catch (error) {
+    console.log(error);
+  }
+}
+document.getElementById("search_div_results").style.display = "none";

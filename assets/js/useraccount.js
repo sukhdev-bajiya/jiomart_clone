@@ -6,12 +6,12 @@ document.body.innerHTML = `
 <section id="Account_Section_Parent"></section>
 <section id="WishListSection">
   <div class="ListButtons">
-    <button>My List </button>
+    <button onclick="movetocartpage()">My List </button>
     <button>WishList</button>
     <button>Legal Information</button>
     <button>Need Help</button>
     <button>Contact Us</button>
-    <button>Logout</button>
+    <button onclick="logountUser()">Logout</button>
   </div>
 </section>
 
@@ -37,7 +37,7 @@ document.body.innerHTML = `
         <label>Email ID</label>
         <input type="email" id="email" placeholder="Enter your email address">
         <label>Phone Number</label>
-        <input type="number" id="usermobilenumber" placeholder="Enter your mobile number" value="${localStorage.getItem(
+        <input type="number" id="usermobilenumber" disabled placeholder="Enter your mobile number" value="${localStorage.getItem(
           "userNumberOndata"
         )}">
         <label>Address</label>
@@ -73,14 +73,11 @@ HTML for Payment  info Div     -->
     <div>
       <div id="Payment_Account_1">
         <div>
-          <img
-            src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2018/png/iconmonstr-user-circle-thin.png&r=0&g=0&b=0"
-            class="userImage"
-          />
+        <i class="fa-solid fa-circle-user"></i>
         </div>
         <div class="userDetails_account">
-          <h2>${data[0].user_fname}</h2>
-          <p class="dullBlue">${data[0].user_email}</p>
+          <h2>${data[0].user_fname || "Guest"}</h2>
+          <p class="dullBlue">${data[0].user_email || "guest@example.com"}</p>
           <p class="dullBlue">
             +91-<span class="phoneNoPaymentDiv">${data[0].user_number}</span>
           </p>
@@ -124,12 +121,12 @@ HTML for Account info Div     -->
           <div id="All_Info_Data_1">
             <div>
               <p class="dullgrey">Full Name</p>
-              <h3>${data[0].user_name}</h3>
+              <h3>${data[0].user_name || "Guest"}</h3>
               
             </div>
              <div>
               <p class="dullgrey">Email id</p>
-              <h3>${data[0].user_email}</h3>
+              <h3>${data[0].user_email || "guest@example.com"}</h3>
             </div>
           
 
@@ -137,8 +134,8 @@ HTML for Account info Div     -->
 
           <div id="All_Info_Data_2">
              <div>
-              <p class="dullgrey">AGE</p>
-              <h3>${data[0].user_dathofbirth}</h3
+              <p class="dullgrey">DOB</p>
+              <h3>${data[0].user_dathofbirth || "YYYY/MM/DD"}</h3
             </div>
              <div>
               <p class="dullgrey">Mobile Number</p>
@@ -146,7 +143,9 @@ HTML for Account info Div     -->
             </div>
              <div>
               <p class="dullgrey">Default Address</Address></p>
-              <h3>${data[0].user_address}, ${data[0].user_pincode}</h3>
+              <h3>${data[0].user_address || "India"} ${
+    data[0].user_pincode || ""
+  }</h3>
             </div>
 
           </div>
@@ -195,3 +194,12 @@ document.querySelector("form").addEventListener("submit", (event) => {
   ClosePopBtn_address();
   dataShowUserAccount();
 });
+
+function logountUser() {
+  localStorage.clear();
+  window.open("./index.html", "_Salf");
+}
+
+function movetocartpage() {
+  window.open("./cartpage.html", "_Salf");
+}

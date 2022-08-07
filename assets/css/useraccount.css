@@ -44,6 +44,11 @@
 
 #Payment_Account_1>div {
     margin: 5px 20px;
+
+}
+
+#Payment_Account_1>div>i {
+    font-size: 65px;
 }
 
 .userImage {

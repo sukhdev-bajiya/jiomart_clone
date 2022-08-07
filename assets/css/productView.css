@@ -254,25 +254,6 @@ body {
 
 #Item_Description {
   padding: 0 30px;
-<<<<<<< HEAD:assets/css/productOverview.css
-  /* width: 98%; */
-}
-#first_desc {
-  padding-left: 30px;
-}
-#second_desc {
-  padding-left: 30px;
-}
-
-/* 
-CSSS For Location to be shown */
-
-#locationToBeShown {
-  margin-left: 20px;
-  font-size: 14px;
-  color: #05b905;
-}
-=======
 }
 
 #first_desc {
@@ -293,4 +274,3 @@ CSSS For Location to be shown */
 #Item_Description h3 {
   padding: 5px 0;
 }
->>>>>>> 5b464a6e96d41f26bc841205b2b7a87b0b10bbd5:assets/css/productView.css

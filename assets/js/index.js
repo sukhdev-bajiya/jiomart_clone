@@ -4,6 +4,42 @@
 // Part -  homepage body+++++++++++++++++++++++++++++++++++++++++++++++++
 
 document.body.innerHTML = `
+ <section id="navbar_small_section">
+      <div id="navbar_small">
+        <div id="navbar_small_upper">
+          <div><i class="fa-solid fa-bars"></i></div>
+          <div>
+            <img
+              src="https://www.jiomart.com/assets/version1659035733/smartweb/images/jiomart_logo_beta.svg"
+              alt=""
+            />
+          </div>
+          <div id="smallCarProf">
+            <i class="fa-solid fa-circle-user"></i>
+            <div id="smallCart">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+        <div id="smallSearch_div">
+          <input
+            type="text"
+            placeholder="Search essentials, groceries, and more …"
+          />
+          <button><i class="fa-solid fa-list"></i></button>
+        </div>
+      </div>
+    </section>
+    <section id="small_navbar_small_2">
+      <div id="small_location-option-div" onclick="ShowlocationPopup()">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <p>Deliver to</p>
+          <p id="small_pincode">400001</p>
+        </div>
+      </div>
+    </section>
 <section id="navabar_section"></section>
 <section id="location_popup_section"></section>
 <section id="slide_menu_slider_section"></section>
@@ -560,11 +596,11 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-
-
 async function dishplayData1() {
   try {
-    let res = await fetch("https://jsonservermasai.herokuapp.com/items?item_category=Top_Deals");
+    let res = await fetch(
+      "https://jsonservermasai.herokuapp.com/items?item_category=Top_Deals"
+    );
     let data = await res.json();
 
     // Part - Top Deals +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -597,7 +633,9 @@ async function dishplayData1() {
         <div><span class="homepage_TopDeals_part_dis_section"><span>${
           element.item_discount
         }</span>%<br>off</span></div>
-        <div class="homepage_TopDeals_part_pro_detail" onclick="showSelectProductDetails(${element.id})">
+        <div class="homepage_TopDeals_part_pro_detail" onclick="showSelectProductDetails(${
+          element.id
+        })">
             <img class="product-image-photo"
                 src="${element.item_img_url}"
                 alt="">
@@ -605,7 +643,9 @@ async function dishplayData1() {
         </div>
         <div class="homepage_TopDeals_part_price_box">
             <p class="final_price">₹ ${element.item_final_price}.00</p>
-            <p class="price">M.R.P: <strike>₹ ${element.item_price}.00</strike></p>
+            <p class="price">M.R.P: <strike>₹ ${
+              element.item_price
+            }.00</strike></p>
             <p class="save_price">Save ₹ ${element.item_disc_price}.00</p>
         </div>
         <div id="homepage_TopDeals_part_Addtocart_btn"> ${buttonInt} </div>

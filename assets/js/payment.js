@@ -1,9 +1,8 @@
-// JS for Final Payment Page
-
 document.querySelector("#HideButton").addEventListener("click", HideCover);
 function HideCover() {
   let HideCo = document.querySelector("#qrcode_cover");
   HideCo.style.display = "none";
+  ConfirmPayment();
 }
 
 document
@@ -27,16 +26,8 @@ function ConfirmPayment() {
     document.getElementById("waitingforPayment").style.color = "grey";
   }, 1000);
   setTimeout(() => {
-    ShowAlertOfPaymentSuccessfull();
+    showcartpageupdate();
   }, 5000);
-}
-
-function ShowAlertOfPaymentSuccessfull() {
-  document.getElementById("Successfull").style.display = "flex";
-  setTimeout(() => {
-    document.getElementById("Successfull").style.display = "none";
-    window.open("../index.html", "_Self");
-  }, 2000);
 }
 
 document.getElementById("EnterUPIid").addEventListener("keyup", ConvertToBlue);
@@ -51,5 +42,32 @@ function ConvertToBlue() {
     document.getElementById("UPIconfirmBtn").disabled = false;
     document.getElementById("UPIconfirmBtn").style.backgroundColor = "#004584";
     document.getElementById("UPIconfirmBtn").style.color = "white";
+  }
+}
+
+async function showcartpageupdate() {
+  try {
+    let res = await fetch(
+      `https://jsonservermasai.herokuapp.com/items?item_addtocart=true`
+    );
+    let data = await res.json();
+    document.getElementById("Successfull").style.display = "flex";
+    data.forEach((element) => {
+      fetch(`https://jsonservermasai.herokuapp.com/items/${element.id}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          item_addtocart: false,
+          item_quantity: 0,
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+    });
+
+    setTimeout(() => {
+      document.getElementById("Successfull").style.display = "none";
+      window.open("./index.html", "_Self");
+    }, 3000);
+  } catch (error) {
+    console.log(error);
   }
 }
