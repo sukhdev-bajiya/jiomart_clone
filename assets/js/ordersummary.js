@@ -88,7 +88,7 @@ async function showcartpageData() {
             </div>
             <p class="save-amount cart-savings ng-star-inserted">You Save ₹${
               savePayment + coupanPayment
-            }.00</p>
+            }</p>
 
 
         </div>

@@ -52,7 +52,7 @@ function shownavbar() {
             <div class="mc_footer">
                 <div class="mc_price">
                     <div class="mc_amount"></div>
-                    <div class="mc_savings">You save ₹ 0.00</div>
+                    <div class="mc_savings"></div>
                 </div><button class="mc_cartBtn btn-ripple" type="button">PROCEED TO CART</button>
             </div>
         </div>

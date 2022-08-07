@@ -132,7 +132,7 @@ async function showcartpageData() {
         <h3 class="balck_TP">Payment Details</h3>
         <div>
           <p class="grey_Tp">MRP Total</p>
-          <p>₹<span>₹${totalPayment + savePayment}.00</span></p>
+          <p>₹<span>${totalPayment + savePayment}.00</span></p>
         </div>
         <div>
           <p class="grey_Tp">Product Discount</p>
@@ -145,13 +145,13 @@ async function showcartpageData() {
           }</span></p>
         </div>
         <div class="yousaveIt">
-          <p>You save ₹<span>${savePayment + coupanPayment}</span>.00</p>
+          <p>You save ₹<span>${savePayment + coupanPayment}</span></p>
         </div>
       </div>
       <button id="ProceedToPay" onclick="ProceedToPay()">
         Proceed To Pay ₹ <span id="totalPayment">${
           totalPayment - coupanPayment
-        }</span>.00
+        }</span>
       </button>
     </div>
     `;
