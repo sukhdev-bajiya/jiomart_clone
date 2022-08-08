@@ -1,0 +1,131 @@
+
+
+<style id='c-p-s'>
+    #top-layer{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 3%;
+        ;
+
+    }
+    #c-p-info{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    #levels{
+        display: flex;
+    }
+    #levels>hr{
+        background-color: grey;
+        border-left: solid grey ;
+        height: 0.1px;
+        width: 100px;
+        margin: 15px 10px 0px 5px ;
+    }
+    #levels>span{
+        margin: 5px 5px 0px 10px;
+    }
+    #left-side-cart-items{
+      border-radius: 14px;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    #indicator-of-items-in-cart{
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+    #items-shower>div{
+      display: flex;
+
+    }
+
+    #items-shower>img{
+      width: 150px;
+      height: 100px;
+      margin-right: 15px;
+    }
+    #count-items{
+      color: grey;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+    #items-shower>div>button{
+      width: 30px;
+      height: 20px;
+
+      margin: 100px 10px 0px 5px;
+      background-color: skyblue;
+    }
+    #items-shower>div>h4{
+      margin: 50px 10px 0px 5px ;
+      color: slategray;
+    }
+    #bottom-cart-view{
+      margin: auto;
+      margin: 3%;
+      display: grid;
+      grid-template-columns: 45% 50%;
+      grid-template-rows: 25% 50%;
+      grid-gap: 4%;
+
+
+    }
+    #apply-promo-code{
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+    }
+    #apply-promo-code>div{
+      display: flex;
+      justify-content: space-between;
+      padding: 4%;
+    }
+    #apply-promo-code>div>h5{
+      color: red;
+    }
+    #apply-promo-code>div>input{
+      width: 50%;
+      margin-left: -50px;
+      border: none;
+      box-shadow: rgba(241, 241, 241, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+    #apply-promo-code>div>p:hover{
+      cursor: pointer;
+      color:grey;
+    }
+    #payment-details-final{
+
+      box-shadow: rgb(255, 255, 255) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+      border-radius: 10px;
+    }
+    #payment-details-final>div>div{
+      display: flex;
+      justify-content: space-between;
+      padding: 1%;
+    }
+    #payment-details-final>div{
+      width: 80%;
+      margin: auto;
+    }
+    #payment-details-final>div>div>p:nth-child(1){
+      color: grey;
+      margin-bottom: 15x;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    #payment-btn>button{
+      width: 200px;
+      height: 40px;
+      background-color:#008ECC ;
+      color: white;
+      border-radius: 8px;
+      border: hidden;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    #saved-price{
+      color: rgb(81, 129, 8);
+    }

@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/683b4b40e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>cart</title>
+    <style id='nav'>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      #nav_bar {
+        width: 100%;
+        height: 80px;
+        background-color: #008ecc;
+        display: flex;
+      }
+      #menu {
+        color: white;
+        font-size: 40px;
+        margin-left: 120px;
+        margin-top: 20px;
+      }
+      h1 {
+        margin-left: 30px;
+        color: white;
+        margin-top: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      #search {
+        height: 40px;
+        width: 700px;
+        background-color: white;
+        margin-left: 40px;
+        margin-top: 20px;
+        border-radius: 5px;
+        display: flex;
+      }
+      #search_menu {
+        color: rgb(7, 7, 7);
+        font-size: 20px;
+        margin-left: 40px;
+        margin-top: 5px;
+      }
+      #search_bar {
+        height: 30px;
+        width: 600px;
+        margin-left: 20px;
+        margin-top: 3px;
+        border-radius: 5px;
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+      }
+      #search_button {
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        color: rgb(7, 7, 7);
+        font-size: 20px;
+        margin-right: 20px;
+        margin-bottom: 3px;
+      }
+
+      #signin_icon {
+        margin-left: 90px;
+        font-size: 25px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: white;
+      }
+      #signin_text {
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: white;
+      }
+      #cart_icon {
+        margin-left: 90px;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        color: white;
+      }
+      #cart_text {
+        font-weight: bold;
+        font-size: 14px;
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        color: white;
+      }
+      /* -- --------------------------------------------------nav bar 2------------------------------------------- -- */
+
+      .navbar2 {
+        background-color: #ececed;
+        text-align: center;
+      }
+      .navbar2 ul {
+        display: flex;
+        list-style: none;
+        margin-left: 50px;
+      }
+      .navbar2 ul li {
+        width: 160px;
+        height: 40px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .navbar2 ul li a {
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 15px;
+      }
+      .navbar2 ul li i {
+        color: #878b9c;
+      }
+      #loction_icon {
+        display: flex;
+      }
+      #loction_icon p {
+        margin-bottom: 0;
+        margin-top: -15px;
+        margin-left: -10px;
+      }
+      #loction_icon i {
+        font-size: 30px;
+        color: #878b9c;
+      }
+      .menu_text:nth-child(1) {
+        margin-left: 70px;
+      }
+      .menu_text:nth-child(2) {
+        margin-left: -20px;
+      }
+      .menu_text:nth-child(3) {
+        margin-left: 20px;
+      }
+      .menu_text:nth-child(4) {
+        margin-left: 20px;
+      }
+      .menu_text:nth-child(5) {
+        margin-left: 10px;
+      }
+      .menu_text:nth-child(6) {
+        margin-left: -20px;
+      }
+      .menu_text:nth-child(7) {
+        margin-left: -20px;
+      }
+      .menu_text:nth-child(8) {
+        margin-left: -20px;
+      }
+      .menu_text:nth-child(9) {
+        margin-left: -60px;
+      }
+      .sub_menu_1 {
+        display: none;
+      }
+      .navbar2 ul li:hover .sub_menu_1 {
+        display: block;
+        position: absolute;
+        background-color: #ececed;
+      }
+      .navbar2 ul li:hover .sub_menu_1 ul {
+        display: block;
+        margin-left: 20px;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbar2 ul li:hover .sub_menu_1 ul li {
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+
+        margin-top: 10px;
+        width: 250px;
+      }
+      .navbar2 ul li:hover .sub_menu_1 ul li a:hover {
+        color: lightskyblue;
+      }
+
+      /* -------------------------------------------------------------sidenav bar------------------------------------------------------ */
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      #sidenav_home > a {
+        padding: 20px 8px 8px 20px;
+        text-decoration: none;
+        color: black;
+        display: block;
+        transition: 0.3s;
+      }
+      .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 25px;
+        margin-left: 70px;
+        color: white;
+        margin-top: 10px;
+      }
+      .myacc {
+        background-color: #008ecc;
+        height: 100px;
+      }
+      #hello_button {
+        display: flex;
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        color: white;
+        margin-left: 10px;
+      }
+      #hello_icon {
+        font-size: 25px;
+        margin-top: 18px;
+        margin-left: 5px;
+      }
+      #hello_text {
+        margin-left: 14px;
+        font-size: 15px;
+        margin-top: 25px;
+      }
+      #account {
+        display: flex;
+      }
+      .accdiv {
+        border: 1px solid white;
+        width: 150px;
+        height: 25px;
+        color: white;
+        text-align: center;
+        margin-left: 7px;
+        padding-top: 7px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      #order_box {
+        margin-left: 5px;
+      }
+
+      .line {
+        height: 5px;
+        width: 100%;
+        background-color: #ececed;
+        margin-top: 6px;
+      }
+      #sidenav_home {
+        overflow: scroll;
+        height: 600px;
+        top: 0;
+        left: 0;
+        background-color: white;
+      }
+      #sidenav_home > h4,
+      p {
+        padding: 10px 0px 0px 20px;
+        margin-right: 20px;
+      }
+      #playstore {
+        display: flex;
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+    </style>
+    <style id='c-p-s'>
+        #top-layer{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 3%;
+            ;
+
+        }
+        #c-p-info{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        #levels{
+            display: flex;
+        }
+        #levels>hr{
+            background-color: grey;
+            border-left: solid grey ;
+            height: 0.1px;
+            width: 100px;
+            margin: 15px 10px 0px 5px ;
+        }
+        #levels>span{
+            margin: 5px 5px 0px 10px;
+        }
+        #left-side-cart-items{
+          border-radius: 14px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+
+        #indicator-of-items-in-cart{
+          padding: 5%;
+          display: flex;
+          justify-content: space-between;
+        }
+        #items-shower>div{
+          display: flex;
+
+        }
+
+        #items-shower>img{
+          width: 150px;
+          height: 100px;
+          margin-right: 15px;
+        }
+        #count-items{
+          color: grey;
+          font-size: 14px;
+          font-weight: lighter;
+        }
+        #items-shower>div>button{
+          width: 30px;
+          height: 20px;
+
+          margin: 100px 10px 0px 5px;
+          background-color: skyblue;
+        }
+        #items-shower>div>h4{
+          margin: 50px 10px 0px 5px ;
+          color: slategray;
+        }
+        #bottom-cart-view{
+          margin: auto;
+          margin: 3%;
+          display: grid;
+          grid-template-columns: 45% 50%;
+          grid-template-rows: 25% 50%;
+          grid-gap: 4%;
+
+
+        }
+        #apply-promo-code{
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          border-radius: 10px;
+          margin-bottom: 50px;
+        }
+        #apply-promo-code>div{
+          display: flex;
+          justify-content: space-between;
+          padding: 4%;
+        }
+        #apply-promo-code>div>h5{
+          color: red;
+        }
+        #apply-promo-code>div>input{
+          width: 50%;
+          margin-left: -50px;
+          border: none;
+          box-shadow: rgba(241, 241, 241, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        }
+        #apply-promo-code>div>p:hover{
+          cursor: pointer;
+          color:grey;
+        }
+        #payment-details-final{
+
+          box-shadow: rgb(255, 255, 255) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+          border-radius: 10px;
+        }
+        #payment-details-final>div>div{
+          display: flex;
+          justify-content: space-between;
+          padding: 1%;
+        }
+        #payment-details-final>div{
+          width: 80%;
+          margin: auto;
+        }
+        #payment-details-final>div>div>p:nth-child(1){
+          color: grey;
+          margin-bottom: 15x;
+          font-weight: 400;
+          font-size: 14px;
+        }
+        #payment-btn>button{
+          width: 200px;
+          height: 40px;
+          background-color:#008ECC ;
+          color: white;
+          border-radius: 8px;
+          border: hidden;
+          margin-top: 20px;
+          font-size: 16px;
+        }
+        #saved-price{
+          color: rgb(81, 129, 8);
+        }
+
+    </style>
+  </head>
+  <body>
+          <!-- -------------------------------------------------Nav Bar-----------------------------------------------  -->
+              <div id="nav_bar">
+                <i onclick="sidenav()" id="menu" class="fas fa-bars"></i>
+                <h1 onclick="home()">JioMart</h1>
+                <div id="search">
+                  <input
+                    id="search_bar"
+                    type="text"
+                    placeholder="Search essentials,grcoceries,and more...."
+                  />
+                  <button id="search_button">
+                    <i id="search_menu" class="fas fa-list-ul"></i>
+                  </button>
+                </div>
+                <button id="signin_icon" class="signin" onclick="signin()">
+                  <i class="fas fa-user-alt"></i>
+                </button>
+                <button id="signin_text" class="signin" onclick="signin()">Sign in/ sign up</button>
+                <button id="cart_icon" onclick="cart()"><i class="fas fa-shopping-cart"></i></button>
+                <button id="cart_text" onclick="cart()">Cart</button>
+              </div>
+              <!-- --------------------------------------------------nav bar 2------------------------------------------- -->
+
+              <div class="navbar2">
+                <ul class="menu">
+                  <li id="loction_icon" class="menu_text">
+                    <i id="loction_icon" class="fas fa-map-marker-alt"></i>
+                    <p>Deliver to <br />444303</p>
+                  </li>
+                  <li class="menu_text">
+                    <a href="#" onclick="product()">Fruits & Vegetables <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="#"onclick="product()">Fresh Fruits</a></li>
+                        <li><a href="#"onclick="product()">Fresh Vegetables</a></li>
+                        <li><a href="#"onclick="product()">Herbs & Seasonings</a></li>
+                        <li><a href="#"onclick="product()">Exotic & Vegetables</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu_text">
+                    <a href="">Premium Fruits <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="">Avocado, Peach, Plum</a></li>
+                        <li><a href="">Cherries, Berries & Exotic Fruits</a></li>
+                        <li><a href="">Pomegranate, Papaya & Pineapple</a></li>
+                        <li><a href="">Citrus, Mango & Grapes</a></li>
+                        <li><a href="">Apples & Pears</a></li>
+                        <li><a href="">Banana, Melon & Cocunut</a></li>
+                        <li><a href="">Seasonal & Minor Fruits</a></li>
+                        <li><a href="">Dates</a></li>
+                        <li><a href="">Organic & Residue Certified</a></li>
+                        <li><a href="">Gift, Assorted & XL Packs</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu_text">
+                    <a href="">Dairy & Bakery <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="">Dairy</a></li>
+                        <li><a href="">Toast & Khari</a></li>
+                        <li><a href="">Cakes & Muffins</a></li>
+                        <li><a href="">Breads and Buns</a></li>
+                        <li><a href="">Baked Cookies</a></li>
+                        <li><a href="">Bakery Snacks</a></li>
+                        <li><a href="">Batter & Chutney</a></li>
+                        <li><a href="">Cheese</a></li>
+                        <li><a href="">Ghee</a></li>
+                        <li><a href="">Paneer & Tofu</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu_text">
+                    <a href="">Staples <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="">Atta, Flours & Sooji</a></li>
+                        <li><a href="">Dals & Pulses</a></li>
+                        <li><a href="">Rice & Rice Products</a></li>
+                        <li><a href="">Edible Oils</a></li>
+                        <li><a href="">Massalas & Spices</a></li>
+                        <li><a href="">Salt, Sugar and Jaggery</a></li>
+                        <li><a href="">Soya Products, Wheat & Other</a></li>
+                        <li><a href="">Grains</a></li>
+                        <li><a href="">Dry Fruits & Nuts</a></li>
+                        <li><a href="">Combo Offer</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu_text">
+                    <a href="">Men <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="">Clothing Accessories</a></li>
+                        <li><a href="">Western Wear</a></li>
+                        <li><a href="">Inner Wear</a></li>
+                        <li><a href="">Bags, Belts & Wallets</a></li>
+                        <li><a href="">Ethnic Wear</a></li>
+                        <li><a href="">Footwear</a></li>
+                        <li><a href="">Fusion Wear</a></li>
+                        <li><a href="">Night & Lounge</a></li>
+                        <li><a href="">Fashion Jewellery</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu_text">
+                    <a href="">Women <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="">Clothing Accessories</a></li>
+                        <li><a href="">Western Wear</a></li>
+                        <li><a href="">Inner Wear</a></li>
+                        <li><a href="">Bags, Belts & Wallets</a></li>
+                        <li><a href="">Ethnic Wear</a></li>
+                        <li><a href="">Footwear</a></li>
+                        <li><a href="">Fusion Wear</a></li>
+                        <li><a href="">Night & Lounge</a></li>
+                        <li><a href="">Fashion Jewellery</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu_text">
+                    <a href="">Boys <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="">Western Wear</a></li>
+                        <li><a href="">Ethnic Wear</a></li>
+                        <li><a href="">Clothing Accessories</a></li>
+                        <li><a href="">Footwear</a></li>
+                        <li><a href="">Inner Wear</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu_text">
+                    <a href="">Girls <i class="fas fa-chevron-down"></i></a>
+                    <div class="sub_menu_1">
+                      <ul>
+                        <li><a href="">Western Wear</a></li>
+                        <li><a href="">Ethnic Wear</a></li>
+                        <li><a href="">Clothing Accessories</a></li>
+                        <li><a href="">Bags, Belts & Wallets</a></li>
+                        <li><a href="">Footwear</a></li>
+                        <li><a href="">Night & Lounge</a></li>
+                        <li><a href="">Inner Wear</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+
+            <!-- -------------------------------------------------sidenav side ----------------------------------- -->
+            <div id="mysidebar" class="sidenav">
+              <div id="myacc" class="myacc">
+                <a href="" class="closebtn" onclick="closenav()"
+                  ><i class="fas fa-times"></i
+                ></a>
+                <button id="hello_button"  onclick="signin()" >
+                  <span id="hello_icon" class="hello"
+                    ><i class="fas fa-user-circle"></i>
+                  </span>
+                  <h3 id="hello_text" class="hello" onclick="signin()">Hello, Sign in</h3>
+                </button>
+
+                <div id="account">
+                  <div id="account_box" class="accdiv" onclick="account()">Account</div>
+                  <div id="order_box" class="accdiv">Orders</div>
+                </div>
+              </div>
+
+              <div id="sidenav_home">
+                <a href="home.html">Home</a>
+                <a href="product.html">Shop Category</a>
+                <a href="cart.html">My list</a>
+                <a href="wallet.html">JioMart wallet</a>
+                <a href="">Jiomart cashback</a>
+                <a href="GiftStore.html">Jiomart Gift Store</a>
+                <a href="">Jiomart Gift Card</a>
+                <a href="">All offers</a>
+                <div class="line"></div>
+                <a href="account.html">My Account</a>
+                <a href="">Need Help</a>
+                <a href="about.html">About us</a>
+                <a href="">Guide</a>
+                <div class="line"></div>
+                <h4>CONTACT US</h4>
+                <p>
+                  WhatsApp us :
+                  <a
+                    href="https://api.whatsapp.com/send/?phone=917000370003&text=Hi&app_absent=0"
+                    target="_blank"
+                    >70003 70003</a
+                  >
+                </p>
+                <span id="footerspan">
+                  <p>Call Us : <a href="">1800 890 1222</a></p>
+                  <p>8:00 AM to 8:00 PM,365 days</p>
+                </span>
+                <p>
+                  Please note that you are accessing the BETA Version of
+                  <a href="">www.jiomart.com</a>
+                </p>
+                <p>
+                  Should you encounter any bugs, glitches, lack of functionality, delayed
+                  deliveries, billing errors or other problems on the beta website, please
+                  email us on <a href="">cs@jiomart.com</a>
+                </p>
+                <h4>DOWNLOAD APP</h4>
+                <div id="playstore">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.jpl.jiomart"
+                    target="_blank"
+                    style="margin-right: 16px"
+                  >
+                    <img
+                      src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png"
+                      alt="Donwload Jio mart app from Play store"
+                    />
+                  </a>
+                  <a
+                    href="https://apps.apple.com/in/app/jiomart/id1522085683"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"
+                      alt="Donwload Jio mart for IOS app from App store"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div id='cart-page-starting-point'>
+            <div id='top-layer'>
+                <div id='c-p-info'>
+                    <p>MY cart ( <span id='counter'> </span> )</p>
+                </div>
+                <div id='levels'>
+                    <img src="https://www.jiomart.com/msassets/images/icons/cart_blue_active.svg" alt=""><span>cart</span><hr>
+                    <img id='order-sum' src="https://www.jiomart.com/msassets/images/icons/orders_review_inactive.svg" alt=""><span>Order Summary</span> <hr>
+                    <img id='paym' src="https://www.jiomart.com/msassets/images/icons/payment_inactive.svg" alt=""><span>Payment</span>
+                </div>
+            </div>
+            <div id='bottom-cart-view'>
+              <div id='left-side-cart-items'>
+                <div id='indicator-of-items-in-cart'>
+                  <h3>Groceries Basket ( <span id='count-items'></span> )</h3>
+                  <h3 id='total-Bill'>bill</h3>
+                </div>
+                <div id='items-shower'>
+                  <!--  -->
+                </div>
+              </div>
+              <div id='right-side-cart-items'>
+                <div id='apply-promo-code'>
+                  <div>
+                    <h3>Apply Copoun</h3>
+                    <h5>VIEW ALL</h5>
+                  </div>
+                  <div>
+                    <img src="https://img.icons8.com/ios-filled/40/ACACAC/discount--v2.png"/>
+                    <input type="email"  id="discount-coupon-code">
+                    <p id='apl'>Apply</p>
+                  </div>
+                </div>
+                <div id='payment-details-final'>
+                  <div>
+                    <div>
+                      <h3>Payment details</h3>
+                    </div>
+                    <div>
+                      <p>MRP Total</p>
+                      <p id='total_bill_amount'></p>
+                    </div><hr>
+                    <div>
+                      <p>Product discount</p>
+                      <p id='Discounted-Price'></p>
+                    </div><hr>
+                    <div>
+                      <p>Total Amount</p>
+                      <p id='checkout_price'></p>
+                    </div>
+                    <div>
+                      <p>
+                        <!--  -->
+                      </p>
+                      <p id='saved-price'></p>
+                    </div>
+                  </div>
+                </div>
+                <div id='payment-btn'>
+                  <button id='CheckOut_Button'>Place Order</button>
+                  <button id='make-payment' hidden>Make a Payment</button>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+
+    </body>
+</html>
+<script>
+  var person = JSON.parse(localStorage.getItem('UserDetails')) || [] ;
+    document.querySelector('#hello_text').textContent = person[0].Fname || 'Hello Signin';
+    document.querySelector('#signin_text').textContent =person[0].Fname || 'signup';
+
+  function home(){
+      window.location.href ="home.html"
+  }
+  function cart(){
+      window.location.href ="cart.html"
+  }
+  function product(){
+      window.location.href="product.html"
+  }
+  function wallet(){
+    window.location.href="wallet.html"
+  }
+  function signin(){
+    window.location.href="sign.html"
+  }
+  function account(){
+      window.location.href="account.html"
+  }
+  function gift(){
+    window.location.href = "GiftStrore.html"
+  }
+
+    var amount =0;
+    var array = JSON.parse(localStorage.getItem('cartData')) || [];
+
+
+    document.querySelector('#count-items').innerHTML = array.length + " "+"items "
+    document.querySelector('#counter').innerHTML = array.length
+    array.map(function(elem ,index){
+      var plus = document.createElement('button')
+      var minus = document.createElement('button')
+      plus.textContent= '+';
+      minus.textContent= '-';
+      var p= document.createElement('p');
+      p.style.marginTop = '90px'
+      var no = 1;
+
+      p.textContent = no;
+
+      var img = document.createElement('img')
+      img.setAttribute('src',elem.image_url) ;
+      var name = document.createElement('h4');
+      name.textContent = elem.type  ;
+      var value = document.createElement('h4');
+      value.textContent = elem.MRP +" /-";
+      var hr = document.createElement('hr')
+      var div = document.createElement('div')
+      div.append(img,name,value,minus,p,plus);
+      document.querySelector('#items-shower').append(div,hr)
+
+      amount+= Number(elem.MRP);
+
+
+
+      plus.addEventListener('click',function(){
+        no = no+1 ;
+        p.textContent = no ;
+        amount += Number(elem.MRP) ;
+        document.querySelector('#total-Bill').textContent = amount ;
+        document.querySelector('#total_bill_amount').textContent = amount;
+        document.querySelector('#checkout_price').textContent = amount;
+
+      });
+      minus.addEventListener('click',function(event,index){
+        no = no-1 ;
+        p.textContent = no ;
+        amount -= Number(elem.MRP) ;
+        document.querySelector('#total-Bill').textContent = amount ;
+        document.querySelector('#total_bill_amount').textContent = amount;
+        document.querySelector('#checkout_price').textContent = amount;
+        if(no<0){
+
+          array.splice(index,1);
+          localStorage.setItem('cardData',JSON.stringify(array)) ;
+          event.target.parentNode.remove();
+          document.querySelector('#count-items').innerHTML = array.length + " "+"items "
+          document.querySelector('#counter').innerHTML = array.length
+        }
+      });
+    });
+    document.querySelector('#total-Bill').textContent = amount ;
+    var discounted_amount = 0;
+    document.querySelector('#total_bill_amount').textContent = amount;
+    document.querySelector('#saved-price').textContent = Math.floor(discounted_amount);
+    document.querySelector('#Discounted-Price').textContent = Math.floor(discounted_amount);
+    document.querySelector('#checkout_price').textContent = amount;
+    document.querySelector('#apl').addEventListener('click',function(){
+      var card =  document.querySelector('#discount-coupon-code').value;
+      document.querySelector('#apl').disabled = true;
+      if(card == 'Masai30'){
+        discounted_amount = amount*0.3;
+        amount = amount - Math.floor(discounted_amount) ;
+        document.querySelector('#total_bill_amount').textContent = amount;
+        document.querySelector('#Discounted-Price').textContent = Math.floor(discounted_amount);
+        document.querySelector('#checkout_price').textContent = amount;
+        document.querySelector('#saved-price').textContent = "saved pice" +" "+Math.floor(discounted_amount);
+
+
+      }else{
+        document.querySelector('#total_bill_amount').textContent = amount;
+        document.querySelector('#Discounted-Price').textContent = Math.floor(discounted_amount);
+        document.querySelector('#checkout_price').textContent = amount;
+        document.querySelector('#saved-price').textContent ="saved pice" +" "+Math.floor(discounted_amount);
+
+
+      }
+
+    });
+    document.querySelector('#CheckOut_Button').addEventListener('click',function(){
+      document.querySelector('#CheckOut_Button').hidden = true;
+      document.querySelector('#make-payment').hidden = false;
+      document.querySelector('#make-payment').style.backgroundColor = 'grey';
+      document.querySelector('#order-sum').setAttribute('src','https://www.jiomart.com/msassets/images/icons/orders_review_active.svg');
+      document.querySelector('#make-payment').addEventListener('click',function(){
+        var obj = {
+          price_amount : amount,
+        }
+        localStorage.setItem('price',JSON.stringify(obj));
+        window.location.href = "payment.html";
+      })
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+  function sidenav() {
+    document.getElementById("mysidebar").style.width = "330px";
+  }
+  function closenav() {
+    document.getElementById("mysidebar").style.width = "0";
+  }
+  var personalInfo = JSON.parse(localStorage.getItem('UserDetails')) || [] ;
+
+
+
+</script>
