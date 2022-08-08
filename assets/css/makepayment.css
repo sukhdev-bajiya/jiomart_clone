@@ -1,0 +1,316 @@
+#footer_section {
+    margin-top: 500px;
+}
+
+#PaymentDetailsHeading {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#PaymentDetailsHeading img {
+    width: 30px;
+}
+
+#PaymentDetailsHeading>div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px 0;
+    gap: 22px;
+}
+
+#PaymentDetailsHeading>div:last-child hr {
+    transform: rotate(90deg);
+    width: 1px;
+    border: none;
+    border-bottom: 25px solid grey;
+}
+
+#payment_section {
+    /* margin-top: 142px; */
+    display: flex;
+    gap: 20px;
+}
+
+#payment_methods {
+    width: 60%;
+    /* background-color: aquamarine; */
+    padding: 30px;
+}
+
+#payment_options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#payment_options>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px dotted grey;
+    padding-bottom: 5px;
+}
+
+.gpayLogo {
+    width: 50px;
+}
+
+.credit-logo>i {
+    font-size: 45px;
+    color: brown;
+}
+
+.debit-logo>i {
+    font-size: 45px;
+    color: blue;
+}
+
+.codLogo>i {
+    font-size: 45px;
+    color: rgb(47, 78, 202);
+}
+
+.bold_options {
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+#payment_details {
+    width: 29%;
+}
+
+#payment_Details_main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    margin-top: 32px;
+}
+
+#payment_Details_main>div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted grey;
+    padding-bottom: 4px;
+    padding: 0 8px 5px 5px;
+}
+
+.balck_TP {
+    color: black;
+    font-weight: 700;
+}
+
+.yousaveIt {
+    color: rgb(3, 172, 3);
+    font-weight: 650;
+    border: none !important;
+}
+
+.yousaveIt>p {
+    width: 100%;
+    text-align: right;
+}
+
+.grey_Tp {
+    color: grey;
+    font-weight: 550;
+}
+
+#ProceedToPay {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: #008ecc;
+    color: white;
+    border: none;
+    margin-top: 60px;
+    /* margin-left: 50px; */
+    cursor: pointer;
+    display: block;
+}
+
+#ProceedToPay>span {
+    font-weight: 600;
+}
+
+/*====================== CSS For Final Payment Page */
+
+body {
+    margin: 0;
+}
+
+#payment_nav {
+    width: 100%;
+    height: 75px;
+    background-color: #fafafd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#payment_nav img {
+    width: 155px;
+}
+
+#payment_display {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    background-color: antiquewhite;
+    background-image: url("https://wallpaperaccess.com/full/4597135.jpg");
+    border-radius: 10px;
+}
+
+.main_payment_content {
+    width: 400px;
+    height: auto;
+    background-color: white;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin: 80px;
+    border: 2px solid purple;
+    margin-left: 651px;
+}
+
+.qrcode {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 15px;
+    margin-left: -4px;
+}
+
+.qrcode img {
+    width: 180px;
+}
+
+#qrcode_cover {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.724);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    width: 190px;
+}
+
+#qrcode_cover p {
+    display: inline;
+    background-color: #004584;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.UpperHalfPay {
+    padding: 10px;
+    text-align: center;
+}
+
+.orDiv {
+    display: flex;
+    font-size: 20px;
+    color: rgb(48, 46, 46);
+}
+
+.orDiv>hr {
+    width: 42%;
+}
+
+.OrPhoneNodiv {
+    padding: 7px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UpperHalfPay h2 {
+    margin: 0;
+}
+
+.PaymentInputsButton {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 10px;
+}
+
+.PaymentInputsButton input {
+    padding: 10px 20px;
+    border: 1px solid #004584;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    color: black;
+    align-self: center;
+    margin-left: 4%;
+    width: 95%;
+    text-align: center;
+}
+
+.h2mZero {
+    margin: 0;
+    color: #024687;
+}
+
+.PaymentInputsButton button {
+    padding: 10px 20px;
+    border: 1px solid #004584;
+    background-color: #1b5e9d8f;
+    border-radius: 70px;
+    font-size: 18px;
+    outline: none;
+    color: white;
+    width: 95%;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+.TermsInfoPara {
+    font-size: 14px;
+    color: grey;
+    text-align: center;
+}
+
+.TermsInfoPara span {
+    color: #5f259f;
+}
+
+.PaymentInputsButton {
+    text-align: center;
+}
+
+#waitingforPayment {
+    display: none;
+}
+
+#Successfull {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(240, 248, 255, 0.66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+}

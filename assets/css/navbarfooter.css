@@ -1,0 +1,976 @@
+    /* ================================CSS For Navbar ============================ */
+    #nav-dropdowns-section {
+      width: 100%;
+      height: 100vh;
+      margin-top: 113px;
+      top: 0;
+      background-color: rgba(20, 125, 218, 0.787);
+      z-index: 5;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    #navabar_section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      /* overflow: hidden; */
+      z-index: 5;
+    }
+
+    #nav-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 72px;
+      background-color: #008ecc;
+      color: white;
+      min-width: 1230px;
+    }
+
+    #logosM {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #logosM img {
+      width: 110px;
+    }
+
+    #logosM i {
+      font-size: 30px;
+    }
+
+    #nav-top a {
+      text-decoration: none;
+      color: white;
+      /* width: 30px; */
+    }
+
+    #login-div {
+      display: block;
+    }
+
+    #login-div i,
+    #login-div span {
+      font-size: 18px;
+      margin: 0 2px;
+    }
+
+    #after_login_div {
+      display: none;
+    }
+
+    #after_login_div a {
+      display: flex;
+      gap: 15px;
+    }
+
+    #after_login_div i {
+      font-size: 32px;
+      margin: 0 2px;
+    }
+
+    #after_login_div {
+      font-size: 22px;
+
+    }
+
+    #cart-div {
+      position: relative;
+    }
+
+    /* #cart-div>div{
+  position: relative;
+}
+#cart-div>div p{
+  margin: 0;
+} */
+    #cart-div:hover .cartpopup_container {
+      display: block;
+    }
+
+    #cart-div .cartpopup_container .mc_title {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    #cart-div .cartpopup_container .mc_title h2 {
+      text-transform: uppercase;
+    }
+
+    #cart-div .cartpopup_container .cartpopup_items .mc_item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    #cart-div .cartpopup_container .mc_footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    #cart-div .cartpopup_container .mc_footer .mc_price .mc_amount {
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    #cart-div .cartpopup_container .mc_footer .mc_price .mc_savings {
+      color: #05b905;
+    }
+
+    #cart-div .cartpopup_container .mc_footer .mc_cartBtn {
+      width: 200px;
+      margin: 6px;
+      border-radius: 5px;
+      color: white;
+      font-weight: 700;
+      background: #008ecc;
+      border: none;
+      letter-spacing: 1.5px;
+    }
+
+    .cartpopup_container {
+      color: black;
+      display: none;
+      position: absolute;
+      width: 401px;
+      height: auto;
+      right: 5px;
+      top: 51px;
+      padding: 5px;
+      background-color: rgb(255, 255, 255);
+      z-index: 2;
+      border-radius: 5px;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
+    .cartpopup_container>.trishalCartcontainer {
+      background: rgb(255, 255, 255);
+      height: 21px;
+      width: 21px;
+      position: absolute !important;
+      right: 21px;
+      top: -9px !important;
+      transform: rotate(45deg);
+    }
+
+    #cart-div>div>span {
+      position: fixed;
+      top: 0;
+    }
+
+    #cart-div a {
+      position: relative;
+    }
+
+    #cart-div i,
+    #cart-div span {
+      font-size: 18px;
+      margin: 0 2px;
+    }
+
+    #search-div {
+      position: relative;
+      display: flex;
+      width: 60%;
+    }
+
+    #search_div_results {
+      position: absolute;
+      width: 100%;
+      background-color: #ffffff;
+      top: 37px;
+      left: 0;
+      border-radius: 7px;
+      z-index: 1;
+      height: 250px;
+      padding: 10px;
+      overflow: hidden;
+      display: none;
+    }
+
+    #search_div_results>p {
+      color: black;
+      font-size: 21px;
+      padding: 9px;
+      border-bottom: 1px solid gray;
+      cursor: pointer;
+    }
+
+    #search-div input {
+      width: 100%;
+      font-size: 17px;
+      height: 30px;
+      padding: 6px 20px;
+      border-radius: 7px 0 0 7px;
+      outline: none;
+      border: none;
+    }
+
+    #search-div button {
+      background-color: white;
+      border: none;
+      border-radius: 0 7px 7px 0;
+      padding: 0 14px;
+    }
+
+    #countOfCart {
+      background-color: red;
+      padding: 1px 6px;
+      border-radius: 80px;
+      font-size: 12px !important;
+      font-weight: bold;
+      position: absolute;
+      top: -10px;
+      left: 5px
+    }
+
+    #slider_Menu_BTN {
+      cursor: pointer;
+    }
+
+    #logosM {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #logosM img {
+      width: 110px;
+    }
+
+    #logosM i {
+      font-size: 30px;
+    }
+
+    #nav-top a {
+      text-decoration: none;
+      color: white;
+      position: relative;
+    }
+
+    #login-div {
+      display: block;
+    }
+
+    #login-div i,
+    #login-div span {
+      font-size: 18px;
+      margin: 0 2px;
+    }
+
+    #after_login_div {
+      display: none;
+    }
+
+    #after_login_div a {
+      display: flex;
+      gap: 15px;
+    }
+
+    #after_login_div i {
+      font-size: 32px;
+      margin: 0 2px;
+    }
+
+    #after_login_div {
+      font-size: 22px;
+
+    }
+
+    #cart-div>div>span {
+      position: fixed;
+      top: 0;
+    }
+
+    #cart-div i,
+    #cart-div span {
+      font-size: 18px;
+      margin: 0 2px;
+    }
+
+    #search-div {
+      display: flex;
+      width: 60%;
+    }
+
+    #search-div input {
+      width: 100%;
+      font-size: 17px;
+      height: 30px;
+      padding: 18px 20px;
+      border-radius: 7px 0 0 7px;
+      outline: none;
+      border: none;
+    }
+
+    #search-div button {
+      background-color: white;
+      border: none;
+      border-radius: 0 7px 7px 0;
+      padding: 0 14px;
+    }
+
+    #countOfCart {
+      background-color: red;
+      padding: 1px 4px;
+      border-radius: 80px;
+      font-size: 10px !important;
+      font-weight: bold;
+      position: absolute;
+      top: -9px;
+      left: 9px;
+    }
+
+    #slider_Menu_BTN {
+      cursor: pointer;
+    }
+
+    /*======================== CSS for bottom navbar ================================*/
+
+    #nav-bottom {
+      width: 100%;
+      height: 40px;
+      background-color: #ececed;
+      display: flex;
+      justify-content: center;
+      min-width: 1024px;
+
+    }
+
+    #nav-bottom-options {
+      width: 95%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      color: #767676;
+    }
+
+    #nav-bottom-options>div {
+      will-change: 70px;
+      height: 30px;
+      /* background-color: rgb(252, 228, 198); */
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #nav-bottom-options h4 {
+      color: black;
+      font-size: 16px;
+    }
+
+    #nav-bottom-options a {
+      text-decoration: none;
+    }
+
+    #nav-bottom-options>div i {
+      font-size: 16px;
+      transition: 0.5s;
+    }
+
+    #nav-bottom-options>div:hover i {
+      transform: rotate(-180deg);
+    }
+
+    #nav-bottom-options>div:first-child:hover i {
+      transform: rotate(0deg);
+    }
+
+    #location-option-div {
+      cursor: pointer;
+    }
+
+    #location-option-div p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    #location-option-div>i {
+      font-size: 27px !important;
+    }
+
+    #pincode {
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+    }
+
+    /*========================CSS For Footer=========================================================*/
+
+    #footer_section {
+      max-width: 1680px;
+      min-width: 1024px;
+      background-color: #ededef;
+      bottom: 0;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    footer {
+      /* display: flex;
+      justify-content: space-around; */
+      font-size: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    .ContactUs {
+      padding: 0 8% 0 3%;
+      border-left: 2px solid rgb(171, 167, 167);
+      color: grey;
+      margin-top: 10px;
+    }
+
+    .ContactUs>div>p {
+      padding: 2px 0;
+    }
+
+    .ContactUs h3 {
+      color: black;
+    }
+
+    .ContactUs img {
+      width: 40%;
+    }
+
+    .ContactUs span {
+      color: blue;
+    }
+
+    .ContactUs img {
+      padding: 10px;
+    }
+
+    footer li {
+      margin: 9px 0;
+      list-style: none;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: grey;
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 50px;
+      border-top: 1px solid rgb(159, 155, 155);
+      font-size: 14px;
+      color: rgb(24, 23, 23);
+      padding: 5px 0;
+    }
+
+
+    /* ===========================Css For Dropdown ====================================*/
+
+    /* #nav-dropdowns-section {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  margin-top: 113px;
+  top: 0;
+  display: none;
+  background-color: rgba(20, 125, 218, 0.787);
+} */
+
+    /* =========================== Css For Dropdown ====================================*/
+
+
+    #nav-bottom ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #nav-bottom-options>div>div a {
+      color: black;
+      font-weight: 640;
+
+    }
+
+    #nav-bottom-options li:hover {
+      background-color: white;
+    }
+
+    #nav-bottom-options li:hover a {
+      color: #008ecc;
+    }
+
+    .navigation_submenu li {
+      padding: 8px 12px;
+      margin: 2px 1px;
+    }
+
+    #Groceries-option {
+      position: relative;
+    }
+
+    #Groceries-dropdown {
+      position: fixed;
+      top: 112px;
+      background: #ececed;
+      display: none;
+      width: 600px;
+    }
+
+    #Groceries-option:hover #Groceries-dropdown {
+      display: block;
+    }
+
+    #Groceries-dropdown ul {
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Groceries-dropdown ul li {
+      width: 280px;
+    }
+
+
+    #premiumfruits-option {
+      position: relative;
+    }
+
+    #premiumfruits-dropdown {
+      position: fixed;
+      top: 112px;
+      background: #ececed;
+      display: none;
+      width: 600px;
+    }
+
+    #premiumfruits-option:hover #premiumfruits-dropdown {
+      display: block;
+    }
+
+    #premiumfruits-dropdown ul {
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #premiumfruits-dropdown ul li {
+      width: 280px;
+    }
+
+    #homekitchen-option {
+      position: relative;
+    }
+
+    #homekitchen-dropdown {
+      position: fixed;
+      top: 112px;
+      background: #ececed;
+      display: none;
+      width: 600px;
+    }
+
+    #homekitchen-dropdown ul {
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #homekitchen-dropdown ul li {
+      width: 280px;
+    }
+
+    #homekitchen-option:hover #homekitchen-dropdown {
+      display: block;
+    }
+
+    #fashion-option {
+      position: relative;
+    }
+
+    #fashion-dropdown {
+      position: fixed;
+      top: 112px;
+      background: #ececed;
+      display: none;
+      width: 300px;
+    }
+
+    #fashion-option:hover #fashion-dropdown {
+      display: block;
+    }
+
+    #electronics-option {
+      position: relative;
+    }
+
+    #electronics-dropdown {
+      position: fixed;
+      top: 112px;
+      background: #ececed;
+      display: none;
+      width: 300px;
+    }
+
+    #electronics-option:hover #electronics-dropdown {
+      display: block;
+    }
+
+    #beauty-option {
+      position: relative;
+    }
+
+    #beauty-dropdown {
+      position: fixed;
+      top: 112px;
+      background: #ececed;
+      display: none;
+      width: 300px;
+    }
+
+    #beauty-option:hover #beauty-dropdown {
+      display: block;
+    }
+
+    #jwellery-option {
+      position: relative;
+    }
+
+    #jwellery-dropdown {
+      position: fixed;
+      top: 112px;
+      background: #ececed;
+      display: none;
+      width: 300px;
+    }
+
+    #jwellery-option:hover #jwellery-dropdown {
+      display: block;
+    }
+
+
+    /*======================= CSS for location popup ===============================*/
+
+    #location_popup_section {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #4d4d4d77;
+      display: none;
+      z-index: 5;
+    }
+
+    #location_popup {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    #location_popup_div {
+      width: 350px;
+      min-height: 325px;
+      max-height: 450px;
+      background-color: white;
+      border-radius: 13px;
+      position: absolute;
+      top: 120px;
+      left: 5.5%;
+    }
+
+    .triangle {
+      height: 15px;
+      width: 20px;
+      background-color: white;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 115px;
+      left: 7%;
+    }
+
+    /* Inner Content */
+
+    #location_popup {
+      z-index: 1;
+    }
+
+    #location_popup_div {
+      padding: 20px;
+      z-index: 0;
+    }
+
+    .location_close_btn {
+      text-align: right;
+      font-weight: bold;
+      font-size: 35px;
+      margin: 0;
+      cursor: pointer;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+
+    .whereDoYouwant {
+      display: block;
+      margin-top: 0;
+      display: flex;
+      margin: 0;
+    }
+
+    .where_address_div h5 {
+      margin-top: 0;
+    }
+
+    .location_close_btn:hover {
+      color: red;
+    }
+
+    .location_popup_lower {
+      bottom: 0;
+      border-top: 5px solid #c0bcbc;
+    }
+
+    .location_popup_lower>h3,
+    .location_popup_lower>h5 {
+      margin: 5px;
+    }
+
+    .enter_pincode_div {
+      display: flex;
+      margin-top: 10px;
+      /* align-items: center; */
+
+    }
+
+    .enter_pincode_div>input {
+      width: 80%;
+      padding: 5px 10px;
+      border: none;
+      border-bottom: 2px solid #7f7f7f;
+      font-size: 17px;
+      outline: none;
+
+    }
+
+    .enter_pincode_div>button {
+      background-color: white;
+      border: none;
+      border-bottom: 2px solid #7f7f7f;
+      font-size: 17px;
+      color: rgb(194, 5, 5);
+      font-weight: bold;
+    }
+
+    .enter_pincode_div>i {
+      font-size: 22px;
+      margin-top: 4px;
+      margin-right: 4px;
+      color: #7f7f7f;
+    }
+
+    .detect_loc_mark {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      color: rgb(194, 5, 5);
+      gap: 20px;
+    }
+
+    .my_address_div {
+      width: 170px;
+      height: 170px;
+      background-color: #008ecc;
+      padding: 0 5px;
+      border-radius: 12px;
+      color: white;
+      margin-bottom: 20px;
+      /* display: none; */
+    }
+
+    .my_address_div * {
+      margin: 0;
+      padding: 5px;
+    }
+
+    .my_address_div button {
+      background-color: #1eafee;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .where_address_div {
+      padding: 0 5px;
+      margin-bottom: 20px;
+      /* display: none; */
+    }
+
+    .where_address_div>button {
+      width: 90%;
+      padding: 8px;
+      border-radius: 5px;
+      color: white;
+      border: none;
+      font-size: 17px;
+      background-color: #008ecc;
+    }
+
+    #location_popup {
+      z-index: 2;
+    }
+
+    #locationToBeShown {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #05b905;
+    }
+
+    /* =================  CSS For Slider Menu ========================================*/
+
+    #slide_menu_slider_section {
+      width: 0px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.389);
+      display: none;
+      transition: 1s;
+      z-index: 5;
+    }
+
+    #slide_menu_slider {
+      width: 23%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #ececed;
+    }
+
+    .HelloName {
+      height: 110px;
+      background-color: rgb(0 142 204);
+      padding: 5px 20px;
+      color: white;
+    }
+
+    .OnlyHelloName {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .OnlyHelloName i {
+      font-size: 25px;
+    }
+
+    .OnlyHelloName>div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #CloseSlideMenuSlider {
+      font-size: 30px;
+      /* font-weight: bolder; */
+      margin: 0;
+      cursor: pointer;
+    }
+
+    #CloseSlideMenuSlider:hover {
+      color: rgb(197, 205, 217);
+    }
+
+    .HelloNameBtns {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .HelloNameBtns a {
+      width: 49%;
+      padding: 8px;
+      font-size: 17px;
+      text-decoration: none;
+      text-align: center;
+      background-color: #008ecc;
+      border: 1px solid white;
+      color: white;
+      font-weight: 600;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    .HelloNameBtns a:hover {
+      background-color: white;
+      color: #008ecc;
+    }
+
+    .Slider_Content_Option {
+      height: 75vh;
+      overflow-y: scroll;
+    }
+
+    .Slider_Content_Option ul {
+      list-style: none;
+      background-color: white;
+      margin: 2px 0 20px 0;
+      padding: 0;
+    }
+
+    .Slider_Content_Option li {
+      padding: 10px 20px;
+      margin: 0;
+    }
+
+    .Slider_Content_Option li a {
+      text-decoration: none;
+      color: black;
+
+    }
+
+    .Slider_Content_Option li:hover {
+      background-color: #7f7f7f;
+    }
+
+    .ContactUsinsideSlider {
+      padding: 10px;
+      background-color: white;
+    }
+
+    .ContactUsinsideSlider>div>p {
+      padding: 2px 0;
+    }
+
+    .ContactUsinsideSliderImg {
+      display: flex;
+    }
+
+    .ContactUsinsideSliderImg img {
+      width: 120px !important;
+      margin: 10px 5px 10px 5px;
+    }
+
+    .ContactUsinsideSlider span {
+      color: blue;
+    }
+
+    .slider_home_option li:hover {
+      background-color: #008ecc;
+
+    }
+
+    .slider_home_option li:hover a {
+      color: white;
+    }

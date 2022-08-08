@@ -1,0 +1,245 @@
+body {
+    background-color: #f6f6f7;
+}
+
+#cartDataSection_container {
+    margin-top: 112px;
+    padding: 25px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.cartDataliftside_container {
+    margin: 0 10px;
+    padding: 10px 0;
+}
+
+.cartDataliftside_container>div {
+    background-color: white;
+    padding: 10px;
+}
+
+.cartDataliftside_container>h1 {
+    margin: 10px 0;
+}
+
+.cartDataliftside_container>div>h4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    padding-right: 50px;
+}
+
+.offersUpdateinAddcartPage {
+    font-size: 12px;
+    margin: 25px 5px;
+    display: flex;
+}
+
+.offersUpdateinAddcartPage>span {
+    background-image: url(https://www.jiomart.com/msassets/images/icons/offer-green.svg);
+    height: 16px;
+    width: 16px;
+    background-size: 100%;
+}
+
+.offersUpdateinAddcartPage>p {
+    margin-left: 5px;
+}
+
+.addproducttocartpageitems>div {
+    display: flex;
+    margin: 10px 0;
+}
+
+.addproducttocartpageitems>div>div:first-child {
+    width: 95px;
+}
+
+.addproducttocartpageitems>div>div:first-child>img {
+    width: 100%;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2) {
+    margin-left: 10px;
+    width: 70%;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>p:nth-child(2) {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>p:nth-child(2)>span:first-child {
+    font-weight: 600;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>p:nth-child(2)>span:nth-child(2) {
+    font-family: JioMedium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .5);
+    text-decoration: line-through;
+    padding: 0 8px 0 0;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>p:nth-child(2)>span:nth-child(3) {
+    font-family: JioMedium;
+    color: #00a100;
+    padding: 0 8px 0 0;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>p:nth-child(3) {
+    font-size: 14px;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>p:nth-child(3)>span {
+    color: blue;
+    cursor: pointer;
+}
+
+.addproducttocartpageitems>div>div:nth-child(2)>#homepage_TopDeals_part_Addtocart_btn {
+    width: 40%;
+    margin-left: 70%;
+}
+
+.cartDatarightside_container>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+.cartDatarightside_container>div:first-child hr {
+    transform: rotate(90deg);
+    width: 1px;
+    border: none;
+    border-bottom: 25px solid grey;
+}
+
+.cartDatarightside_container>div:nth-child(2)>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+
+}
+
+.cartDatarightside_container>div:nth-child(2)>div:first-child input {
+    width: 69%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.cartDatarightside_container>div:nth-child(2)>div:first-child button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    background-color: #008ecc;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.cartDatarightside_container>div:nth-child(2)>div:first-child span {
+    font-size: 12px;
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartDatarightside_container>div:nth-child(2)>div:nth-child(2) {
+    font-family: JioMedium;
+    font-size: 16px;
+    color: #000;
+    line-height: 20px;
+    padding: 0 0 16px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.cartDatarightside_container>div:nth-child(2)>div:nth-child(2) a {
+    text-decoration: none;
+    font-weight: 700;
+    font-family: JioBold;
+    font-size: 16px;
+    color: #008ecc;
+    line-height: 20px;
+    border-bottom: 1px solid #008ecc;
+    padding-bottom: 1px;
+}
+
+.cartDatarightside_container>div:nth-child(3) h4 {
+    font-family: JioBold;
+    color: #000;
+    line-height: 22px;
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.cartDatarightside_container>div:nth-child(3)>div {
+    padding: 0 0 8px;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    justify-content: space-between;
+    margin: 0 0 8px 0px;
+    font-size: 14px;
+}
+
+.cartDatarightside_container>div:nth-child(3)>div:nth-child(3) label,
+.cartDatarightside_container>div:nth-child(3)>div:nth-child(2) label {
+    color: gray;
+}
+
+.cartDatarightside_container>div:nth-child(3)>div:nth-child(4) {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+.cartDatarightside_container>div:nth-child(3)>p {
+    text-align: end;
+    color: green;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.cartDatarightside_container>div:nth-child(4) {
+    display: flex;
+    justify-content: end;
+    margin: 20px 0;
+}
+
+.cartDatarightside_container>div:nth-child(4)>button {
+    background: #008ecc;
+    font-family: JioMedium;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    border-radius: 4px;
+    box-shadow: none !important;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 10px 6px;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}

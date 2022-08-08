@@ -1,0 +1,262 @@
+.my_acc_heading {
+    padding: 20px;
+    font-size: 30px;
+}
+
+#Account_Section_Parent {
+    margin-top: 112px;
+    width: 100%;
+    min-width: 1024px;
+}
+
+#Account_Section {
+    display: flex;
+}
+
+/* css for left part */
+
+#Payment_Account_div {
+    width: 43%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#Payment_Account_div>div {
+    background-color: #008ecc;
+    padding: 4px 10px;
+    width: 80%;
+    border-radius: 8px;
+    height: 240px;
+}
+
+#Payment_Account_1 img {
+    border-radius: 80px;
+    background-color: white;
+}
+
+#Payment_Account_1 {
+    display: flex;
+    align-items: center;
+    margin: 0 20px 20px 20px;
+    color: white;
+}
+
+#Payment_Account_1>div {
+    margin: 5px 20px;
+
+}
+
+#Payment_Account_1>div>i {
+    font-size: 65px;
+}
+
+.userImage {
+    width: 60px;
+}
+
+.userDetails_account * {
+    margin: 5px;
+}
+
+.dullBlue {
+    color: #66bbe0;
+}
+
+#Payment_Account_2 {
+    width: 100%;
+    /* background-color: beige; */
+}
+
+#Payment_Account_2> :first-child button {
+    width: 45%;
+    margin: 5px;
+    padding: 12px 8px;
+    font-size: 17px;
+    text-align: left;
+    border: none;
+    background-color: #66bbe0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Payment_Account_2> :last-child button {
+    width: 93%;
+    margin: 5px;
+    padding: 12px 8px;
+    font-size: 17px;
+    text-align: left;
+    border: none;
+    background-color: #66bbe0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Payment_Account_2 i {
+    margin-right: 10px;
+}
+
+/* CSS For Right Part */
+
+#Info_Account_div {
+    width: 57%;
+    background-color: white;
+    padding: 5px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 8px;
+}
+
+#Info_Account_div {}
+
+.heading_of_account_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading_of_account_info button {
+    background-color: white;
+    color: rgb(178, 2, 2);
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+}
+
+#All_Info_Data {
+    display: flex;
+    width: 100%;
+}
+
+#All_Info_Data_1 {
+    width: 50%;
+    padding: 5px 20px;
+}
+
+#All_Info_Data_2 {
+    width: 50%;
+    padding: 5px 20px;
+}
+
+#All_Info_Data>div>div>p,
+#All_Info_Data>div>div>h3 {
+    margin: 1px;
+}
+
+#All_Info_Data>div>div {
+    margin: 10px 5px;
+}
+
+.dullgrey {
+    color: rgb(169, 156, 156);
+    font-weight: bold;
+}
+
+.editAddress {
+    cursor: pointer;
+}
+
+#WishListSection {
+    width: 100%;
+    min-width: 600px;
+    margin-top: 50px;
+}
+
+.ListButtons {
+    width: 25%;
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    border-radius: 8px;
+}
+
+.ListButtons button {
+    background-color: white;
+
+    border: none;
+    border-bottom: 1px solid rgb(203, 201, 201);
+    text-align: left;
+    padding: 19px 10px;
+    font-size: 16px;
+    color: rgb(55, 53, 53);
+    cursor: pointer;
+}
+
+/* Update Address Popup */
+
+#UpdateAddress_PopUp_section {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.475);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    z-index: 6;
+    display: none;
+}
+
+#UpdateAddress_PopUp {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+#ClosePopBtn_address {
+    padding: 7px 16px;
+    border-radius: 50px;
+    border: none;
+    font-size: 25px;
+    color: rgb(202, 4, 4);
+    cursor: pointer;
+}
+
+#UpdateAddress {
+    background-color: white;
+    width: 430px;
+    height: auto;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+#UpdateAddress>p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#profileUpdateForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#profileUpdateForm input,
+#profileUpdateForm select {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 3px 0 5px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+}
+
+#profileUpdateForm input[type="submit"] {
+    background-color: #66bbe0;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+#profileUpdateForm input[type="submit"]:hover {
+    background-color: #00b3ff;
+    color: white;
+}

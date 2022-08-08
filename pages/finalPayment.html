@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Payment</title>
+  <link rel="stylesheet" href="../assets/css/makepayment.css" />
+</head>
+
+<body>
+  <div id="payment_nav">
+    <img src="https://www.pngplay.com/wp-content/uploads/7/Online-Payment-Logo-PNG-HD-Quality.png" alt="" />
+  </div>
+  <section id="payment_display">
+    <div class="main_payment_content">
+      <div>
+        <div class="UpperHalfPay">
+          <h2>Scan and Pay via any UPI App</h2>
+          <div class="qrcode">
+            <img
+              src="https://www.investopedia.com/thmb/KfGSwVyV8mOdTHFxL1T0aS3xpE8=/1148x1148/smart/filters:no_upscale()/qr-code-bc94057f452f4806af70fd34540f72ad.png" />
+            <div id="qrcode_cover">
+              <p id="HideButton">Show QR Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="orDiv">
+          <hr />
+          Or
+          <hr />
+        </div>
+        <div class="OrPhoneNodiv">
+          <h2 class="h2mZero">Enter Your UPI ID</h2>
+          <p class="TermsInfoPara">
+            Login with the same number or register with a new number to access
+            your account with PhonePe
+          </p>
+          <div class="PaymentInputsButton">
+            <input type="text" placeholder="Enter Your UPI Id" class="EnterHeadingTag" id="EnterUPIid" />
+            <button id="UPIconfirmBtn" disabled="true">
+              Send Payment Request
+            </button>
+            <p id="waitingforPayment"></p>
+          </div>
+
+          <p class="TermsInfoPara">
+            By generating OTP, you are agreeing to PhonePe’s
+            <span>terms &amp; conditions.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Successfull">
+    <div>
+      <img src="http://www.shikharclasses.in/wp-content/uploads/2020/04/PAYMENT-SUCCESS.png" alt="" />
+    </div>
+  </section>
+</body>
+
+</html>
+<script src="../assets/js/payment.js"></script>
+<script>
+
+  if (localStorage.getItem("jiomartUserNotLogin") == "false") {
+    window.open("./signup.html", "_Self");
+  }
+</script>
