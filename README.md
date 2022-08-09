@@ -1,3 +1,11 @@
+## Problem Statement
+
+Our Problem statement is to build a pixel-perfect Jio Mart website clone. Previously we did a clone of a few web pages but in this problem, we were supposed to make pages dynamic.
+
+## Idea
+Since I'm pursuing a Full Stack Web Development course at Masai School I was given a project to clone an Indian e-commerce website, Jio Mart. I was given a team of four members including me and the task was to clone the pixel-perfect clone of the website. Let's look at how we designed it 👇
+
+
 ## **JioMart  landing page** 👇 💻 
 ![image](https://user-images.githubusercontent.com/106476212/183395391-642faa6b-28ba-4f4e-a581-81f6e1368149.png)
 
