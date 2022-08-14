@@ -84,7 +84,7 @@ Since I'm pursuing a Full Stack Web Development course at Masai School I was giv
 
 # Project
 > GitHub - [Code](https://github.com/sukhdev-bajiya/jiomart_clone) <br>
-> Netlify - [Live demo](https://adorable-clafoutis-27b5bb.netlify.app) <br>
+> Netlify - [Live demo](jiomart-clone.netlify.app) <br>
 > Hash node - [Blog](https://jiomart-clone.hashnode.dev/jiomartclone)
 
 # Technology Used
