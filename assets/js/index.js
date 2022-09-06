@@ -34,7 +34,7 @@ dishplayData();
 dishplayData1();
 async function dishplayData() {
   try {
-    let res = await fetch("https://jsonservermasai.herokuapp.com/homepageData");
+    let res = await fetch("https://masai-server.herokuapp.com/homepageData");
     let data = await res.json();
 
     dishplayDatahompagecontant(data);
@@ -563,7 +563,7 @@ function showSlides(n) {
 async function dishplayData1() {
   try {
     let res = await fetch(
-      "https://jsonservermasai.herokuapp.com/items?item_category=Top_Deals"
+      "https://masai-server.herokuapp.com/items?item_category=Top_Deals"
     );
     let data = await res.json();
 

@@ -693,7 +693,7 @@ async function checkuserdata() {
   try {
     let userndata = localStorage.getItem("userNumberOndata");
     let res = await fetch(
-      `https://jsonservermasai.herokuapp.com/jiomartuserdata?user_number=${userndata}`
+      `https://masai-server.herokuapp.com/jiomartuserdata?user_number=${userndata}`
     );
     let data = await res.json();
     if (data.length == 1) {
@@ -734,10 +734,10 @@ async function searchDivResultsInAll() {
     let val = document.getElementById("search").value;
     document.getElementById("search_div_results").innerHTML = "";
     let res = await fetch(
-      `https://jsonservermasai.herokuapp.com/items?item_name_like=${val}`
+      `https://masai-server.herokuapp.com/items?item_name_like=${val}`
     );
     console.log(
-      `https://jsonservermasai.herokuapp.com/items?item_name_like=${val}`
+      `https://masai-server.herokuapp.com/items?item_name_like=${val}`
     );
     let data = await res.json();
     let as = 5;
