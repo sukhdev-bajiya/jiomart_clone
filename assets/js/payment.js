@@ -48,12 +48,12 @@ function ConvertToBlue() {
 async function showcartpageupdate() {
   try {
     let res = await fetch(
-      `https://jsonservermasai.herokuapp.com/items?item_addtocart=true`
+      `https://masai-server.herokuapp.com/items?item_addtocart=true`
     );
     let data = await res.json();
     document.getElementById("Successfull").style.display = "flex";
     data.forEach((element) => {
-      fetch(`https://jsonservermasai.herokuapp.com/items/${element.id}`, {
+      fetch(`https://masai-server.herokuapp.com/items/${element.id}`, {
         method: "PATCH",
         body: JSON.stringify({
           item_addtocart: false,

@@ -10,7 +10,7 @@ showcartpageData();
 async function showcartpageData() {
   try {
     let res = await fetch(
-      `https://jsonservermasai.herokuapp.com/items?item_addtocart=true`
+      `https://masai-server.herokuapp.com/items?item_addtocart=true`
     );
     let data = await res.json();
     let totalPayment = 0;
@@ -143,7 +143,7 @@ async function checkuserdatainoderpage() {
   try {
     let userndata = localStorage.getItem("userNumberOndata");
     let res = await fetch(
-      `https://jsonservermasai.herokuapp.com/jiomartuserdata?user_number=${userndata}`
+      `https://masai-server.herokuapp.com/jiomartuserdata?user_number=${userndata}`
     );
     let data = await res.json();
     document.getElementById("userAddressShowForD").innerHTML = `
@@ -172,18 +172,15 @@ function updateDaddressFun() {
     document.getElementById("updateDaddressID").innerHTML =
       "Change/Add Address";
     let userndata = localStorage.getItem("userNumberOndataID");
-    fetch(
-      `https://jsonservermasai.herokuapp.com/jiomartuserdata/${userndata}`,
-      {
-        method: "PATCH",
-        body: JSON.stringify({
-          user_address: document.getElementById("userAddressShowForDAddress")
-            .value,
-          user_pincode: document.getElementById("userAddressShowForDPincode")
-            .value,
-        }),
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    fetch(`https://masai-server.herokuapp.com/jiomartuserdata/${userndata}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        user_address: document.getElementById("userAddressShowForDAddress")
+          .value,
+        user_pincode: document.getElementById("userAddressShowForDPincode")
+          .value,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

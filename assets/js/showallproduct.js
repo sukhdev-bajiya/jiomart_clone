@@ -190,7 +190,7 @@ async function dishplayData2(valFOR) {
   try {
     document.getElementById("products_display").innerHTML = "";
     let res = await fetch(
-      `https://jsonservermasai.herokuapp.com/items?item_category=${locaValue}&_sort=${valFOR}`
+      `https://masai-server.herokuapp.com/items?item_category=${locaValue}&_sort=${valFOR}`
     );
     let data = await res.json();
 
