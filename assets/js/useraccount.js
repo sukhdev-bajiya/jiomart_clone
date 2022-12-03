@@ -57,7 +57,7 @@ dataShowUserAccount();
 async function dataShowUserAccount() {
   let userndata = localStorage.getItem("userNumberOndata");
   let res = await fetch(
-    `https://masai-server.herokuapp.com/jiomartuserdata?user_number=${userndata}`
+    `https://jsonserver-twny.onrender.com/jiomartuserdata?user_number=${userndata}`
   );
   let data = await res.json();
 
@@ -176,7 +176,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   let userAddress = document.getElementById("userAddress").value;
   let userAddressPincode = document.getElementById("userAddressPincode").value;
   localStorage.setItem("userpincodelocal", userAddressPincode);
-  fetch(`https://masai-server.herokuapp.com/jiomartuserdata/${userndata}`, {
+  fetch(`https://jsonserver-twny.onrender.com/jiomartuserdata/${userndata}`, {
     method: "PATCH",
     body: JSON.stringify({
       user_fname: fname,

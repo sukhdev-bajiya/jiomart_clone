@@ -85,12 +85,12 @@ function gotoOtpPartinSignupstep2() {
 async function checkuserallreadyLoginornot(userndata) {
   try {
     let res = await fetch(
-      `https://masai-server.herokuapp.com/jiomartuserdata?user_number=${userndata}`
+      `https://jsonserver-twny.onrender.com/jiomartuserdata?user_number=${userndata}`
     );
     let data = await res.json();
     console.log(data);
     if (data.length == 0) {
-      fetch("https://masai-server.herokuapp.com/jiomartuserdata", {
+      fetch("https://jsonserver-twny.onrender.com/jiomartuserdata", {
         method: "POST",
         body: JSON.stringify({
           user_number: userndata,

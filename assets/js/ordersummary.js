@@ -10,7 +10,7 @@ showcartpageData();
 async function showcartpageData() {
   try {
     let res = await fetch(
-      `https://masai-server.herokuapp.com/items?item_addtocart=true`
+      `https://jsonserver-twny.onrender.com/items?item_addtocart=true`
     );
     let data = await res.json();
     let totalPayment = 0;
@@ -143,7 +143,7 @@ async function checkuserdatainoderpage() {
   try {
     let userndata = localStorage.getItem("userNumberOndata");
     let res = await fetch(
-      `https://masai-server.herokuapp.com/jiomartuserdata?user_number=${userndata}`
+      `https://jsonserver-twny.onrender.com/jiomartuserdata?user_number=${userndata}`
     );
     let data = await res.json();
     document.getElementById("userAddressShowForD").innerHTML = `
@@ -172,7 +172,7 @@ function updateDaddressFun() {
     document.getElementById("updateDaddressID").innerHTML =
       "Change/Add Address";
     let userndata = localStorage.getItem("userNumberOndataID");
-    fetch(`https://masai-server.herokuapp.com/jiomartuserdata/${userndata}`, {
+    fetch(`https://jsonserver-twny.onrender.com/jiomartuserdata/${userndata}`, {
       method: "PATCH",
       body: JSON.stringify({
         user_address: document.getElementById("userAddressShowForDAddress")

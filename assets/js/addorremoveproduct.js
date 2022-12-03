@@ -1,5 +1,5 @@
 function updateproductValuesplus(id, val) {
-  fetch(`https://masai-server.herokuapp.com/items/${id}`, {
+  fetch(`https://jsonserver-twny.onrender.com/items/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       item_quantity: val + 1,
@@ -18,7 +18,7 @@ function updateproductValuesminus(id, val) {
   if (val == 1) {
     tgfl = false;
   }
-  fetch(`https://masai-server.herokuapp.com/items/${id}`, {
+  fetch(`https://jsonserver-twny.onrender.com/items/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       item_quantity: val - 1,
@@ -30,7 +30,7 @@ function updateproductValuesminus(id, val) {
 }
 
 function likeProductvalue(id, val) {
-  fetch(`https://masai-server.herokuapp.com/items/${id}`, {
+  fetch(`https://jsonserver-twny.onrender.com/items/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       item_like: !val,
@@ -54,7 +54,7 @@ showAddtocartProductList();
 async function showAddtocartProductList() {
   try {
     let res = await fetch(
-      `https://masai-server.herokuapp.com/items?item_addtocart=true`
+      `https://jsonserver-twny.onrender.com/items?item_addtocart=true`
     );
     let data = await res.json();
     let totalPayment = 0;

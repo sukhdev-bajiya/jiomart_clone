@@ -10,7 +10,7 @@ showcartpageData();
 async function showcartpageData() {
   try {
     let res = await fetch(
-      `https://masai-server.herokuapp.com/items?item_addtocart=true`
+      `https://jsonserver-twny.onrender.com/items?item_addtocart=true`
     );
     let data = await res.json();
     let totalPayment = 0;

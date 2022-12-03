@@ -11,7 +11,7 @@ dishplayProductOnItemData();
 async function dishplayProductOnItemData() {
   try {
     let id = localStorage.getItem("selectProductIdandshowDetails");
-    let res = await fetch(`https://masai-server.herokuapp.com/items/${id}`);
+    let res = await fetch(`https://jsonserver-twny.onrender.com/items/${id}`);
     let data = await res.json();
 
     document.getElementById("product_Overview_Nav").innerHTML = `

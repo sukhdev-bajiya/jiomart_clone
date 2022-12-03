@@ -48,12 +48,12 @@ function ConvertToBlue() {
 async function showcartpageupdate() {
   try {
     let res = await fetch(
-      `https://masai-server.herokuapp.com/items?item_addtocart=true`
+      `https://jsonserver-twny.onrender.com/items?item_addtocart=true`
     );
     let data = await res.json();
     document.getElementById("Successfull").style.display = "flex";
     data.forEach((element) => {
-      fetch(`https://masai-server.herokuapp.com/items/${element.id}`, {
+      fetch(`https://jsonserver-twny.onrender.com/items/${element.id}`, {
         method: "PATCH",
         body: JSON.stringify({
           item_addtocart: false,
